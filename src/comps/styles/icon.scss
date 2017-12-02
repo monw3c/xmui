@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 271058 */
+    src: url('//at.alicdn.com/t/font_271058_4zgbddmtpuq8h0k9.eot');
+    src: url('//at.alicdn.com/t/font_271058_4zgbddmtpuq8h0k9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_271058_4zgbddmtpuq8h0k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_271058_4zgbddmtpuq8h0k9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_271058_4zgbddmtpuq8h0k9.svg#iconfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+[class^="xm__icon--"], [class*=" xm__icon--"]  {
+    font-family:"iconfont" !important;
+    font-size:14px;
+    font-style:normal;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.xm__icon--link:before { content: "\e635"; }
+
+.xm__icon--loading{ -webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+.xm__icon--loading:before { content: "\e69d";}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

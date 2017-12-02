@@ -1,0 +1,134 @@
+@import "../../styles/mixin";
+@import "../../styles/index";
+
+.xm__btn {
+    display: inline-block;
+    line-height: 1;
+    cursor: pointer;
+    color: rgb(31, 45, 61);
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(191, 203, 217);
+    border-image: initial;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 12px 20px;
+} 
+.xm__btn--default{
+    color: $btn-default-color;
+    background: $btn-default-bg;
+    border: $border-width-default $border-style-default $border-color-base;
+	@include border-radius;
+
+	&:hover,
+    &:active {
+        background-color: $btn-primary-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-primary-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
+
+.xm__btn--primary{
+	@extend .xm__btn--default;
+	color: $btn-primary-color;
+	background: $btn-primary-bg;
+    border: $border-width-default $border-style-default $btn-primary-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-primary-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-primary-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
+
+.xm__btn--error{
+	@extend .xm__btn--default;
+	color: $btn-error-color;
+	background: $btn-error-bg;
+    border: $border-width-default $border-style-default $btn-error-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-error-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-error-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
+
+
+.xm__btn--block {
+	display: block;
+	width: 100%;
+}
+
+.xm__hasIconBtn{
+    padding: 11px 20px;
+}

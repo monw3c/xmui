@@ -1,0 +1,11 @@
+// set boeder圆角
+@mixin border-radius($radius:4px){
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// set 宽高
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
