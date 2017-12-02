@@ -25,7 +25,7 @@
     <h2>弹出层</h2>
 
     <h2>加载更多</h2>
-
+    
   </div>
 </template>
 
@@ -53,6 +53,10 @@ export default {
 }
 h1,h3{
   margin: 0;
+}
+h3{
+  font-weight: normal;
+  font-size: 16px;
 }
 h2{
   text-align: left;
