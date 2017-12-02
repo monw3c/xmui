@@ -15,6 +15,8 @@
     <XMButton loading>loading状态按钮</XMButton>
     <XMButton bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMButton>
     <br/><br/>
+    <XMButton bgColor="#fcb" color="#e0439a" borderColor="#fcb" block class="btn__block">块按钮</XMButton>
+    <br/>
     <XMButton round long>长按钮</XMButton>
     <br/><br/>
     <XMButtonGroup class="btn__group">
@@ -87,6 +89,9 @@ h2{
   left: -20px;
   background: #fff;
   color: #aaa;
+}
+.btn__block{
+  margin: 0 auto!important;
 }
 </style>
 

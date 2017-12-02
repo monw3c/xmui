@@ -5,7 +5,7 @@
         :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor}"
         :class="[
         'xm__btn--'+type,
-        {'is-plain': plain, 'is-round': round, 'is-long': long},
+        {'is-plain': plain, 'is-round': round, 'is-long': long, 'xm__btn--block': block},
         iconClass
         ]"
         :disabled="disabled"
@@ -46,6 +46,7 @@ export default {
       type: String,
       default: ''
     },
+    block: Boolean,
     disabled: Boolean,
     plain: Boolean,
     round: Boolean
