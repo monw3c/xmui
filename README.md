@@ -26,5 +26,8 @@ npm run e2e
 # run all tests
 npm test
 ```
+<<<<<<< HEAD
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+>>>>>>> 93836fd31fb39e725a4ec7d76c42428e8260dedf
