@@ -15,21 +15,10 @@
     <br/><br/>
     <XMButton round long>长按钮</XMButton>
     
-    <h1>头部</h1>
-
-    <h1>底部</h1>
-
-    <h1>tab切换</h1>
-
-    <h1>弹出层</h1>
-
-    <h1>加载更多</h1>
-
   </div>
 </template>
 
 <script>
-// import { XMButton } from '../comps/index'
 export default {
   data () {
     return {

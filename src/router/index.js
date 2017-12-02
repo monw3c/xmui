@@ -11,14 +11,14 @@ export default new Router({
       component: (resolve) => {
         require(['@/views/home'], resolve)
       }
-    },
-    {
-      path: '/buttons',
-      name: 'buttons',
-      component: (resolve) => {
-        require(['@/views/buttons'], resolve)
-      }
     }
+    // {
+    //   path: '/buttons',
+    //   name: 'buttons',
+    //   component: (resolve) => {
+    //     require(['@/views/buttons'], resolve)
+    //   }
+    // }
     // {
     //     path:'/install',
     //     name: 'install',
