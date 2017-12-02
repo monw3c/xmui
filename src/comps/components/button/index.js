@@ -1,4 +1,7 @@
-/* eslint-disable */
-import Button from './button.vue';
+import Button from './button.vue'
+import ButtonGroup from './button-group.vue'
 
-export default Button;
+export {
+    Button,
+    ButtonGroup
+}

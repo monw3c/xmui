@@ -14,7 +14,10 @@
     <XMButton bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMButton>
     <br/><br/>
     <XMButton round long>长按钮</XMButton>
-    
+    <XMButtonGroup>
+      <XMButton>普通按钮</XMButton>
+      <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
+    </XMButtonGroup>
   </div>
 </template>
 

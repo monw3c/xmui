@@ -1,8 +1,9 @@
 /* eslint-disable */
-import Button from './components/button/index';
+import {Button,ButtonGroup} from './components/button/index';
 
 const components = [
-    Button
+    Button,
+    ButtonGroup
 ]
 
 const install = function(Vue) {

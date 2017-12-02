@@ -12,7 +12,7 @@
     >
         <i :class="icon" v-if="icon"></i>
         <i class="xm__icon--loading" v-if="loading && !icon"></i>
-        <slot></slot>
+        <span><slot></slot></span>
     </button>
 </template>
 
@@ -66,9 +66,4 @@ export default {
 
 <style scoped lang="scss">
 @import './button';
-
-.hello {
-  background: $body-background;
-}
-
 </style>

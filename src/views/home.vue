@@ -5,6 +5,7 @@
   <div class="wrap">
     <h1><img src="../assets/logo.png"/></h1>
     <h3>{{ msg }}</h3>
+
     <h2>按钮</h2>
     <XMButton>普通按钮</XMButton>
     <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
@@ -15,7 +16,12 @@
     <XMButton bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMButton>
     <br/><br/>
     <XMButton round long>长按钮</XMButton>
-    
+    <br/><br/>
+    <XMButtonGroup class="btn__group">
+      <XMButton>普通按钮</XMButton>
+      <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
+    </XMButtonGroup>
+
     <h2>头部</h2>
 
     <h2>底部</h2>
@@ -25,7 +31,7 @@
     <h2>弹出层</h2>
 
     <h2>加载更多</h2>
-    
+
   </div>
 </template>
 
@@ -68,6 +74,19 @@ h2{
   text-indent: 10px;
   margin-top: 30px;
 }
-
+.btn__group{
+  border: 1px solid #eee;
+  padding: 10px;
+  position: relative;
+}
+.btn__group::before{
+  content: '按钮组';
+  font-size:12px;
+  position: absolute;
+  top: -6px;
+  left: -20px;
+  background: #fff;
+  color: #aaa;
+}
 </style>
 
