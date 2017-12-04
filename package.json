@@ -1,9 +1,8 @@
 {
-  "name": "xmui",
-  "version": "1.0.0",
+  "name": "x-m-ui",
+  "version": "1.0.1",
   "description": "UI components base on Vue 2.x",
   "author": "mon <505038730@qq.com>",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
