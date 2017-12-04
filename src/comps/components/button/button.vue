@@ -17,7 +17,7 @@
 </template>
 
 <script>
-// const prefixCls = 'xm__btn'
+
 export default {
   name: 'XMButton',
   props: {
@@ -52,7 +52,7 @@ export default {
     round: Boolean
   },
   methods: {
-    handleClick: function (event) {
+    handleClick (event) {
       if (this.disabled) return
       this.$emit('click', event)// 传播方法名为click，你也可以自定义其他名字
     }

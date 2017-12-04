@@ -1,9 +1,13 @@
 /* eslint-disable */
 import {Button,ButtonGroup} from './components/button/index';
+import Tag from './components/tag/index';
+import LoadMore from './components/loadMore/index';
 
 const components = [
     Button,
-    ButtonGroup
+    ButtonGroup,
+    Tag,
+    LoadMore
 ]
 
 const install = function(Vue) {

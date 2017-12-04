@@ -1,6 +1,3 @@
-/* 按钮种类分为 
- * 基础，禁用，图标(可单独)，带加载效果，长按钮，按钮组合，垂直
-*/
 <template>
   <div class="wrap">
     <h1><img src="../assets/logo.png"/></h1>
@@ -8,13 +5,16 @@
 
     <h2>通用组件</h2>
 
+    /* 按钮种类分为 
+    * 基础，禁用，图标(可单独)，带加载效果，长按钮，按钮组合，垂直
+    */
     <h4>按钮</h4>
     <XMButton>普通按钮</XMButton>
     <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
     <XMButton type="error" icon="xm__icon--link" ></XMButton>
-    <XMButton disabled>禁止按钮</XMButton>
+    <XMButton type="warning" disabled>禁止按钮</XMButton>
     <XMButton plain>简约按钮</XMButton>
-    <XMButton loading>loading状态按钮</XMButton>
+    <XMButton loading type="success">loading状态按钮</XMButton>
     <XMButton bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMButton>
     <br/><br/>
     <XMButton bgColor="#fcb" color="#e0439a" borderColor="#fcb" block class="btn__block">块按钮</XMButton>
@@ -22,13 +22,18 @@
     <XMButton round long>长按钮</XMButton>
     <br/><br/>
     <XMButtonGroup class="btn__group">
-      <XMButton>普通按钮</XMButton>
+      <XMButton type="warning">警告按钮</XMButton>
       <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
     </XMButtonGroup>
-
+    
 
     <h4>标签</h4>
-    
+    <XMTag>普通</XMTag>
+    <XMTag type="primary">primary</XMTag>
+    <XMTag type="success">success</XMTag>
+    <XMTag type="warning">warning</XMTag>
+    <XMTag type="error" round>error</XMTag>
+    <XMTag bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMTag>
 
     <h4>头部</h4>
 
@@ -43,7 +48,12 @@
 
 
     <h4>加载更多</h4>
+    <XMLoadmore ></XMLoadmore>
+    <XMLoadmore icon color="#2d8cf0">loading...</XMLoadmore>
+    <XMLoadmore noData>暂无数据</XMLoadmore>
 
+
+    <h4>表单</h4>
 
 
 
@@ -66,7 +76,7 @@ export default {
     }
   },
   mounted: () => {
-    console.log('1111')
+    // console.log('1111')
   }
 }
 </script>
