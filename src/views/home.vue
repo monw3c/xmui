@@ -6,7 +6,9 @@
     <h1><img src="../assets/logo.png"/></h1>
     <h3>{{ msg }}</h3>
 
-    <h2>按钮</h2>
+    <h2>通用组件</h2>
+
+    <h4>按钮</h4>
     <XMButton>普通按钮</XMButton>
     <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
     <XMButton type="error" icon="xm__icon--link" ></XMButton>
@@ -24,16 +26,30 @@
       <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
     </XMButtonGroup>
 
-    <h2>头部</h2>
 
-    <h2>底部</h2>
+    <h4>标签</h4>
+    
 
-    <h2>tab切换</h2>
+    <h4>头部</h4>
 
-    <h2>弹出层</h2>
 
-    <h2>加载更多</h2>
+    <h4>底部</h4>
 
+
+    <h4>tab切换</h4>
+
+
+    <h4>弹出层</h4>
+
+
+    <h4>加载更多</h4>
+
+
+
+
+    <h2>应用组件</h2>
+
+    <h4>投票</h4>
   </div>
 </template>
 
@@ -65,6 +81,13 @@ h1,h3{
 h3{
   font-weight: normal;
   font-size: 16px;
+}
+h4{
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px dashed #ededed;
+  padding: 10px;
 }
 h2{
   text-align: left;
