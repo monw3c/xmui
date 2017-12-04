@@ -88,6 +88,76 @@
     }
 }
 
+.xm__btn--success{
+	@extend .xm__btn--default;
+	color: $btn-success-color;
+	background: $btn-success-bg;
+    border: $border-width-default $border-style-default $btn-success-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-success-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-success-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
+
+.xm__btn--warning{
+	@extend .xm__btn--default;
+	color: $btn-warning-color;
+	background: $btn-warning-bg;
+    border: $border-width-default $border-style-default $btn-warning-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-warning-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-warning-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
+
 .xm__btn--error{
 	@extend .xm__btn--default;
 	color: $btn-error-color;

@@ -1,0 +1,30 @@
+@import "../../styles/mixin";
+@import "../../styles/index";
+
+.xm__loadMore {
+    display: inline-block;
+    line-height: 1em;
+    cursor: pointer;
+    color: rgb(31, 45, 61);
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    text-align: center;
+	white-space: nowrap;
+    font-size: 12px;
+    padding: 5px 8px;
+    width: 65%;
+    margin: 1em auto;
+}
+
+.xm__loadmore--line {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 2em;
+    
+    & .xm__loadmore--tips {
+    position: relative;
+    top: -0.9em;
+    padding: 0 .55em;
+    background-color: #FFFFFF;
+    color: #999999;
+    }
+}
