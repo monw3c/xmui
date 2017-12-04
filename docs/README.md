@@ -1,8 +1,8 @@
-## xmui
-
+![logo](imgs/logo.png)  
 基于vue2，为公司产品打(zao)造(lun)的(zi)可复用UI组件
 
-## 开发
+
+## 开发  
 
 ``` bash
 # 安装依赖
@@ -14,3 +14,4 @@ npm run dev
 # 生产代码
 npm run build
 ```
+
