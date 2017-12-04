@@ -4,10 +4,6 @@
     <h3>{{ msg }}</h3>
 
     <h2>通用组件</h2>
-
-    /* 按钮种类分为 
-    * 基础，禁用，图标(可单独)，带加载效果，长按钮，按钮组合，垂直
-    */
     <h4>按钮</h4>
     <XMButton>普通按钮</XMButton>
     <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
