@@ -46,8 +46,8 @@
     <h4>加载更多</h4>
     <XMLoadmore ></XMLoadmore>
     <XMLoadmore icon color="#2d8cf0">loading...</XMLoadmore>
-    <XMLoadmore noData>暂无数据</XMLoadmore>
-
+    <XMLoadmore no-data>暂无数据</XMLoadmore>
+    <XMLoadmore no-data>▪</XMLoadmore>
 
     <h4>表单</h4>
 

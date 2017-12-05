@@ -11,6 +11,13 @@
 
 - 移动端 浏览器 和 高级浏览器(Chrome,safari,IE9+等)
 
+## 开发  
+
+``` bash
+# 安装依赖
+cnpm install x-m-ui --save
+```
+
 ## 贡献
 
 如果你在使用时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/monw3c/xmui/issues) 或 [Pull Request](https://github.com/monw3c/xmui/pulls)
