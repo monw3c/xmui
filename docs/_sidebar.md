@@ -1,11 +1,10 @@
 - 开发指北
- - [介绍](/guide.md)
- - [开始](/quickstart.md)
-
+ - [介绍](/README.md)
+ 
 - 基础组件
- - [按钮](/button.md)
- - [标签](/tag.md)
- - [加载更多](/loadmore.md)
+ - [按钮](/components/button.md)
+ - [标签](/components/tag.md)
+ - [加载更多](/components/loadmore.md)
 
 - 应用组件
-  - [投票](/vote.md)
+ - [投票](/components/vote.md)
