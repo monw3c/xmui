@@ -8,6 +8,7 @@ $success-color          : #19be6b;
 $warning-color          : #ff9900;
 $error-color            : #ed3f14;
 $plain-color            : #fff;
+$transparent-color      : transparent;
 
 $link-color             : #2D8cF0;
 $link-hover-color       : tint($link-color, 20%);
@@ -106,6 +107,10 @@ $btn-error-border       : $border-color-base;
 $btn-plain-color        : $text-color;
 $btn-plain-bg           : $plain-color;
 $btn-plain-border       : $border-color-base;
+
+$btn-text-color         : $text-color;
+$btn-text-bg            : $transparent-color;
+$btn-text-border        : $border-color-base;
 
 $btn-circle-size        : 28px;
 $btn-circle-size-lg     : 32px;

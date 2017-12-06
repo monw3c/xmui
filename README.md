@@ -17,6 +17,7 @@
 # 安装
 cnpm install x-m-ui --save
 ```
+更多说明，请查看[在线文档](https://monw3c.github.io/xmui/)
 
 ## 贡献
 

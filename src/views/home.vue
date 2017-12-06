@@ -10,10 +10,11 @@
     <XMButton type="error" icon="xm__icon--link" ></XMButton>
     <XMButton type="warning" disabled>禁止按钮</XMButton>
     <XMButton plain>简约按钮</XMButton>
+    <XMButton type="text" icon="xm__icon--link">文字按钮</XMButton>
     <XMButton loading type="success">loading状态按钮</XMButton>
-    <XMButton bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMButton>
+    <XMButton bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMButton>
     <br/><br/>
-    <XMButton bgColor="#fcb" color="#e0439a" borderColor="#fcb" block class="btn__block">块按钮</XMButton>
+    <XMButton bg-color="#fcb" color="#e0439a" border-color="#fcb" block class="btn__block">块按钮</XMButton>
     <br/>
     <XMButton round long>长按钮</XMButton>
     <br/><br/>
@@ -29,7 +30,7 @@
     <XMTag type="success">success</XMTag>
     <XMTag type="warning">warning</XMTag>
     <XMTag type="error" round>error</XMTag>
-    <XMTag bgColor="#fc0" color="#e0439a" borderColor="#fc0">自定义颜色</XMTag>
+    <XMTag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMTag>
 
     <h4>头部</h4>
 
@@ -44,7 +45,7 @@
 
 
     <h4>加载更多</h4>
-    <XMLoadmore ></XMLoadmore>
+    <XMLoadmore></XMLoadmore>
     <XMLoadmore icon color="#2d8cf0">loading...</XMLoadmore>
     <XMLoadmore no-data>暂无数据</XMLoadmore>
     <XMLoadmore no-data>▪</XMLoadmore>
@@ -56,6 +57,11 @@
     <h2>应用组件</h2>
 
     <h4>投票</h4>
+
+    <h4>搜索框</h4>
+    <XMSearch bg-color="#09c" action-text-color="#fff"></XMSearch>
+    <XMSearch placeholder="自定义placeholder" value="123" @action="searchAction">搜索</XMSearch>
+
   </div>
 </template>
 
@@ -69,6 +75,9 @@ export default {
   methods: {
     btnClick () {
       alert(1)
+    },
+    searchAction () {
+      alert(`触发搜索`)
     }
   },
   mounted: () => {

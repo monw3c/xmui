@@ -1,6 +1,3 @@
-@import "../../styles/mixin";
-@import "../../styles/index";
-
 .xm__btn {
     display: inline-block;
     line-height: 1;
@@ -17,7 +14,9 @@
     margin: 0px;
     border-radius: 4px;
     padding: 12px 20px;
+    position: relative;
 } 
+
 .xm__btn--default{
     color: $btn-default-color;
     background: $btn-default-bg;
@@ -193,6 +192,30 @@
     }
 }
 
+.xm__btn--text{
+	@extend .xm__btn--default;
+	color: $btn-text-color;
+	background: $btn-text-bg;
+    border: none;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-text-bg;
+        text-decoration: none;
+        color: $text-color;
+        border-color: $btn-text-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-long {
+        @include size(100%,40px)
+    }
+}
 
 .xm__btn--block {
 	display: block;

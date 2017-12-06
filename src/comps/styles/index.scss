@@ -1,4 +1,10 @@
 @import "varibles";
-@import "common";
+@import "mixin";
 @import "normalize";
+@import "common";
 @import "icon";
+
+@import "../components/button/button.scss";
+@import "../components/loadmore/loadMore.scss";
+@import "../components/tag/tag.scss";
+@import "../components/search/search.scss";

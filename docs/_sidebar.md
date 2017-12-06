@@ -5,6 +5,7 @@
  - [按钮](/components/button.md)
  - [标签](/components/tag.md)
  - [加载更多](/components/loadmore.md)
+ - [搜索框](/components/search.md)
 
 - 应用组件
  - [投票](/components/vote.md)

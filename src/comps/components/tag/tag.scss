@@ -1,6 +1,3 @@
-@import "../../styles/mixin";
-@import "../../styles/index";
-
 .xm__tag {
     display: inline-block;
     line-height: 1;
@@ -17,11 +14,11 @@
 }
 
 .xm__tag--close,.xm__tag--desc {
-	font-size: 12px
+	font-size: 12px;
 }
 
 .xm__tag--desc {
-	margin-right: 2px
+	margin-right: 2px;
 }
 
 .xm__tag--default {
@@ -52,7 +49,7 @@
 
 .xm__tag--primary .el-tag__close:hover {
 	background-color: #3FAAF5;
-	color: #fff
+	color: #fff;
 }
 
 .xm__tag--warning {
