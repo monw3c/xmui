@@ -1,15 +1,16 @@
 {
   "name": "x-m-ui",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "UI components base on Vue 2.x",
   "author": "mon <505038730@qq.com>",
+  "main": "package/xmui.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js",
     "package:dev": "webpack --config build/package.dev.config.js",
-    "package:prod": "webpack --config build/package.prod.config.js",
+    "package:prod": "webpack --config build/package.prod.config.js && npm publish",
     "package": "npm run package:dev && npm run package:prod"
   },
   "dependencies": {
