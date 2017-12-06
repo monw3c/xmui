@@ -3,9 +3,9 @@
 ### 基础用法
  使用```action-text-color```、```bg-color```和```placeholder```属性来定义 Search 的样式。
 ``` html
-<form action="/"><XMSearch bg-color="#09c" @action="searchAction" v-model="value"></XMSearch></form>
+<form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value"></xm-search></form>
 
-<XMSearch placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</XMSearch>
+<xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
 ```
 
 ### 属性

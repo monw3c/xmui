@@ -14,7 +14,7 @@
 <script>
 
 export default {
-  name: 'XMLoadmore',
+  name: 'xm-loadmore',
   props: {
     color: {
       type: String,

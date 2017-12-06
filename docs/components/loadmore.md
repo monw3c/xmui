@@ -1,11 +1,11 @@
 # LoadMore 加载更多
 ----
 ### 基础用法
-使用```icon```、```color```和```noData```属性来定义 LoadMore 的样式。
+使用```icon```、```color```和```no-data```属性来定义 LoadMore 的样式。
 ``` html
-<XMLoadmore ></XMLoadmore>
-<XMLoadmore icon color="#2d8cf0">loading...</XMLoadmore>
-<XMLoadmore no-data>暂无数据</XMLoadmore>
+<xm-loadmore></xm-loadmore>
+<xm-loadmore icon color="#2d8cf0">loading...</xm-loadmore>
+<xm-loadmore no-data>暂无数据</xm-loadmore>
 ```
 
 ### 属性

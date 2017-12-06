@@ -23,7 +23,7 @@
 <script>
 
 export default {
-  name: 'XMSearch',
+  name: 'xm-search',
   props: {
     placeholder: {
       type: String,

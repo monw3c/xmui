@@ -14,7 +14,7 @@
 <script>
 
 export default {
-  name: 'XMTag',
+  name: 'xm-tag',
   props: {
     type: {
       type: String,
