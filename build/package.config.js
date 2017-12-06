@@ -28,15 +28,15 @@ module.exports = {
         loaders: [{
             test: /\.vue$/,
             loader: 'vue-loader',
-            // options: {
-            //     loaders: {
-            //         css: 'vue-style-loader!css-loader',
-            //         sass: 'vue-style-loader!css-loader!sass-loader'
-            //     },
-            //     postLoaders: {
-            //         html: 'babel-loader'
-            //     }
-            // }
+            options: {
+                loaders: {
+                    css: 'vue-style-loader!css-loader',
+                    sass: 'vue-style-loader!css-loader!sass-loader'
+                },
+                postLoaders: {
+                    html: 'babel-loader'
+                }
+            }
         }, {
             test: /\.js$/,
             loader: 'babel-loader',
@@ -48,13 +48,6 @@ module.exports = {
                 'css-loader',
                 'autoprefixer-loader'
             ]
-        // }, {
-        //     test: /\.scss$/,
-        //     use: [
-        //         'style-loader',
-        //         'css-loader',
-        //         'sass-loader?sourceMap'
-        //     ]
         }, { 
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, 
             loader: 'url-loader?limit=8192'

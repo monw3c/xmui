@@ -59,8 +59,9 @@
     <h4>投票</h4>
 
     <h4>搜索框</h4>
-    <XMSearch bg-color="#09c" action-text-color="#fff"></XMSearch>
-    <XMSearch placeholder="自定义placeholder" value="123" @action="searchAction">搜索</XMSearch>
+    <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
+    <form action="/"><XMSearch bg-color="#09c" @action="searchAction" v-model="value"></XMSearch></form>
+    <XMSearch placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</XMSearch>
 
   </div>
 </template>
@@ -69,15 +70,21 @@
 export default {
   data () {
     return {
-      msg: `xmui - 基于vue2.x，可复用UI组件`
+      msg: `xmui - 基于vue2.x，可复用UI组件`,
+      value: '',
+      inputValue: ''
     }
   },
   methods: {
     btnClick () {
       alert(1)
     },
-    searchAction () {
-      alert(`触发搜索`)
+    searchAction (e) {
+      this.value = e
+      alert(this.value)
+    },
+    inputAction (e) {
+      this.inputValue = e
     }
   },
   mounted: () => {

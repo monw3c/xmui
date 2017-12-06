@@ -2,15 +2,18 @@
     <div class="xm__search" :style="{'background-color':bgColor}">
       <div class="xm__search--input--wrap">
         <i class="xm__icon xm__icon--search"></i>
-        <input type="search" class="xm__search--input"
+        <input type="search" class="xm__search--input" 
         :placeholder="placeholder" 
         :value="value" 
+        @input="onInput" 
+        @keypress.enter.prevent="searchAction" 
+        @focus="onFocus"
         >
         <i class="xm__icon xm__icon--clear" style="display: none;"></i>
       </div>
-      <div class="xm__search--action">
+      <div class="xm__search--action" v-if="showAction">
         <div class="xm__search--action--text" :style="{'color':actionTextColor}" @click="searchAction">
-          <slot>取消</slot>
+          <slot>搜索</slot>
         </div>
       </div>
     </div>
@@ -37,27 +40,31 @@ export default {
       type: String,
       default: ''
     },
-    icon: {
-      type: String,
-      default: ''
-    },
     actionTextColor: {
       type: String,
       default: ''
     },
-    block: Boolean,
-    disabled: Boolean,
-    plain: Boolean,
-    round: Boolean
+    showAction: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return {
+      isFocus: false
+    }
   },
   methods: {
     searchAction (event) {
-      this.$emit('action', event)// 传播方法名为click，你也可以自定义其他名字
-    }
-  },
-  computed: {
-    iconClass () {
-      if (this.icon !== '') return 'xm__hasIconBtn'
+      event.preventDefault()
+      this.$emit('action', this.value)
+      return false
+    },
+    onInput (event) {
+      this.$emit('input', event.target.value)
+    },
+    onFocus () {
+      this.isFocus = true
     }
   }
 }

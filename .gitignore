@@ -6,6 +6,8 @@ yarn-error.log*
 /test/unit/coverage/
 /test/e2e/reports/
 selenium-debug.log
+package/style.js
+package/style.min.js
 
 # Editor directories and files
 .idea
