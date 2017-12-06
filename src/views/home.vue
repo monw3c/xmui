@@ -32,6 +32,11 @@
     <XMTag type="error" round>error</XMTag>
     <XMTag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMTag>
 
+    <h4>搜索框</h4>
+    <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
+    <form action="/"><XMSearch bg-color="#09c" @action="searchAction" v-model="value"></XMSearch></form>
+    <XMSearch placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</XMSearch>
+
     <h4>头部</h4>
 
 
@@ -41,7 +46,7 @@
     <h4>tab切换</h4>
 
 
-    <h4>弹出层</h4>
+    <h4>Modal弹出层</h4>
 
 
     <h4>加载更多</h4>
@@ -58,10 +63,7 @@
 
     <h4>投票</h4>
 
-    <h4>搜索框</h4>
-    <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
-    <form action="/"><XMSearch bg-color="#09c" @action="searchAction" v-model="value"></XMSearch></form>
-    <XMSearch placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</XMSearch>
+    
 
   </div>
 </template>

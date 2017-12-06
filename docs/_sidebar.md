@@ -6,6 +6,7 @@
  - [标签](/components/tag.md)
  - [加载更多](/components/loadmore.md)
  - [搜索框](/components/search.md)
+ - [弹出层](/components/modal.md)
 
 - 应用组件
  - [投票](/components/vote.md)

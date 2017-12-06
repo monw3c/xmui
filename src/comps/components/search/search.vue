@@ -8,6 +8,7 @@
         @input="onInput" 
         @keypress.enter.prevent="searchAction" 
         @focus="onFocus"
+        @blur="onBlur"
         >
         <i class="xm__icon xm__icon--clear" style="display: none;"></i>
       </div>
@@ -65,6 +66,11 @@ export default {
     },
     onFocus () {
       this.isFocus = true
+      this.$emit('focus')
+    },
+    onBlur () {
+      this.isFocus = false
+      this.$emit('blur')
     }
   }
 }
