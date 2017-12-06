@@ -3,12 +3,12 @@
 ### 基础用法
 使用```type```、```bg-color```、```color```、```border-color```和```round```属性来定义 Tag 的样式。
 ``` html
-<XMTag>普通</XMTag>
-<XMTag type="primary">primary</XMTag>
-<XMTag type="success">success</XMTag>
-<XMTag type="warning">warning</XMTag>
-<XMTag type="error" round>error</XMTag>
-<XMTag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMTag>
+<xm-tag>普通</xm-tag>
+<xm-tag type="primary">primary</xm-tag>
+<xm-tag type="success">success</xm-tag>
+<xm-tag type="warning">warning</xm-tag>
+<xm-tag type="error" round>error</xm-tag>
+<xm-tag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
 ```
 
 ### 属性

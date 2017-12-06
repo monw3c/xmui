@@ -5,37 +5,37 @@
 
     <h2>通用组件</h2>
     <h4>按钮</h4>
-    <XMButton>普通按钮</XMButton>
-    <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
-    <XMButton type="error" icon="xm__icon--link" ></XMButton>
-    <XMButton type="warning" disabled>禁止按钮</XMButton>
-    <XMButton plain>简约按钮</XMButton>
-    <XMButton type="text" icon="xm__icon--link">文字按钮</XMButton>
-    <XMButton loading type="success">loading状态按钮</XMButton>
-    <XMButton bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMButton>
+    <xm-button>普通按钮</xm-button>
+    <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
+    <xm-button type="error" icon="xm__icon--link" ></xm-button>
+    <xm-button type="warning" disabled>禁止按钮</xm-button>
+    <xm-button plain>简约按钮</xm-button>
+    <xm-button type="text" icon="xm__icon--link">文字按钮</xm-button>
+    <xm-button loading type="success">loading状态按钮</xm-button>
+    <xm-button bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-button>
     <br/><br/>
-    <XMButton bg-color="#fcb" color="#e0439a" border-color="#fcb" block class="btn__block">块按钮</XMButton>
+    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block class="btn__block">块按钮</xm-button>
     <br/>
-    <XMButton round long>长按钮</XMButton>
+    <xm-button round long>长按钮</xm-button>
     <br/><br/>
-    <XMButtonGroup class="btn__group">
-      <XMButton type="warning">警告按钮</XMButton>
-      <XMButton type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</XMButton>
-    </XMButtonGroup>
+    <xm-button-group class="btn__group">
+      <xm-button type="warning">警告按钮</xm-button>
+      <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
+    </xm-button-group>
     
 
     <h4>标签</h4>
-    <XMTag>普通</XMTag>
-    <XMTag type="primary">primary</XMTag>
-    <XMTag type="success">success</XMTag>
-    <XMTag type="warning">warning</XMTag>
-    <XMTag type="error" round>error</XMTag>
-    <XMTag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</XMTag>
+    <xm-tag>普通</xm-tag>
+    <xm-tag type="primary">primary</xm-tag>
+    <xm-tag type="success">success</xm-tag>
+    <xm-tag type="warning">warning</xm-tag>
+    <xm-tag type="error" round>error</xm-tag>
+    <xm-tag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
 
     <h4>搜索框</h4>
     <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
-    <form action="/"><XMSearch bg-color="#09c" @action="searchAction" v-model="value"></XMSearch></form>
-    <XMSearch placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</XMSearch>
+    <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value"></xm-search></form>
+    <xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
 
     <h4>头部</h4>
 
@@ -50,10 +50,10 @@
 
 
     <h4>加载更多</h4>
-    <XMLoadmore></XMLoadmore>
-    <XMLoadmore icon color="#2d8cf0">loading...</XMLoadmore>
-    <XMLoadmore no-data>暂无数据</XMLoadmore>
-    <XMLoadmore no-data>▪</XMLoadmore>
+    <xm-loadmore></xm-loadmore>
+    <xm-loadmore icon color="#2d8cf0">loading...</xm-loadmore>
+    <xm-loadmore no-data>暂无数据</xm-loadmore>
+    <xm-loadmore no-data>▪</xm-loadmore>
 
     <h4>表单</h4>
 

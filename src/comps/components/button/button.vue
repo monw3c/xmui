@@ -19,7 +19,7 @@
 <script>
 
 export default {
-  name: 'XMButton',
+  name: 'xm-button',
   props: {
     type: {
       type: String,

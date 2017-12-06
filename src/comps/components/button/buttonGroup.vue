@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'XMButtonGroup'
+  name: 'xm-button-group'
 }
 </script>
 
