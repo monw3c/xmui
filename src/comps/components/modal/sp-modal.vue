@@ -1,26 +1,15 @@
+/* special modal特殊的弹出层，可用于活动专题 */
 <template>
   <transition name="modal-fade">
     <div class="xm__dialog--wrap" v-if="isVisible" ref="modal" >
       <div class="xm__mask" @click="maskClose"></div>
-      <div class="xm__dialog" :style="{'z-index':zIndex}">
-        <div class="xm__dialog--hd">
-          <strong class="xm__dialog--title" v-if="dialogTitle">{{dialogTitle}}</strong>
-        </div>
+      <div class="xm__dialog xm__dialog--special" :style="{'z-index':zIndex}">
         <div class="xm__dialog--bd">
           <slot></slot>
         </div>
         <div class="xm__dialog--ft">
-          <div v-if="type&&type=='alert'">
-            <xm-button @click="confirm" :style="{'color':color}"  long>确定</xm-button>
-          </div>
-          <div v-else-if="type&&type=='confirm'">
-          <xm-button-group class="xm__btn--group" >
-            <xm-button @click="close">取消</xm-button>
-            <xm-button @click="confirm" :style="{'color':color}">确定</xm-button>
-          </xm-button-group>
-          </div>
-          <div v-else>
-            <xm-button @click="confirm" :style="{'color':color}"  long>确定</xm-button>
+          <div>
+            <xm-button @click="close"><i class="xm__icon--close"></i></xm-button>
           </div>
         </div>
       </div>
@@ -31,26 +20,14 @@
 
 <script>
 export default {
-  name: 'xm-modal',
+  name: 'xm-sp-modal',
   props: {
-    type: {
-      type: String,
-      default: 'default'
-    },
     visible: {
       type: Boolean,
       default: false
     },
-    dialogTitle: {
-      type: String,
-      default: ''
-    },
     zIndex: {
       type: Number,
-      default: ''
-    },
-    color: {
-      type: String,
       default: ''
     },
     maskClosable: {
@@ -69,9 +46,6 @@ export default {
     },
     close () {
       this.$emit('close')
-    },
-    confirm () {
-      this.$emit('confirm')
     },
     maskClose () {
       if (this.maskClosable) {
@@ -102,5 +76,49 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.xm__dialog{
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  max-width: 300px;
+  font-size: 16px;
+  overflow: hidden;
+  transition: .2s;
+  border-radius: 4px;
+  background-color: transparent;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1000;
+}
 
+.xm__dialog--bd{
+  max-height: 320px;
+  overflow: hidden;
+}
+.xm__dialog--bd img{
+  width: 100%;
+  border-radius: 4px;
+}
+
+.xm__dialog--ft button{
+  background: transparent;
+  margin: 0 auto;
+
+  &::before{
+    border: none;
+  }
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+  }
+
+  & .xm__icon--close{
+    font-size: 34px;
+    color: #fff;
+  }
+}
 </style>

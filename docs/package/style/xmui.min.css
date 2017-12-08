@@ -403,58 +403,14 @@ template {
 [hidden] {
   display: none; }
 
-.modal-fade-enter-active {
-  animation-name: fade-in;
-  animation-duration: .5s; }
-
-.modal-fade-leave-active {
-  animation-name: fade-out;
-  animation-duration: .5s; }
-
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fade-out {
-  to {
-    opacity: 0; } }
-
-@keyframes fold-in {
-  0% {
-    transform: translate3d(0, 100%, 0); }
-  50% {
-    transform: translate3d(0, 50%, 0); }
-  100% {
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes fold-out {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  50% {
-    transform: translate3d(0, 50%, 0); }
-  100% {
-    transform: translate3d(0, 100%, 0); } }
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
 input, button {
   outline: none; }
 
 @font-face {
   font-family: 'iconfont';
   /* project id 271058 */
-  src: url("//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.eot");
-  src: url("//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.woff") format("woff"), url("//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.ttf") format("truetype"), url("//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_271058_gf5jbg4wmq6qd7vi.eot");
+  src: url("//at.alicdn.com/t/font_271058_gf5jbg4wmq6qd7vi.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_271058_gf5jbg4wmq6qd7vi.woff") format("woff"), url("//at.alicdn.com/t/font_271058_gf5jbg4wmq6qd7vi.ttf") format("truetype"), url("//at.alicdn.com/t/font_271058_gf5jbg4wmq6qd7vi.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -473,8 +429,8 @@ input, button {
 .xm__icon--search:before {
   content: "\E613"; }
 
-.xm__icon--close:before {
-  content: "\E634"; }
+.xm__icon--clear:before {
+  content: "\E613"; }
 
 .xm__icon--loading {
   -webkit-animation: spin 2s linear infinite;
@@ -482,6 +438,16 @@ input, button {
 
 .xm__icon--loading:before {
   content: "\E69D"; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 .xm__btn {
   display: inline-block;
@@ -525,7 +491,7 @@ input, button {
     border: 1px solid #dddee1; }
   .xm__btn--default.is-long, .is-long.xm__btn--primary, .is-long.xm__btn--success, .is-long.xm__btn--warning, .is-long.xm__btn--error, .is-long.xm__btn--text {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--primary {
   color: #fff;
@@ -549,7 +515,7 @@ input, button {
     border: 1px solid #dddee1; }
   .xm__btn--primary.is-long {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--success {
   color: #fff;
@@ -573,7 +539,7 @@ input, button {
     border: 1px solid #dddee1; }
   .xm__btn--success.is-long {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--warning {
   color: #fff;
@@ -597,7 +563,7 @@ input, button {
     border: 1px solid #dddee1; }
   .xm__btn--warning.is-long {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--error {
   color: #fff;
@@ -621,7 +587,7 @@ input, button {
     border: 1px solid #dddee1; }
   .xm__btn--error.is-long {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--text {
   color: #495060;
@@ -638,29 +604,15 @@ input, button {
     pointer-events: none; }
   .xm__btn--text.is-long {
     width: 100%;
-    height: auto; }
+    height: 40px; }
 
 .xm__btn--block {
   display: block; }
 
 .xm__btn--group {
   position: relative;
-  vertical-align: middle;
-  display: flex; }
-  .xm__btn--group button {
-    flex: 1;
-    border-radius: 0; }
-  .xm__btn--group button:first-child {
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none; }
-  .xm__btn--group button:last-child {
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
+  display: inline-block;
+  vertical-align: middle; }
 
 .xm__hasIconBtn {
   padding: 11px 20px; }
@@ -806,117 +758,3 @@ input, button {
   transform: translateY(-50%);
   padding: 5px;
   color: #999; }
-
-.xm__mask {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(55, 55, 55, 0.6);
-  height: 100%;
-  z-index: 990; }
-  .xm__mask-hidden {
-    display: none; }
-
-.xm__dialog {
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  width: 85%;
-  max-width: 300px;
-  font-size: 16px;
-  overflow: hidden;
-  transition: .2s;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #fff;
-  transform: translate3d(-50%, -50%, 0);
-  z-index: 1000; }
-
-.xm__dialog--hd {
-  padding: 1.3em 1.6em 0.5em; }
-
-.xm__dialog--title {
-  font-weight: 400;
-  font-size: 18px; }
-
-.xm__dialog--bd {
-  padding: 0.5em 1.6em 0.8em;
-  min-height: 40px;
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
-  word-break: break-all;
-  color: #495060; }
-
-.xm__dialog--ft {
-  position: relative;
-  line-height: 48px; }
-
-.xm__dialog--ft button {
-  background-color: #fff; }
-  .xm__dialog--ft button span {
-    font-size: 15px; }
-
-.xm__dialog--ft .xm__btn--group button {
-  display: block;
-  flex: 1;
-  color: #495060;
-  text-decoration: none;
-  position: relative;
-  border-radius: 0;
-  border: none; }
-  .xm__dialog--ft .xm__btn--group button:hover, .xm__dialog--ft .xm__btn--group button:active {
-    background-color: #fff;
-    text-decoration: none;
-    color: #495060;
-    border: none; }
-  .xm__dialog--ft .xm__btn--group button:first-child {
-    border-right: none;
-    border-bottom-left-radius: 4px; }
-  .xm__dialog--ft .xm__btn--group button:last-child {
-    border-bottom-right-radius: 4px; }
-  .xm__dialog--ft .xm__btn--group button::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 200%;
-    height: 200%;
-    transform: scale(0.5);
-    transform-origin: 0px 0px 0px;
-    pointer-events: none;
-    box-sizing: border-box;
-    border: 1px solid #dddee1; }
-
-.xm__dialog--ft .xm__btn--default, .xm__dialog--ft .xm__btn--primary, .xm__dialog--ft .xm__btn--success, .xm__dialog--ft .xm__btn--warning, .xm__dialog--ft .xm__btn--error, .xm__dialog--ft .xm__btn--text {
-  display: block;
-  flex: 1;
-  color: #495060;
-  text-decoration: none;
-  position: relative;
-  border-radius: 0;
-  border: none;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
-  .xm__dialog--ft .xm__btn--default:hover, .xm__dialog--ft .xm__btn--primary:hover, .xm__dialog--ft .xm__btn--success:hover, .xm__dialog--ft .xm__btn--warning:hover, .xm__dialog--ft .xm__btn--error:hover, .xm__dialog--ft .xm__btn--text:hover, .xm__dialog--ft .xm__btn--default:active, .xm__dialog--ft .xm__btn--primary:active, .xm__dialog--ft .xm__btn--success:active, .xm__dialog--ft .xm__btn--warning:active, .xm__dialog--ft .xm__btn--error:active, .xm__dialog--ft .xm__btn--text:active {
-    background-color: #fff;
-    text-decoration: none;
-    color: #495060;
-    border: none; }
-  .xm__dialog--ft .xm__btn--default.is-long, .xm__dialog--ft .is-long.xm__btn--primary, .xm__dialog--ft .is-long.xm__btn--success, .xm__dialog--ft .is-long.xm__btn--warning, .xm__dialog--ft .is-long.xm__btn--error, .xm__dialog--ft .is-long.xm__btn--text {
-    height: auto; }
-  .xm__dialog--ft .xm__btn--default::before, .xm__dialog--ft .xm__btn--primary::before, .xm__dialog--ft .xm__btn--success::before, .xm__dialog--ft .xm__btn--warning::before, .xm__dialog--ft .xm__btn--error::before, .xm__dialog--ft .xm__btn--text::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 200%;
-    height: 200%;
-    transform: scale(0.5);
-    transform-origin: 0px 0px 0px;
-    pointer-events: none;
-    box-sizing: border-box;
-    border: 1px solid #dddee1; }

@@ -21,6 +21,7 @@
     <xm-button-group class="btn__group">
       <xm-button type="warning">警告按钮</xm-button>
       <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
+      <xm-button type="success" icon="xm__icon--loading">success按钮</xm-button>
     </xm-button-group>
     
 
@@ -47,7 +48,12 @@
 
 
     <h4>Modal弹出层</h4>
-
+    <xm-button type="success" @click="modalClick1">alert</xm-button>
+    <xm-button type="primary" @click="modalClick2">confirm</xm-button>
+    <xm-button type="error" @click="modalClick3">特殊应用层</xm-button>
+    <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
+    <xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
+    <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
 
     <h4>加载更多</h4>
     <xm-loadmore></xm-loadmore>
@@ -74,7 +80,11 @@ export default {
     return {
       msg: `xmui - 基于vue2.x，可复用UI组件`,
       value: '',
-      inputValue: ''
+      inputValue: '',
+      modalVisible1: false,
+      modalVisible2: false,
+      modalVisible3: false,
+      zIndex: 3000
     }
   },
   methods: {
@@ -87,10 +97,48 @@ export default {
     },
     inputAction (e) {
       this.inputValue = e
+    },
+    modalClick1 (e) {
+      // alert(this.modalVisible)
+      this.modalVisible1 = true
+      this.zIndex++
+    },
+    modalClick2 (e) {
+      // alert(this.modalVisible)
+      this.modalVisible2 = true
+      this.zIndex++
+    },
+    modalClick3 (e) {
+      // alert(this.modalVisible)
+      this.modalVisible3 = true
+      this.zIndex++
+    },
+    modalClose1 (e) {
+      this.modalVisible1 = false
+      // alert(this.modalVisible)
+    },
+    modalClose2 (e) {
+      this.modalVisible2 = false
+      // alert(this.modalVisible)
+    },
+    modalClose3 (e) {
+      this.modalVisible3 = false
+      // alert(this.modalVisible)
+    },
+    modalOk1 (e) {
+      alert(`好的1`)
+      this.modalVisible1 = false
+      // alert(this.modalVisible)
+    },
+    modalOk2 (e) {
+      alert(`好的2`)
+      this.modalVisible2 = false
+      // alert(this.modalVisible)
     }
   },
   mounted: () => {
-    // console.log('1111')
+    // alert(this.modalVisible)
+    // this.$modal()
   }
 }
 </script>
@@ -127,18 +175,23 @@ h2{
   border: 1px solid #eee;
   padding: 10px;
   position: relative;
+  margin: 0 20px;
 }
 .btn__group::before{
   content: '按钮组';
   font-size:12px;
   position: absolute;
   top: -6px;
-  left: -20px;
+  right: -20px;
   background: #fff;
   color: #aaa;
 }
 .btn__block{
   margin: 0 auto!important;
+}
+.xm__dialog--special .xm__dialog--bd img{
+  width: 100%;
+  border-radius: 4px;
 }
 </style>
 

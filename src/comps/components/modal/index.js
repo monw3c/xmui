@@ -1,7 +1,7 @@
-import Button from './button.vue'
-import ButtonGroup from './buttonGroup.vue'
+import Modal from './modal.vue'
+import SpModal from './sp-modal.vue'
 
 export {
-    Button,
-    ButtonGroup
+  Modal,
+  SpModal
 }

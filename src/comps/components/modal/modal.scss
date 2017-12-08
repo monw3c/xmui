@@ -1,232 +1,130 @@
-.xm__btn {
-    display: inline-block;
-    line-height: 1;
-    cursor: pointer;
-    color: rgb(31, 45, 61);
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    font-size: 14px;
-    background: rgb(255, 255, 255);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(191, 203, 217);
-    border-image: initial;
-    margin: 0px;
-    border-radius: 4px;
-    padding: 12px 20px;
-    position: relative;
+.xm__mask {
+    @include mask
 } 
 
-.xm__btn--default{
+.xm__dialog{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 300px;
+    font-size: 16px;
+    overflow: hidden;
+    transition: .2s;
+    @include border-radius;
+    background-color: $body-background;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: $zindex-modal;
+}
+
+.xm__dialog--hd {
+    padding: 1.3em 1.6em 0.5em;
+}
+
+.xm__dialog--title {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.xm__dialog--bd {
+    padding: 0.5em 1.6em 0.8em;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: $line-height-base;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $text-color;
+}
+
+.xm__dialog--ft {
+    position: relative;
+    line-height: 48px;
+}
+
+.xm__dialog--ft button{
+    background-color: $body-background;
+    
+    & span{
+        font-size: 15px; 
+    }
+}
+
+.xm__dialog--ft .xm__btn--group button{
+    display: block;
+    flex: 1;
     color: $btn-default-color;
-    background: $btn-default-bg;
-    border: $border-width-default $border-style-default $border-color-base;
-	@include border-radius;
-
-	&:hover,
-    &:active {
-        background-color: $btn-primary-bg;
-        text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-primary-bg;
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &.is-round {
-        @include border-radius(20px);
-    }
-
-    &.is-plain {
-        color: $btn-plain-color;
-        background: $btn-plain-bg;
-        border: $border-width-default $border-style-default $border-color-base;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
-    }
-}
-
-.xm__btn--primary{
-	@extend .xm__btn--default;
-	color: $btn-primary-color;
-	background: $btn-primary-bg;
-    border: $border-width-default $border-style-default $btn-primary-bg;
-    
-    &:hover,
-    &:active {
-        background-color: $btn-primary-bg;
-        text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-primary-bg;
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &.is-round {
-        @include border-radius(20px);
-    }
-
-    &.is-plain {
-        color: $btn-plain-color;
-        background: $btn-plain-bg;
-        border: $border-width-default $border-style-default $border-color-base;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
-    }
-}
-
-.xm__btn--success{
-	@extend .xm__btn--default;
-	color: $btn-success-color;
-	background: $btn-success-bg;
-    border: $border-width-default $border-style-default $btn-success-bg;
-    
-    &:hover,
-    &:active {
-        background-color: $btn-success-bg;
-        text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-success-bg;
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &.is-round {
-        @include border-radius(20px);
-    }
-
-    &.is-plain {
-        color: $btn-plain-color;
-        background: $btn-plain-bg;
-        border: $border-width-default $border-style-default $border-color-base;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
-    }
-}
-
-.xm__btn--warning{
-	@extend .xm__btn--default;
-	color: $btn-warning-color;
-	background: $btn-warning-bg;
-    border: $border-width-default $border-style-default $btn-warning-bg;
-    
-    &:hover,
-    &:active {
-        background-color: $btn-warning-bg;
-        text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-warning-bg;
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &.is-round {
-        @include border-radius(20px);
-    }
-
-    &.is-plain {
-        color: $btn-plain-color;
-        background: $btn-plain-bg;
-        border: $border-width-default $border-style-default $border-color-base;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
-    }
-}
-
-.xm__btn--error{
-	@extend .xm__btn--default;
-	color: $btn-error-color;
-	background: $btn-error-bg;
-    border: $border-width-default $border-style-default $btn-error-bg;
-    
-    &:hover,
-    &:active {
-        background-color: $btn-error-bg;
-        text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-error-bg;
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    &.is-round {
-        @include border-radius(20px);
-    }
-
-    &.is-plain {
-        color: $btn-plain-color;
-        background: $btn-plain-bg;
-        border: $border-width-default $border-style-default $border-color-base;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
-    }
-}
-
-.xm__btn--text{
-	@extend .xm__btn--default;
-	color: $btn-text-color;
-	background: $btn-text-bg;
+    text-decoration: none;
+    position: relative;
+    border-radius: 0;
     border: none;
-    
+
     &:hover,
     &:active {
-        background-color: $btn-text-bg;
+        background-color: $plain-color;
         text-decoration: none;
         color: $text-color;
-        border-color: $btn-text-bg;
+        border: none;
     }
 
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.5;
+    &:first-child{
+        border-right:none;
+        border-bottom-left-radius: 4px;
+    }
+
+    &:last-child{
+        border-bottom-right-radius: 4px;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0px 0px 0px;
         pointer-events: none;
-    }
-
-    &.is-long {
-        @include size(100%,40px)
+        box-sizing: border-box;
+        border: 1px solid $border-color-base;
     }
 }
 
-.xm__btn--block {
-	display: block;
-}
+.xm__dialog--ft .xm__btn--default{
+    display: block;
+    flex: 1;
+    color: $btn-default-color;
+    text-decoration: none;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 
-.xm__btn--group {
-	position: relative;
-    display: inline-block;
-    vertical-align: middle;    
-}
+    &:hover,
+    &:active {
+        background-color: $plain-color;
+        text-decoration: none;
+        color: $text-color;
+        border: none;
+    }
 
-.xm__hasIconBtn{
-    padding: 11px 20px;
+    &.is-long{
+        height: auto;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0px 0px 0px;
+        pointer-events: none;
+        box-sizing: border-box;
+        border: 1px solid $border-color-base;
+    }
 }

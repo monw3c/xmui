@@ -1,22 +1,29 @@
 # Modal 弹出层
 ----
-<!-- ### 基础用法
- 使用```action-text-color```、```bg-color```和```placeholder```属性来定义 Search 的样式。
+### 基础用法
+ 使用```type```、```:visible```、```@close```、```@confirm```、```dialog-title```、```color```、```:z-index```和```:mask-closable```属性来定义 Modal 的样式。
 ``` html
-<form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value"></xm-search></form>
+<xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
+<xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
+```
 
-<xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
+### 特殊弹出层，是用在活动页面的弹出层，一般为图片展示用
+``` html
+<xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
 ```
 
 ### 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| action-text-color  | 方法文字颜色   | string    |  自定义  |     —    |
-| bg-color     | 背景颜色   | string  | 自定义 |  —   |
-| placeholder     | placeholder   | string    | 自定义 |   请输入搜索关键字    |
+| type  | 类型   | string    |  alert，confirm  |     —    |
+| visible     | 显示钩子   | string  | 自定义 |  —   |
+| mask-closable     | 可否点击背景关闭   | Boolean    | - |   true    |
+| color     | 确定文字颜色   | string  | 自定义 |  —   |
+| z-index     | z-index   | string  | 自定义 |  —   |
+| dialog-title     | 是否有标题内容   | string  | 自定义 | 无标题  |
 
 ### 方法
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| action     | 按钮操作   | string    |  自定义  |     —    |
-| input     | input监听方法   | string  |  自定义  |  —   | -->
+| close     | 取消操作   | Function    |  自定义  |     —    |
+| confirm     | 确定操作   | Function  |  自定义  |  —   |

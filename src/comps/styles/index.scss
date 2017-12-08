@@ -1,6 +1,7 @@
 @import "varibles";
 @import "mixin";
 @import "normalize";
+@import "animation";
 @import "common";
 @import "icon";
 
@@ -8,3 +9,4 @@
 @import "../components/loadmore/loadMore.scss";
 @import "../components/tag/tag.scss";
 @import "../components/search/search.scss";
+@import "../components/modal/modal.scss";
