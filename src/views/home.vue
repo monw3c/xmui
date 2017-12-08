@@ -56,7 +56,7 @@
     <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
 
     <h4>加载更多</h4>
-    <xm-loadmore></xm-loadmore>
+    <xm-loadmore @action="loadMore"></xm-loadmore>
     <xm-loadmore icon color="#2d8cf0">loading...</xm-loadmore>
     <xm-loadmore no-data>暂无数据</xm-loadmore>
     <xm-loadmore no-data>▪</xm-loadmore>
@@ -90,6 +90,9 @@ export default {
   methods: {
     btnClick () {
       alert(1)
+    },
+    loadMore () {
+      alert(`loadMore`)
     },
     searchAction (e) {
       this.value = e

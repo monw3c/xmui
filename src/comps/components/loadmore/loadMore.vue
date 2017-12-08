@@ -5,6 +5,7 @@
         :class="[
         {'xm__loadmore--line is-no-data':noData}
         ]"
+        @click="loadMoreAction"
     >   
         <i v-if="icon && !noData" class="xm__icon--loading"></i>
         <span class="xm__loadmore--tips"><slot>加载更多</slot></span>
@@ -27,6 +28,11 @@ export default {
     noData: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    loadMoreAction () {
+      this.$emit('action')
     }
   }
 }
