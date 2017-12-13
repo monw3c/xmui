@@ -5,7 +5,7 @@ import xmui from './comps/index'
 
 Vue.use(xmui)
 Vue.config.productionTip = false
-
+/* eslint-disable */
 new Vue({
   el: '#app',
   router,

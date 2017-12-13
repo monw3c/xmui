@@ -3,7 +3,7 @@
     <h1><img src="../assets/logo.png"/></h1>
     <h3>{{ msg }}</h3>
 
-    <h2>通用组件</h2>
+    <h2>基础组件</h2>
     <h4>按钮</h4>
     <xm-button>普通按钮</xm-button>
     <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
@@ -33,10 +33,22 @@
     <xm-tag type="error" round>error</xm-tag>
     <xm-tag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
 
+
     <h4>搜索框</h4>
     <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
     <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value"></xm-search></form>
     <xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
+
+
+    <h4>加载更多</h4>
+    <xm-loadmore @action="loadMore"></xm-loadmore>
+    <xm-loadmore icon color="#2d8cf0">loading...</xm-loadmore>
+    <xm-loadmore no-data>暂无数据</xm-loadmore>
+    <xm-loadmore no-data>▪</xm-loadmore>
+
+
+    <h4>表单</h4>
+
 
     <h4>头部</h4>
 
@@ -47,7 +59,8 @@
     <h4>tab切换</h4>
 
 
-    <h4>Modal弹出层</h4>
+    <h2>弹出层</h2>
+    <h4>Modal</h4>
     <xm-button type="success" @click="modalClick1">alert</xm-button>
     <xm-button type="primary" @click="modalClick2">confirm</xm-button>
     <xm-button type="error" @click="modalClick3">特殊应用层</xm-button>
@@ -58,21 +71,24 @@
     <xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
     <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
 
-    <h4>加载更多</h4>
-    <xm-loadmore @action="loadMore"></xm-loadmore>
-    <xm-loadmore icon color="#2d8cf0">loading...</xm-loadmore>
-    <xm-loadmore no-data>暂无数据</xm-loadmore>
-    <xm-loadmore no-data>▪</xm-loadmore>
 
-    <h4>表单</h4>
+    <h4>Toast</h4>
 
 
 
-    <h2>应用组件</h2>
+    <h4>Loading</h4>
+    <xm-loading></xm-loading>
+    <!-- 自定义定位右上角 -->
+    <xm-loading class="right-top-loading" width="20" height="20" color="#ed3f14"></xm-loading>
+    <xm-loading has-text>自定义文字</xm-loading>
+    <!-- 测试开启 -->
+    <!-- <xm-loading has-text fullScreen>全屏的loading</xm-loading> -->
+    <xm-loading has-text vertical>垂直的loading</xm-loading>
+    <!-- <h2>应用组件</h2>
 
     <h4>投票</h4>
 
-    
+     -->
 
   </div>
 </template>
@@ -117,13 +133,7 @@ export default {
       })
     },
     btnClick () {
-      this.$modal.alert({
-        title: '提示',
-        content: '网络有问题，请重新提交',
-        color: '#19be6b',
-        // autoClose: true,
-        maskClose: false
-      })
+
     },
     loadMore () {
       alert(`loadMore`)
@@ -229,6 +239,17 @@ h2{
 .xm__dialog--special .xm__dialog--bd img{
   width: 100%;
   border-radius: 4px;
+}
+.xm__loading--wrap{
+  margin: 15px auto;
+}
+.right-top-loading{
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}
+.right-top-loading.xm__loading--wrap{
+  margin: 0;
 }
 </style>
 

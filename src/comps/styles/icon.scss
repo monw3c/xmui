@@ -25,7 +25,7 @@
 
 .xm__icon--close:before { content: "\e634"; }
 
-.xm__icon--loading{ -webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+.xm__icon--loading{ animation: spin 1250ms linear infinite;}
 .xm__icon--loading:before { content: "\e69d";}
 
 

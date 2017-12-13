@@ -1,3 +1,3 @@
-import loadMore from './loadMore.vue'
+import LoadMore from './loadMore.vue'
 
-export default loadMore
+export default LoadMore

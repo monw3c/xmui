@@ -421,30 +421,10 @@ template {
   to {
     opacity: 0; } }
 
-@keyframes fold-in {
-  0% {
-    transform: translate3d(0, 100%, 0); }
-  50% {
-    transform: translate3d(0, 50%, 0); }
-  100% {
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes fold-out {
-  0% {
-    transform: translate3d(0, 0, 0); }
-  50% {
-    transform: translate3d(0, 50%, 0); }
-  100% {
-    transform: translate3d(0, 100%, 0); } }
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 input, button {
@@ -477,8 +457,7 @@ input, button {
   content: "\E634"; }
 
 .xm__icon--loading {
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite; }
+  animation: spin 1250ms linear infinite; }
 
 .xm__icon--loading:before {
   content: "\E69D"; }
@@ -920,3 +899,40 @@ input, button {
     pointer-events: none;
     box-sizing: border-box;
     border: 1px solid #dddee1; }
+
+.xm__loading .xm__loading--loader {
+  animation: spin 1250ms linear infinite;
+  border: 2px solid #2d8cf0;
+  border-right-color: transparent;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px; }
+
+.xm__loading.xm__loading--fullScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 14px 10px 10px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  z-index: 1070; }
+
+.xm__loading .xm__loading--vertical {
+  margin: 0 auto;
+  display: block; }
+
+.xm__loading .xm__loading--text {
+  display: inline-block;
+  height: 34px;
+  line-height: 36px;
+  font-size: 14px;
+  vertical-align: top; }

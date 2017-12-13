@@ -3,6 +3,7 @@ import {Button, ButtonGroup} from './components/button/index'
 import Tag from './components/tag/index'
 import LoadMore from './components/loadMore/index'
 import Search from './components/search/index'
+import Loading from './components/loading/index'
 import { Modal, SpModal } from './components/modal/index'
 
 import GlobalModal from './components/globalmodal/index'
@@ -14,7 +15,8 @@ const components = [
   LoadMore,
   Search,
   Modal,
-  SpModal
+  SpModal,
+  Loading
 ]
 
 const install = function (Vue) {

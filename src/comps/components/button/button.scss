@@ -237,7 +237,7 @@
         border-right: none;
     }
     & button:last-child{
-        @include border-radius();
+        @include border-radius;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
