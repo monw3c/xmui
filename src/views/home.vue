@@ -51,6 +51,9 @@
     <xm-button type="success" @click="modalClick1">alert</xm-button>
     <xm-button type="primary" @click="modalClick2">confirm</xm-button>
     <xm-button type="error" @click="modalClick3">特殊应用层</xm-button>
+    <xm-button type="success" @click="modalClick4">全局alert层</xm-button>
+    <xm-button type="primary" @click="modalClick5">全局confirm层,带回调函数</xm-button>
+
     <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
     <xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
     <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
@@ -88,8 +91,39 @@ export default {
     }
   },
   methods: {
+    modalClick4 () {
+      this.$modal.alert({
+        title: '这里可以自定义',
+        content: '开启3秒关闭，取消背景层关闭',
+        color: '#19be6b',
+        autoClose: true,
+        maskClosable: false
+      })
+    },
+    modalClick5 () {
+      this.$modal.confirm({
+        title: '提示',
+        content: '你想怎么样呢？',
+        color: '#19be6b',
+        callBack () {
+          this.$modal.alert({
+            title: '这里可以自定义',
+            content: '开启3秒关闭，取消背景层关闭',
+            color: '#19be6b',
+            autoClose: true,
+            maskClosable: false
+          })
+        }
+      })
+    },
     btnClick () {
-      alert(1)
+      this.$modal.alert({
+        title: '提示',
+        content: '网络有问题，请重新提交',
+        color: '#19be6b',
+        // autoClose: true,
+        maskClose: false
+      })
     },
     loadMore () {
       alert(`loadMore`)
@@ -141,7 +175,7 @@ export default {
   },
   mounted: () => {
     // alert(this.modalVisible)
-    // this.$modal()
+
   }
 }
 </script>

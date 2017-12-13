@@ -27,3 +27,36 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | close     | 取消操作   | Function    |  自定义  |     —    |
 | confirm     | 确定操作   | Function  |  自定义  |  —   |
+
+##  
+## 全局弹出层
+``` js
+this.$modal.confirm(title, content, color, maskClosable, callBack)
+this.$modal.alert(title, content, color, autoClose, maskClosable, callBack)
+
+this.$modal.confirm({
+        title: '提示',
+        content: '你想怎么样呢？',
+        color: '#19be6b',
+        callBack () {
+          this.$modal.alert({
+            title: '这里可以自定义',
+            content: '开启3秒关闭，取消背景层关闭',
+            color: '#19be6b',
+            autoClose: true,
+            maskClosable: false
+          })
+        }
+})
+```
+
+### 属性
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| title  | 标题   | string    |  自定义  |   —    |
+| content     | 内容   | string  | 自定义 |  —   |
+| maskClosable   | 可否点击背景关闭   | Boolean    | - |   true    |
+| color     | 确定文字颜色   | string  | 自定义 |  -   |
+| autoClose    | 自动关闭   | Boolean  | - |  默认为3秒，alert有，confirm无   |
+| callBack     | 回调函数   | Function  | 自定义 | -  |
+

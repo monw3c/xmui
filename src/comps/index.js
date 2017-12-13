@@ -3,7 +3,9 @@ import {Button, ButtonGroup} from './components/button/index'
 import Tag from './components/tag/index'
 import LoadMore from './components/loadMore/index'
 import Search from './components/search/index'
-import {Modal, SpModal} from './components/modal/index'
+import { Modal, SpModal } from './components/modal/index'
+
+import GlobalModal from './components/globalmodal/index'
 
 const components = [
   Button,
@@ -19,7 +21,7 @@ const install = function (Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
 
-  Vue.prototype.$Modal = Modal
+  Vue.prototype.$modal = GlobalModal
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

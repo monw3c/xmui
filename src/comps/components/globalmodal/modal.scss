@@ -1,0 +1,130 @@
+.xm__mask {
+    @include mask
+} 
+
+.xm__dialog{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 300px;
+    font-size: 16px;
+    overflow: hidden;
+    transition: .2s;
+    @include border-radius;
+    background-color: $body-background;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: $zindex-modal;
+}
+
+.xm__dialog--hd {
+    padding: 1.3em 1.6em 0.5em;
+}
+
+.xm__dialog--title {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.xm__dialog--bd {
+    padding: 0.5em 1.6em 0.8em;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: $line-height-base;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $text-color;
+}
+
+.xm__dialog--ft {
+    position: relative;
+    line-height: 48px;
+}
+
+.xm__dialog--ft button{
+    background-color: $body-background;
+    
+    & span{
+        font-size: 15px; 
+    }
+}
+
+.xm__dialog--ft .xm__btn--group button{
+    display: block;
+    flex: 1;
+    color: $btn-default-color;
+    text-decoration: none;
+    position: relative;
+    border-radius: 0;
+    border: none;
+
+    &:hover,
+    &:active {
+        background-color: $plain-color;
+        text-decoration: none;
+        color: $text-color;
+        border: none;
+    }
+
+    &:first-child{
+        border-right:none;
+        border-bottom-left-radius: 4px;
+    }
+
+    &:last-child{
+        border-bottom-right-radius: 4px;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0px 0px 0px;
+        pointer-events: none;
+        box-sizing: border-box;
+        border: 1px solid $border-color-base;
+    }
+}
+
+.xm__dialog--ft .xm__btn--default{
+    display: block;
+    flex: 1;
+    color: $btn-default-color;
+    text-decoration: none;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    &:hover,
+    &:active {
+        background-color: $plain-color;
+        text-decoration: none;
+        color: $text-color;
+        border: none;
+    }
+
+    &.is-long{
+        height: auto;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0px 0px 0px;
+        pointer-events: none;
+        box-sizing: border-box;
+        border: 1px solid $border-color-base;
+    }
+}
