@@ -18,6 +18,12 @@
 cnpm install x-m-ui --save
 ```
 
+## 查看示例  
+
+dist/index.html  
+(暂时有点丑，请见谅，抽时间集成进docs)
+
 ## 贡献
 
+在此不一一感谢所有付出脑力体力的同仁，如觉得有侵权，请与我们联系
 如果你在使用时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/monw3c/xmui/issues) 或 [Pull Request](https://github.com/monw3c/xmui/pulls)

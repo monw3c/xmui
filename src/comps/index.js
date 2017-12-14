@@ -4,6 +4,7 @@ import Tag from './components/tag/index'
 import LoadMore from './components/loadMore/index'
 import Search from './components/search/index'
 import Loading from './components/loading/index'
+import Step from './components/step/index'
 import { Modal, SpModal } from './components/modal/index'
 
 import GlobalModal from './components/globalmodal/index'
@@ -16,7 +17,8 @@ const components = [
   Search,
   Modal,
   SpModal,
-  Loading
+  Loading,
+  Step
 ]
 
 const install = function (Vue) {

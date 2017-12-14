@@ -6,11 +6,11 @@
     <h2>基础组件</h2>
     <h4>按钮</h4>
     <xm-button>普通按钮</xm-button>
-    <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
-    <xm-button type="error" icon="xm__icon--link" ></xm-button>
+    <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >primary按钮</xm-button>
+    <xm-button type="error" icon="xm__icon--checked" ></xm-button>
     <xm-button type="warning" disabled>禁止按钮</xm-button>
     <xm-button plain>简约按钮</xm-button>
-    <xm-button type="text" icon="xm__icon--link">文字按钮</xm-button>
+    <xm-button type="text" icon="xm__icon--checked">文字按钮</xm-button>
     <xm-button loading type="success">loading状态按钮</xm-button>
     <xm-button bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-button>
     <br/><br/>
@@ -20,7 +20,7 @@
     <br/><br/>
     <xm-button-group class="btn__group">
       <xm-button type="warning">警告按钮</xm-button>
-      <xm-button type="primary" @click="btnClick" icon="xm__icon--link" >primary按钮</xm-button>
+      <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >primary按钮</xm-button>
       <xm-button type="success" icon="xm__icon--loading">success按钮</xm-button>
     </xm-button-group>
     
@@ -84,11 +84,12 @@
     <!-- 测试开启 -->
     <!-- <xm-loading has-text fullScreen>全屏的loading</xm-loading> -->
     <xm-loading has-text vertical>垂直的loading</xm-loading>
-    <!-- <h2>应用组件</h2>
+    
+    
+    <h2>应用组件</h2>
 
-    <h4>投票</h4>
-
-     -->
+    <h4>工单流程</h4>
+    <xm-step :step="step" :step-list="stepList"></xm-step>
 
   </div>
 </template>
@@ -103,7 +104,9 @@ export default {
       modalVisible1: false,
       modalVisible2: false,
       modalVisible3: false,
-      zIndex: 3000
+      zIndex: 3000,
+      stepList: ['发起工单', '主管审批', '经理审批', '总监核查', '结束'],
+      step: 2
     }
   },
   methods: {
