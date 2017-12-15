@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <div id="aside">
-      <router-view></router-view>
+      <!-- nav -->
     </div>
-    <!-- <router-view/> -->
     <div id="demo-wrap">
-      
+      <router-view></router-view>
     </div>
     
   </div>
