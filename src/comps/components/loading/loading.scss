@@ -8,7 +8,7 @@
         animation: spin 1250ms linear infinite;
         border: 2px solid $primary-color;
         border-right-color: transparent;
-        @include border-radius(16px);
+        @include border-radius(100px);
         box-sizing: border-box;
         display: inline-block;
         position: relative;

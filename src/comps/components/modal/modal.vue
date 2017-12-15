@@ -1,5 +1,5 @@
 <template>
-  <transition name="modal-fade">
+  <transition name="fade">
     <div class="xm__dialog--wrap" v-if="isVisible" ref="modal" >
       <div class="xm__mask" @click="maskClose"></div>
       <div class="xm__dialog" :style="{'z-index':zIndex}">

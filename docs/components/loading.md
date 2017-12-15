@@ -1,7 +1,7 @@
 # Loading 加载组件
 ----
 ### 基础用法
-使用```width```、```height```、```color```、```fullScreen```、```vertical```和```has-text```属性来定义 Loading 的样式。
+使用```width```、```height```、```color```、```fullScreen```、```border-width```、```vertical```和```has-text```属性来定义 Loading 的样式。
 ``` html
 <xm-loading></xm-loading>
 <!-- 自定义定位右上角 -->

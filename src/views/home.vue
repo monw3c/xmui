@@ -73,8 +73,9 @@
 
 
     <h4>Toast</h4>
-
-
+    <xm-button type="success" @click="toastClick1">文字</xm-button>
+    <xm-button type="primary" @click="toastClick2">loading</xm-button>
+  
 
     <h4>Loading</h4>
     <xm-loading></xm-loading>
@@ -83,7 +84,7 @@
     <xm-loading has-text>自定义文字</xm-loading>
     <!-- 测试开启 -->
     <!-- <xm-loading has-text fullScreen>全屏的loading</xm-loading> -->
-    <xm-loading has-text vertical>垂直的loading</xm-loading>
+    <xm-loading has-text vertical border-width="8">垂直的loading</xm-loading>
     
     
     <h2>应用组件</h2>
@@ -110,6 +111,14 @@ export default {
     }
   },
   methods: {
+    toastClick1 () {
+      this.$toast.text({content: '太长会换行呢，15个字以内最好', direction: 'bottom'})
+    },
+    toastClick2 () {
+      this.$toast.loading({
+        mask: false
+      })
+    },
     modalClick4 () {
       this.$modal.alert({
         title: '这里可以自定义',
@@ -176,7 +185,7 @@ export default {
       // alert(this.modalVisible)
     },
     modalOk1 (e) {
-      alert(`好的1`)
+      // alert(`好的1`)
       this.modalVisible1 = false
       // alert(this.modalVisible)
     },
@@ -238,6 +247,9 @@ h2{
 }
 .btn__block{
   margin: 0 auto!important;
+}
+.xm__btn,.xm__tag{
+  margin-bottom: 10px;
 }
 .xm__dialog--special .xm__dialog--bd img{
   width: 100%;

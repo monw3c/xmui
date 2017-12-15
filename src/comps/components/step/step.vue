@@ -2,7 +2,7 @@
     <div class="xm__steps xm__steps--horizontal">
       <div class="xm__steps--items">
         <div class="xm__step" 
-        :class="['xm__step--'+type,
+        :class="['xm__step--'+direction,
         {'xm__step--process':step==index,
         'xm__step--finish':step>index}]" 
         v-for="(stepItem,index) in stepList" 
@@ -34,15 +34,7 @@ export default {
       type: Array,
       default: () => {}
     },
-    height: {
-      type: String,
-      default: ''
-    },
-    fullScreen: {
-      type: Boolean,
-      default: false
-    },
-    type: {
+    direction: {
       type: String,
       default: 'horizontal'
     }

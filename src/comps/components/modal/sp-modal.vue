@@ -1,6 +1,6 @@
 /* special modal特殊的弹出层，可用于活动专题 */
 <template>
-  <transition name="modal-fade">
+  <transition name="fade">
     <div class="xm__dialog--wrap" v-if="isVisible" ref="modal" >
       <div class="xm__mask" @click="maskClose"></div>
       <div class="xm__dialog xm__dialog--special" :style="{'z-index':zIndex}">

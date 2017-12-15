@@ -1,5 +1,5 @@
 <template>
-  <transition name="modal-fade">
+  <transition name="fade">
     <div class="xm__dialog--wrap" v-show="isVisible" ref="modal" >
       <div class="xm__mask" @click="maskClose"></div>
       <div class="xm__dialog">
@@ -64,16 +64,23 @@ export default {
     close () {
       this.$emit('close')
       this.isVisible = false
+      this.destroyed()
     },
     confirm () {
       this.$emit('confirm')
       this.isVisible = false
       this.callBack()
+      this.destroyed()
     },
     maskClose () {
       if (this.maskClosable) {
         this.close()
       }
+    },
+    destroyed () {
+      setTimeout(() => {
+        this.$destroy()
+      }, 200)
     }
   },
   mounted () {

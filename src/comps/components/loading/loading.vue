@@ -12,7 +12,7 @@
           :class="[
           {'xm__loading--vertical':vertical,'borderRightTransparent':color}
           ]"
-          :style="{'width': width+'px','height': height+'px','border-color': color}"
+          :style="{'width': width+'px','height': height+'px','border-color': color,'border-width': borderWidth+'px'}"
           ></span>
           <span class="xm__loading--text" v-if="hasText"><slot>加载中...</slot></span>
       </div>
@@ -34,6 +34,10 @@ export default {
       default: ''
     },
     height: {
+      type: String,
+      default: ''
+    },
+    borderWidth: {
       type: String,
       default: ''
     },

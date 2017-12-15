@@ -8,6 +8,7 @@ import Step from './components/step/index'
 import { Modal, SpModal } from './components/modal/index'
 
 import GlobalModal from './components/globalmodal/index'
+import Toast from './components/toast/index'
 
 const components = [
   Button,
@@ -26,6 +27,7 @@ const install = function (Vue) {
   components.map(component => Vue.component(component.name, component))
 
   Vue.prototype.$modal = GlobalModal
+  Vue.prototype.$toast = Toast
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
