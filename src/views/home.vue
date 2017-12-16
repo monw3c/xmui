@@ -48,6 +48,7 @@
 
 
     <h4>表单</h4>
+    <xm-input v-model="value1" icon="xm__icon--search"></xm-input>
 
 
     <h4>导航栏(顶部)</h4>
