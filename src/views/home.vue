@@ -14,9 +14,9 @@
     <xm-button loading type="success">loading状态按钮</xm-button>
     <xm-button bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-button>
     <br/><br/>
-    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block class="btn__block">块按钮</xm-button>
+    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block no-radius class="btn__block">无圆角的块按钮</xm-button>
     <br/>
-    <xm-button round long>长按钮</xm-button>
+    <xm-button round long>圆角长按钮</xm-button>
     <br/><br/>
     <xm-button-group class="btn__group">
       <xm-button type="warning">警告按钮</xm-button>
@@ -29,14 +29,14 @@
     <xm-tag>普通</xm-tag>
     <xm-tag type="primary">primary</xm-tag>
     <xm-tag type="success">success</xm-tag>
-    <xm-tag type="warning">warning</xm-tag>
+    <xm-tag type="warning" round>warning</xm-tag>
     <xm-tag type="error" round>error</xm-tag>
     <xm-tag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
-
+    <xm-tag type="success" closable>success</xm-tag>
 
     <h4>搜索框</h4>
     <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
-    <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value"></xm-search></form>
+    <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"></xm-search></form>
     <xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
 
 
@@ -48,16 +48,58 @@
 
 
     <h4>表单</h4>
-    <xm-input v-model="value1" icon="xm__icon--search"></xm-input>
+    <div class="form-demo">
+      <xm-cell-group>
+        <!-- <div slot="top">头部的</div> -->
+        <xm-cell-item>
+          <span slot="left">用户名：</span>
+          <xm-input slot="right" v-model="value1" placeholder="请输入用户名"></xm-input>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="left">密  码：</span>
+          <xm-input slot="right" type="password" v-model="value1" placeholder="请输入密码"></xm-input>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="leftIcon" class="xm__icon--phone"></span>
+          <xm-input slot="right" type="tel" v-model="value1" placeholder="请输入手机号"></xm-input>
+          <xm-button slot="right" type="warning" class="btn__block" style="padding: 6px;width: 120px;font-size: 12px;">获取验证码</xm-button>
+        </xm-cell-item>
+        <xm-cell-item>
+          <xm-input slot="right" v-model="value1" placeholder="请输入文字"></xm-input>
+          <span slot="rightIcon" class="xm__icon--delete"></span>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="leftIcon" class="xm__icon--contact"></span>
+          <span slot="left">联系方式</span>
+          <span slot="right">400517517</span>
+        </xm-cell-item>
+        <xm-cell-item arrow>
+          <span slot="left">我的消息</span>
+          <xm-tag slot="right" type="error" round right style="margin-bottom:0;">8</xm-tag>
+          <span slot="rightIcon" class="xm__icon--right"></span>
+        </xm-cell-item>
+        <!-- <div slot="bottom">底部的</div> -->
+      </xm-cell-group>
+    </div>
+
+
+    <h4>网格</h4>
+
 
 
     <h4>导航栏(顶部)</h4>
 
 
+
+
     <h4>标签栏(底部)</h4>
 
 
+
+
     <h4>tab切换</h4>
+
+
 
 
     <h2>弹出层</h2>
@@ -102,6 +144,7 @@ export default {
     return {
       msg: `xmui - 基于vue2.x，可复用UI组件`,
       value: '',
+      value1: '',
       inputValue: '',
       modalVisible1: false,
       modalVisible2: false,
@@ -204,6 +247,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#demo-wrap{
+  margin: 10px auto;
+}
 .wrap{
   margin: 10px;
 }
@@ -218,18 +264,19 @@ h4{
   font-weight: normal;
   font-size: 14px;
   text-align: left;
-  border-bottom: 1px dashed #ededed;
+  background-color: #e9e9e9;
   padding: 10px;
 }
 h2{
   text-align: left;
   width: 100%;
-  background-color: #f5f5f5;
+  border-bottom: 1px dashed #ededed;
   font-size: 16px;
   height: 40px;
   line-height: 40px;
   text-indent: 10px;
   margin-top: 30px;
+  margin-bottom: 0;
 }
 .btn__group{
   border: 1px solid #eee;
@@ -266,6 +313,12 @@ h2{
 }
 .right-top-loading.xm__loading--wrap{
   margin: 0;
+}
+.form-demo{
+  width: 98%;
+  margin: 0 auto;
+  background: #f5f5f5;
+  padding: 1%;
 }
 </style>
 

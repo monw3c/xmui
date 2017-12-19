@@ -1,4 +1,5 @@
 import './styles/index.scss'
+
 import {Button, ButtonGroup} from './components/button/index'
 import Tag from './components/tag/index'
 import LoadMore from './components/loadMore/index'
@@ -7,6 +8,7 @@ import Loading from './components/loading/index'
 import Step from './components/step/index'
 import Input from './components/input/index'
 import { Modal, SpModal } from './components/modal/index'
+import { CellItem, CellGroup } from './components/cell/index'
 
 import GlobalModal from './components/globalmodal/index'
 import Toast from './components/toast/index'
@@ -21,7 +23,9 @@ const components = [
   SpModal,
   Loading,
   Step,
-  Input
+  Input,
+  CellItem,
+  CellGroup
 ]
 
 const install = function (Vue) {

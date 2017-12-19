@@ -8,17 +8,21 @@
 }
 
 .xm__input {
-    flex: 1;
-    @include size(100%,32px);
-    line-height: $line-height-base;
-    padding: 4px 7px;
-    font-size: $font-size-small;
-    border: 1px solid #dddee1;
-    @include border-radius;
-    color: $text-color;
-    background-color: $body-background;
-    background-image: none;
-    position: relative;
-    cursor: text;
-    transition: border .2s ease-in-out,background .2s ease-in-out,box-shadow .2s ease-in-out;
+    display: flex;
+    @include size(100%,100%);
+    align-items: center;
+
+    > input {
+        display: block;
+        @include size(100%,100%);
+        border: none;
+        font-size: inherit;
+        &::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+        }
+
+        &.is-right{
+            text-align: right;
+        }
+    }
 }

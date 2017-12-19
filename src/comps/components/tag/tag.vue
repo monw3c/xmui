@@ -8,6 +8,7 @@
         ]"
     >
         <span><slot></slot></span>
+        <i class="xm__icon--close xm__tag--close" v-if="closable"></i>
     </div>
 </template>
 
@@ -32,7 +33,11 @@ export default {
       type: String,
       default: ''
     },
-    round: Boolean
+    round: Boolean,
+    closable: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>

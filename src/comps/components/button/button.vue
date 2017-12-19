@@ -5,14 +5,15 @@
         :style="{backgroundColor: bgColor, color: color, 'border-color':borderColor}"
         :class="[
         'xm__btn--'+type,
-        {'is-plain': plain, 'is-round': round, 'is-long': long, 'xm__btn--block': block},
+        {'is-plain': plain, 'is-round': round, 'is-long': long, 'xm__btn--block': block, 'no-radius': noRadius},
         iconClass
         ]"
         :disabled="disabled"
     >
         <i :class="icon" v-if="icon"></i>
         <i class="xm__icon--loading" v-if="loading && !icon"></i>
-        <span><slot></slot></span>
+        <!-- <span><slot></slot></span> -->
+        <slot></slot>
     </button>
 </template>
 
@@ -27,6 +28,10 @@ export default {
     },
     long: Boolean,
     loading: {
+      type: Boolean,
+      default: false
+    },
+    noRadius: {
       type: Boolean,
       default: false
     },

@@ -1,0 +1,79 @@
+.xm__cell--box{
+    position: relative;
+}
+
+.xm__cell {
+    background-color: $body-background;
+    position: relative;
+    z-index: 5;
+
+    & .xm__cell--item {
+        display: flex;
+        position: relative;
+        padding-left: 10px;
+        overflow: hidden;
+        font-size: $font-size-base;
+
+        & .xm__cell--left, 
+        & .xm__cell--right {
+            display: flex;
+            align-items: center;
+        }
+        
+        & .xm__cell--left {
+            color: $text-color;
+            white-space: nowrap;
+
+            & .xm__cell--icon {
+                display: block;
+                margin-right: 2px;
+            }
+        }
+
+        & .xm__cell--right {
+            flex: 1;
+            width: 100%;
+            min-height: 40px;
+            color: #525252;
+            text-align: right;
+            padding-right: 10px;
+            justify-content: flex-end;
+
+            & .xm__cell--icon {
+                display: block;
+                margin-left: 2px;
+            }
+        }
+
+        &:not(:last-child):after {
+            margin-left: 10px;
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: $border-width-default $border-style-default $border-color-split;
+            transform: scaleY(.5);
+            transform-origin: 0 0;
+        }
+        
+        &.yd-cell-arrow:after{
+
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: $border-width-default $border-style-default $border-color-base;
+        transform: scaleY(.5);
+        transform-origin: 0 0;
+    }
+
+    
+}

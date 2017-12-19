@@ -6,14 +6,14 @@
         :placeholder="placeholder" 
         :value="value" 
         @input="onInput" 
-        @keypress.enter.prevent="searchAction" 
+        @keypress.enter.prevent="onSearch" 
         @focus="onFocus"
         @blur="onBlur"
         >
         <i class="xm__icon xm__icon--clear" style="display: none;"></i>
       </div>
-      <div class="xm__search--action" v-if="showAction">
-        <div class="xm__search--action--text" :style="{'color':actionTextColor}" @click="searchAction">
+      <div class="xm__search--action" v-if="onSearch">
+        <div class="xm__search--action--text" :style="{'color':actionTextColor}" @click="onSearch">
           <slot>搜索</slot>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default {
     }
   },
   methods: {
-    searchAction (event) {
+    onSearch (event) {
       event.preventDefault()
       this.$emit('action', this.value)
       return false

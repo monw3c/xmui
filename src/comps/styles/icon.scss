@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'iconfont';  /* project id 271058 */
-    src: url('//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.eot');
-    src: url('//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.woff') format('woff'),
-    url('//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_271058_ubui0u1bi71fw29.svg#iconfont') format('svg');
+    font-family: 'iconfont';  /* project id 510640 */
+    src: url('//at.alicdn.com/t/font_510640_y9g0dy1gjot4vx6r.eot');
+    src: url('//at.alicdn.com/t/font_510640_y9g0dy1gjot4vx6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_510640_y9g0dy1gjot4vx6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_510640_y9g0dy1gjot4vx6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_510640_y9g0dy1gjot4vx6r.svg#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -16,16 +16,40 @@
     vertical-align: baseline;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    
 }
   
 .xm__icon--checked:before { content: "\e635"; }
 
+.xm__icon--phone:before { content: "\e624"; }
+
 .xm__icon--search:before { content: "\e613"; }
 
-.xm__icon--close:before { content: "\e634"; }
+.xm__icon--close-outline:before { content: "\e634"; }
+.xm__icon--close:before { content: "\e627"; }
+
+.xm__icon--my:before { content: "\e606"; }
+.xm__icon--user:before { content: "\e60a"; }
+.xm__icon--lock:before { content: "\e654"; }
+.xm__icon--contact:before { content: "\e615"; }
+
+.xm__icon--like:before { content: "\e6a1"; }
+.xm__icon--likefill:before { content: "\e60b"; }
+
+.xm__icon--date:before { content: "\e609"; }
+
+.xm__icon--edit:before { content: "\e629"; }
+.xm__icon--delete:before { content: "\e68c"; }
+
+.xm__icon--lbs:before { content: "\e625"; }
+.xm__icon--lbsfill:before { content: "\e669"; }
+
+.xm__icon--qrcode:before { content: "\e632"; }
 
 .xm__icon--loading{ animation: spin 1250ms linear infinite;}
 .xm__icon--loading:before { content: "\e69d";}
 
-
+.xm__icon--left:before { content: "\e681"; }
+.xm__icon--right:before { content: "\e687"; }
+.xm__icon--up:before { content: "\e67f"; }
+.xm__icon--down:before { content: "\e601"; }

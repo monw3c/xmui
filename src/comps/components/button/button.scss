@@ -50,6 +50,10 @@
     &.is-long {
         @include size(100%,auto)
     }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
 }
 
 .xm__btn--primary{
@@ -84,6 +88,10 @@
 
     &.is-long {
         @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
     }
 }
 
@@ -120,6 +128,10 @@
     &.is-long {
         @include size(100%,auto)
     }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
 }
 
 .xm__btn--warning{
@@ -154,6 +166,10 @@
 
     &.is-long {
         @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
     }
 }
 
@@ -190,6 +206,10 @@
     &.is-long {
         @include size(100%,auto)
     }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
 }
 
 .xm__btn--text{
@@ -215,6 +235,10 @@
     &.is-long {
         @include size(100%,auto)
     }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
 }
 
 .xm__btn--block {
@@ -229,6 +253,10 @@
     & button{
         flex: 1;
         border-radius: 0;
+
+        &.no-radius {
+            @include border-radius(0);
+        }
     }
     & button:first-child{
         @include border-radius();

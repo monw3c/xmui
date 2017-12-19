@@ -1,5 +1,5 @@
 // set boeder圆角
-@mixin border-radius($radius:4px){
+@mixin border-radius($radius:$border-radius-small){
     -webkit-border-radius: $radius;
     border-radius: $radius;
 }
