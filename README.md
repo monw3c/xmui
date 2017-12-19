@@ -1,6 +1,6 @@
 <div align=center><a href="https://github.com/monw3c/xmui" target="blank"><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png"/></a></div>  
 
-## XMUI  
+# XMUI  
 
 [![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://travis-ci.org/XadillaX/x-m-ui.svg)](https://travis-ci.org/XadillaX/x-m-ui)  
 
