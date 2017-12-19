@@ -3,13 +3,13 @@
 
 ## 特性
 
-- 基于 `Vue 2+` 开发的可复用 UI 组件，并且可随产品需要扩展
+- 基于 [Vue](http://vuejs.org/)`>=v2.1.4` 开发的可复用 UI 组件，并且可随产品需要扩展
 - 使用Vue官方的工作流，支持 ES6
 - 一系列线上产品都在使用中
 
 ## 浏览器支持
 
-- 主要应用于移动端浏览器 和 部分PC浏览器(Chrome,safari,IE9+等)
+- 适用于 移动 和 部分PC 端(Chrome,safari,IE9+等)  
 
 ## 开发  
 
@@ -21,9 +21,9 @@ cnpm install x-m-ui --save
 ## 查看示例  
 
 dist/index.html  
-(暂时有点丑，请见谅，抽时间集成进docs)
+(暂时有点简陋，请见谅，稍晚集成在docs)  
 
 ## 贡献
 
-在此不一一感谢所有付出脑力体力的同仁，如觉得有侵权，请与我们联系  
+在此不一一感谢所有付出脑力体力的同仁，如有疑问，请与我们联系  
 如果你在使用时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/monw3c/xmui/issues) 或 [Pull Request](https://github.com/monw3c/xmui/pulls)

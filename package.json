@@ -95,5 +95,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monw3c/xmui/issues"
+  }
 }
