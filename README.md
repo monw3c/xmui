@@ -1,18 +1,21 @@
 <div align=center><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png"/></div>  
 
+## xmui  
+
 [![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://travis-ci.org/XadillaX/x-m-ui.svg)](https://travis-ci.org/XadillaX/x-m-ui)  
 
-基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 PC 端和 移动 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
+基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 移动 和 部分PC 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
+
 
 ## 特性
 
-- 基于 `Vue 2+` 开发的可复用 UI 组件，并且可随产品需要扩展
+- 基于 [Vue](http://vuejs.org/)`>=v2.1.4` 开发的可复用 UI 组件，并且可随产品需要扩展
 - 使用Vue官方的工作流，支持 ES6
 - 一系列线上产品都在使用中
 
 ## 浏览器支持
 
-- 主要应用于移动端浏览器 和 部分PC浏览器(Chrome,safari,IE9+等)
+- 适用于 移动 和 部分PC 端(Chrome,safari,IE9+等)
 
 ## 开发  
 
