@@ -11,6 +11,7 @@
     display: flex;
     @include size(100%,100%);
     align-items: center;
+    position: relative;
 
     > input {
         display: block;
@@ -24,5 +25,14 @@
         &.is-right{
             text-align: right;
         }
+    }
+
+    &::before {
+        content: "*";
+        position: absolute;
+        left: -7px;
+        font-size: 14px;
+        color: rgb(255, 68, 68);
+        display: none;
     }
 }

@@ -8,7 +8,7 @@
         ]"
     >
         <span><slot></slot></span>
-        <i class="xm__icon--close xm__tag--close" v-if="closable"></i>
+        <i class="xm__icon--close xm__tag--close" v-if="closable" @click="closeAction"></i>
     </div>
 </template>
 
@@ -37,6 +37,11 @@ export default {
     closable: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    closeAction () {
+      this.$emit('close')
     }
   }
 }

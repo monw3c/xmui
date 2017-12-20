@@ -7,6 +7,9 @@ import Search from './components/search/index'
 import Loading from './components/loading/index'
 import Step from './components/step/index'
 import Input from './components/input/index'
+import Textarea from './components/textarea/index'
+import Select from './components/select/index'
+import Switch from './components/switch/index'
 import { Modal, SpModal } from './components/modal/index'
 import { CellItem, CellGroup } from './components/cell/index'
 
@@ -24,6 +27,9 @@ const components = [
   Loading,
   Step,
   Input,
+  Textarea,
+  Select,
+  Switch,
   CellItem,
   CellGroup
 ]

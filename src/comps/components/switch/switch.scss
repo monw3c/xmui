@@ -1,0 +1,49 @@
+.xm__switch {
+    position: relative;
+    z-index: 10;
+    display: block;
+    @include size(52px,32px);
+    left: 0;
+    border: $border-width-default $border-style-default $border-color-base;
+    @include border-radius(16px);
+    background-color: #dfdfdf;
+    -webkit-appearance: none;
+    color: #4cd864;
+
+    &:checked {
+        border-color: currentColor;
+        background-color: currentColor;
+        &:before {
+          transform: scale(0);
+        }
+        &:after {
+          transform: translateX(20px);
+        }
+    }
+    
+    &[disabled] {
+        opacity: 0.5;
+    }
+    
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+        @include border-radius(15px);
+        transition: transform .3s;
+    }
+
+    &:before {
+        width: 50px;
+        background-color: #FDFDFD;
+    }
+    
+    &:after {
+        width: 30px;
+        background-color: $body-background;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    }
+}

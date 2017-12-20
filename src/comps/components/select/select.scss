@@ -1,0 +1,21 @@
+.xm__select {
+    flex: 1;
+    height: 40px;
+    border: none;
+    display: block;
+
+
+    & select {
+        border: none;
+        display: block;
+        @include size(100%,40px);
+        color: $text-color;
+        font-size: $font-size-base;
+        background-color: $body-background;
+        outline: none;
+
+        &.is-right{
+            direction: rtl;
+        }
+    }
+}

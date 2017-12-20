@@ -31,7 +31,7 @@
 </template>
 
 <script>
-
+// input属性还需要不断完善 2017/12/20
 export default {
   name: 'xm-input',
   props: {
@@ -44,10 +44,6 @@ export default {
       type: String,
       default: 'off'
     },
-    required: {
-      type: Boolean,
-      default: false
-    },
     type: {
       type: String,
       default: 'text'
@@ -57,17 +53,6 @@ export default {
         return /^\d*$/.test(val)
       }
     },
-    min: {
-      validator (val) {
-        return /^\d*$/.test(val)
-      }
-    },
-    onBlur: {
-      type: Function
-    },
-    onFocus: {
-      type: Function
-    },
     right: {
       type: Boolean,
       default: false
@@ -75,41 +60,23 @@ export default {
   },
   data () {
     return {
-      currentValue: this.value,
-      isempty: !this.value,
-      iserror: false,
-      showPwd: false,
-      showClear: false,
-      showWarn: true,
-      initError: false,
-      valid: true,
-      errorMsg: '',
-      errorCode: '',
-      regexObj: {
-        email: '^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$',
-        mobile: '^(86)?1[3,4,5,7,8]\\d{9}$',
-        bankcard: '^\\d{15,19}$'
-      }
+      currentValue: this.value
     }
   },
   watch: {
     value (val) {
       this.currentValue = val
-      this.emitInput()
     },
     currentValue (val) {
-      this.isempty = !val
-      this.validatorInput(val, true)
-      this.emitInput()
-    },
-    required (val) {
-      this.required = val
-      this.validatorInput(this.currentValue, false)
+      this.$emit('input', val)
     }
   },
-  computed: {
-    iconClass () {
-      if (this.icon !== '') return this.icon
+  methods: {
+    onBlur (event) {
+      this.$emit('blur', event.target.value)
+    },
+    onFocus () {
+      this.$emit('focus')
     }
   }
 }

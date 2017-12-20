@@ -1,0 +1,14 @@
+.xm__textarea{
+    padding: 10px 0;
+    background-color: $body-background;
+    width: 100%;
+
+    & textarea {
+        border: none;
+        display: block;
+        @include size(100%,100px);
+        font-size: $font-size-base;
+        outline: none;
+        resize: none;
+    }
+}

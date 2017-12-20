@@ -1,12 +1,18 @@
 <template>
     <div class="xm__cell--item">
         <div class="xm__cell--left">
-              <span class="xm__cell--icon"><slot name="leftIcon"></slot></span>
+              <slot name="leftIcon"></slot>
               <slot name="left"></slot>
         </div>
-        <div class="xm__cell--right">
+
+        <a v-if="type=='link'" :href="href" class="xm__cell--right">
               <slot name="right"></slot>
-              <span class="xm__cell--icon"><slot name="rightIcon"></slot></span>
+              <slot name="rightIcon"></slot>
+        </a>
+
+        <div v-else class="xm__cell--right">
+              <slot name="right"></slot>
+              <slot name="rightIcon"></slot>
         </div>
     </div>
 </template>
@@ -17,7 +23,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'default'
+      default: ''
+    },
+    href: {
+      type: String,
+      default: ''
     },
     bgColor: {
       type: String,

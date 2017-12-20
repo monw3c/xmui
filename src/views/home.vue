@@ -32,7 +32,7 @@
     <xm-tag type="warning" round>warning</xm-tag>
     <xm-tag type="error" round>error</xm-tag>
     <xm-tag bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-tag>
-    <xm-tag type="success" closable>success</xm-tag>
+    <xm-tag type="success" v-if="tag1" closable @close="tag1=false">success</xm-tag>
 
     <h4>搜索框</h4>
     <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
@@ -53,7 +53,7 @@
         <!-- <div slot="top">头部的</div> -->
         <xm-cell-item>
           <span slot="left">用户名：</span>
-          <xm-input slot="right" v-model="value1" placeholder="请输入用户名"></xm-input>
+          <xm-input slot="right" v-model="value1" name="name1" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
         </xm-cell-item>
         <xm-cell-item>
           <span slot="left">密  码：</span>
@@ -65,21 +65,48 @@
           <xm-button slot="right" type="warning" class="btn__block" style="padding: 6px;width: 120px;font-size: 12px;">获取验证码</xm-button>
         </xm-cell-item>
         <xm-cell-item>
-          <xm-input slot="right" v-model="value1" placeholder="请输入文字"></xm-input>
+          <xm-input slot="right" :value="value1" placeholder="这里是readonly" readonly></xm-input>
           <span slot="rightIcon" class="xm__icon--delete"></span>
         </xm-cell-item>
         <xm-cell-item>
+          <xm-input slot="right" :value="value1" placeholder="这里是disabled"   disabled></xm-input>
+          <span slot="rightIcon" class="xm__icon--delete"></span>
+        </xm-cell-item>
+        <xm-cell-item type='link' href="tel:400517517">
           <span slot="leftIcon" class="xm__icon--contact"></span>
           <span slot="left">联系方式</span>
           <span slot="right">400517517</span>
-        </xm-cell-item>
-        <xm-cell-item arrow>
-          <span slot="left">我的消息</span>
-          <xm-tag slot="right" type="error" round right style="margin-bottom:0;">8</xm-tag>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
-        <!-- <div slot="bottom">底部的</div> -->
+        <xm-cell-item>
+          <span slot="left">我的消息</span>
+          <xm-tag slot="right" type="error" round style="margin-bottom:0;">8</xm-tag>
+          <span slot="rightIcon" class="xm__icon--right"></span>
+        </xm-cell-item>
+        <xm-cell-item>
+          <xm-textarea slot="right" placeholder="请输入留言，50字以内" :value="value" @input="textareaAction" maxlength="50"></xm-textarea>
+        </xm-cell-item>
+        <xm-cell-item>
+          <xm-select slot="right" :data="selectList" @change="selectAction"></xm-select>
+          <span slot="rightIcon" class="xm__icon--right"></span>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="left">出行方式</span>
+          <xm-select slot="right" right :data="selectList"></xm-select>
+          <span slot="rightIcon" class="xm__icon--right"></span>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="left">是否保存</span>
+          <xm-switch slot="right" value="switch" @input="switchAction"></xm-switch>
+        </xm-cell-item>
+        <div slot="bottom" style="overflow: hidden;word-break: break-all;text-align: left;padding-left: 10px;font-size: 14px;">
+          <p>您输入：{{inputVal}}</p>
+          <p>留言：{{textareaVal}}</p>
+          <p>出行方式：{{selectVal}}</p>
+          <p>是否保存：{{switchVal}}</p>
+        </div>
       </xm-cell-group>
+      
     </div>
 
 
@@ -151,10 +178,40 @@ export default {
       modalVisible3: false,
       zIndex: 3000,
       stepList: ['发起工单', '主管审批', '经理审批', '总监核查', '结束'],
-      step: 2
+      step: 2,
+      tag1: true,
+      switch: true,
+      selectList: [
+                    { name: '请选择出行方式', value: 0 },
+                    { name: '巴士', value: 1 },
+                    { name: '快车', value: 2 },
+                    { name: '专车', value: 3 },
+                    { name: '顺风车', value: 4 },
+                    { name: '出租车', value: 5 },
+                    { name: '代驾', value: 6 }
+      ],
+      inputVal: '',
+      textareaVal: '',
+      selectVal: '',
+      switchVal: 'true'
     }
   },
   methods: {
+    switchAction (val) {
+      this.switchVal = val
+    },
+    inputAction2 () {
+
+    },
+    inputAction1 (val) {
+      this.inputVal = val
+    },
+    selectAction (val) {
+      this.selectVal = val
+    },
+    textareaAction (val) {
+      this.textareaVal = val
+    },
     toastClick1 () {
       this.$toast.text({content: '太长会换行呢，15个字以内最好', direction: 'bottom'})
     },
@@ -190,6 +247,9 @@ export default {
     },
     btnClick () {
 
+    },
+    closeTag () {
+      this.tag1 = false
     },
     loadMore () {
       alert(`loadMore`)
