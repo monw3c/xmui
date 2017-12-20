@@ -84,7 +84,7 @@
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
         <xm-cell-item>
-          <xm-textarea slot="right" placeholder="请输入留言，50字以内" :value="value" @input="textareaAction" maxlength="50"></xm-textarea>
+          <xm-textarea slot="right" placeholder="请输入留言，50字以内" :value="value" @input="textareaAction" max="50"></xm-textarea>
         </xm-cell-item>
         <xm-cell-item>
           <xm-select slot="right" :data="selectList" @change="selectAction"></xm-select>
@@ -106,7 +106,7 @@
           <p>是否保存：{{switchVal}}</p>
         </div>
       </xm-cell-group>
-      
+
     </div>
 
 

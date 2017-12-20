@@ -19,4 +19,8 @@
 | bg-color     | 背景颜色   | string    | 自定义 |     —    |
 | color     | 文字颜色   | string    |  自定义 |     —    |
 | border-color     | 边框颜色   | string    |   自定义 |     —    |
+
+### API
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- | 
 | closable     | 可关闭   | Boolean  |    — | false   |

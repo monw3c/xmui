@@ -7,6 +7,7 @@
  - [加载更多](/components/loadmore.md)
  - [搜索框](/components/search.md)
  - [表单](/components/form.md)
+ - [网格](/components/grids.md)
  - [图标](/components/icons.md)
 
 - 弹出层

@@ -1,6 +1,6 @@
 <template>
     <div class="xm__textarea">
-        <textarea :placeholder="placeholder" v-model="strVal" :maxlength="maxlength"></textarea>
+        <textarea :placeholder="placeholder" v-model="strVal" :maxlength="max"></textarea>
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     value: {
       type: String
     },
-    maxlength: {
+    max: {
       validator (val) {
         if (!val) return true
         return /^(([1-9]\d*)|0)$/.test(val)
@@ -37,7 +37,7 @@ export default {
     this.$nextTick(() => {
       const v = this.value
       if (!v) return
-      this.strVal = v.length > this.maxlength ? v.substr(v, this.maxlength) : v
+      this.strVal = v.length > this.max ? v.substr(v, this.max) : v
     })
   }
 }
