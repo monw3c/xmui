@@ -1114,8 +1114,7 @@ input, button {
 
 .xm__cell {
   background-color: #fff;
-  position: relative;
-  z-index: 5; }
+  position: relative; }
   .xm__cell .xm__cell--item {
     display: flex;
     position: relative;
@@ -1129,9 +1128,13 @@ input, button {
     .xm__cell .xm__cell--item .xm__cell--left {
       color: #495060;
       white-space: nowrap; }
-      .xm__cell .xm__cell--item .xm__cell--left .xm__cell--icon {
+      .xm__cell .xm__cell--item .xm__cell--left [class^="xm__icon--"],
+      .xm__cell .xm__cell--item .xm__cell--left [class*=" xm__icon--"] {
         display: block;
         margin-right: 2px; }
+    .xm__cell .xm__cell--item a.xm__cell--right {
+      background-color: #fff;
+      text-decoration: none; }
     .xm__cell .xm__cell--item .xm__cell--right {
       flex: 1;
       width: 100%;
@@ -1140,14 +1143,15 @@ input, button {
       text-align: right;
       padding-right: 10px;
       justify-content: flex-end; }
-      .xm__cell .xm__cell--item .xm__cell--right .xm__cell--icon {
+      .xm__cell .xm__cell--item .xm__cell--right [class^="xm__icon--"],
+      .xm__cell .xm__cell--item .xm__cell--right [class*=" xm__icon--"] {
         display: block;
         margin-left: 2px; }
     .xm__cell .xm__cell--item:not(:last-child):after {
       margin-left: 10px;
       content: "";
       position: absolute;
-      z-index: 0;
+      z-index: 1;
       bottom: 0;
       left: 0;
       width: 100%;
@@ -1177,7 +1181,8 @@ input, button {
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .xm__input > input {
     display: block;
     width: 100%;
@@ -1188,3 +1193,79 @@ input, button {
       -webkit-appearance: none; }
     .xm__input > input.is-right {
       text-align: right; }
+  .xm__input:before {
+    content: "*";
+    position: absolute;
+    left: -7px;
+    font-size: 14px;
+    color: #ff4444;
+    display: none; }
+
+.xm__textarea {
+  padding: 10px 0;
+  background-color: #fff;
+  width: 100%; }
+  .xm__textarea textarea {
+    border: none;
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 14px;
+    outline: none;
+    resize: none; }
+
+.xm__select {
+  flex: 1;
+  height: 40px;
+  border: none;
+  display: block; }
+  .xm__select select {
+    border: none;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #495060;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none; }
+    .xm__select select.is-right {
+      direction: rtl; }
+
+.xm__switch {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 52px;
+  height: 32px;
+  left: 0;
+  border: 1px solid #dddee1;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  background-color: #dfdfdf;
+  -webkit-appearance: none;
+  color: #4cd864; }
+  .xm__switch:checked {
+    border-color: currentColor;
+    background-color: currentColor; }
+    .xm__switch:checked:before {
+      transform: scale(0); }
+    .xm__switch:checked:after {
+      transform: translateX(20px); }
+  .xm__switch[disabled] {
+    opacity: 0.5; }
+  .xm__switch:after, .xm__switch:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    transition: transform .3s; }
+  .xm__switch:before {
+    width: 50px;
+    background-color: #FDFDFD; }
+  .xm__switch:after {
+    width: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
