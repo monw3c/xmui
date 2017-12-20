@@ -21,8 +21,17 @@
 
 ``` bash
 # 安装
-cnpm install x-m-ui --save
-```
+cnpm install x-m-ui --save  
+
+# 引入css
+import './package/style/xmui.min.css'  
+
+# 引入xmui.min.js
+import xmui from './package/xmui.min.js'  
+
+# 注入vue
+Vue.use(xmui)
+```  
 更多说明，请查看[在线文档](https://monw3c.github.io/xmui/)
 
 ## 查看示例  
