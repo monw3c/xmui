@@ -27,7 +27,7 @@
         }
     }
 
-    &::before {
+    &:before {
         content: "*";
         position: absolute;
         left: -7px;
