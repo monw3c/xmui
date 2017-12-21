@@ -124,7 +124,7 @@
 
 
 
-    <h4>tab切换</h4>
+    <h4>Tab</h4>
 
 
 
@@ -161,6 +161,24 @@
 
     <h4>工单流程</h4>
     <xm-step :step="step" :step-list="stepList"></xm-step>
+
+
+    <h4>Skeleton骨架</h4>
+    <xm-skeleton type="circle"></xm-skeleton>
+    <xm-skeleton  animate="loading"></xm-skeleton>
+
+    <div class="topic-loading-item">
+      <div class="loading-item-one">
+        <xm-skeleton type="circle"></xm-skeleton>
+        <xm-skeleton width="40%"></xm-skeleton>
+      </div>
+      <div class="loading-item-two">
+        <xm-skeleton width="80%"></xm-skeleton>
+      </div>
+      <div class="loading-item-three">
+        <xm-skeleton width="60%"></xm-skeleton>
+      </div>
+    </div>
 
   </div>
 </template>
@@ -217,7 +235,7 @@ export default {
     },
     toastClick2 () {
       this.$toast.loading({
-        mask: false
+        // mask: false
       })
     },
     modalClick4 () {
@@ -379,6 +397,23 @@ h2{
   margin: 0 auto;
   background: #f5f5f5;
   padding: 1%;
+}
+// 骨架demo
+.topic-loading-item{
+  margin-top: 20px;
+}
+.topic-loading-item .loading-item-one{
+  display: flex;
+  align-items: center;
+}
+.topic-loading-item .loading-item-one .xm__skeleton--bar{
+  margin-left: 10px;
+}
+.topic-loading-item .loading-item-two {
+    margin-top: 10px;
+}
+.topic-loading-item .loading-item-three {
+    margin-top: 10px;
 }
 </style>
 

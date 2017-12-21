@@ -20,3 +20,4 @@
  - [工单流程](/components/step.md)
  - [导航栏(顶部)](/components/navbar.md)
  - [标签栏(底部)](/components/tabbar.md)
+ - [skeleton骨架](/components/skeleton.md)

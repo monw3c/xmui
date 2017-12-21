@@ -10,6 +10,7 @@ import Input from './components/input/index'
 import Textarea from './components/textarea/index'
 import Select from './components/select/index'
 import Switch from './components/switch/index'
+import Skeleton from './components/skeleton/index'
 import { Modal, SpModal } from './components/modal/index'
 import { CellItem, CellGroup } from './components/cell/index'
 
@@ -30,6 +31,7 @@ const components = [
   Textarea,
   Select,
   Switch,
+  Skeleton,
   CellItem,
   CellGroup
 ]

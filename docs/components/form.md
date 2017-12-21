@@ -1,4 +1,4 @@
-# form 表单
+# Form 表单
 ----
 ##### 配合 xm-cell-item 和 xm-cell-group 使用
 
