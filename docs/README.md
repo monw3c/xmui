@@ -23,7 +23,7 @@ import './package/style/xmui.min.css'
 # 引入xmui.min.js
 import xmui from './package/xmui.min.js'  
 
-# 注入vue
+# 注入到vue
 Vue.use(xmui)
 ```
 
