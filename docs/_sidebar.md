@@ -7,13 +7,15 @@
  - [加载更多](/components/loadmore.md)
  - [搜索框](/components/search.md)
  - [表单](/components/form.md)
- - [网格](/components/grids.md)
+ - [网格](/components/grid.md)
  - [图标](/components/icons.md)
 
 - 弹出层
  - [Modal](/components/modal.md)
  - [Toast](/components/toast.md)
  - [Loading](/components/loading.md)
+ - [ActionSheet](/components/actionsheet.md)
+
 
 - 应用组件
  - [标签页](/components/tab.md)

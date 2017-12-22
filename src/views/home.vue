@@ -111,6 +111,32 @@
 
 
     <h4>网格</h4>
+    <xm-grids row="3">
+      <xm-grid href="https://github.com/monw3c/xmui">
+        <span slot="icon" class="xm__icon--phone"></span>
+        <span slot="text">手机</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--lbsfill"></span>
+        <span slot="text">位置</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--lock"></span>
+        <span slot="text">密码</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--qrcode"></span>
+        <span slot="text">扫码</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--date"></span>
+        <span slot="text">时间</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--contact"></span>
+        <span slot="text">电话</span>
+      </xm-grid>
+    </xm-grids>
 
 
 
@@ -156,6 +182,15 @@
     <!-- <xm-loading has-text fullScreen>全屏的loading</xm-loading> -->
     <xm-loading has-text vertical border-width="8">垂直的loading</xm-loading>
     
+
+    <h4>ActionSheet</h4>
+    
+
+
+
+
+
+
     
     <h2>应用组件</h2>
 
@@ -211,7 +246,16 @@ export default {
       inputVal: '',
       textareaVal: '',
       selectVal: '',
-      switchVal: 'true'
+      switchVal: 'true',
+      gridRow: [
+                    { icon: '请选择出行方式', text: '巴士' },
+                    { name: '巴士', text: '巴士' },
+                    { name: '快车', text: '快车' },
+                    { name: '专车', text: '专车' },
+                    { name: '顺风车', text: '顺风车' },
+                    { name: '出租车', text: '出租车' },
+                    { name: '代驾', text: '代驾' }
+      ]
     }
   },
   methods: {

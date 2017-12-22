@@ -1309,3 +1309,82 @@ input, button {
 
 .xm__skeleton--loading {
   animation: bar-loading 1s ease-in-out infinite; }
+
+.xm__grids {
+  position: relative;
+  overflow: hidden; }
+  .xm__grids a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; }
+  .xm__grids.xm__grids--2 .xm__grid {
+    width: 50%; }
+  .xm__grids.xm__grids--3 .xm__grid {
+    width: 33.333333%; }
+  .xm__grids.xm__grids--4 .xm__grid {
+    width: 25%; }
+  .xm__grids.xm__grids--5 .xm__grid {
+    width: 20%; }
+  .xm__grids.xm__grids--6 .xm__grid {
+    width: 16.333333%; }
+  .xm__grids .xm__grid {
+    position: relative;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box; }
+    .xm__grids .xm__grid:before {
+      content: " ";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      bottom: 0;
+      border-right: 1px solid #dddee1;
+      color: #495060;
+      transform-origin: 100% 0;
+      transform: scaleX(0.5); }
+    .xm__grids .xm__grid:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dddee1;
+      color: #495060;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+  .xm__grids:before, .xm__grids:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #495060;
+    transform-origin: 0 0; }
+  .xm__grids:before {
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #dddee1;
+    transform: scaleY(0.5); }
+  .xm__grids:after {
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #dddee1;
+    transform: scaleX(0.5); }
+  .xm__grids .xm__grid--icon {
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px; }
+    .xm__grids .xm__grid--icon span {
+      font-size: 22px;
+      color: #495060; }
+  .xm__grids .xm__grid--text {
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    color: #495060; }
+    .xm__grids .xm__grid--text span {
+      font-size: 12px; }
