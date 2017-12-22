@@ -29,8 +29,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-dist/index.html  
-(暂时有点简陋，请见谅，稍晚集成在docs)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/5/embedded/)   
 
 ## 贡献
 
