@@ -11,6 +11,8 @@ import Textarea from './components/textarea/index'
 import Select from './components/select/index'
 import Switch from './components/switch/index'
 import Skeleton from './components/skeleton/index'
+
+import { Radio, RadioGroup } from './components/radio/index'
 import { Grid, Grids } from './components/grid/index'
 import { Modal, SpModal } from './components/modal/index'
 import { CellItem, CellGroup } from './components/cell/index'
@@ -33,6 +35,8 @@ const components = [
   Select,
   Switch,
   Skeleton,
+  Radio,
+  RadioGroup,
   Grid,
   Grids,
   CellItem,

@@ -99,11 +99,26 @@
           <span slot="left">是否保存</span>
           <xm-switch slot="right" value="switch" @input="switchAction"></xm-switch>
         </xm-cell-item>
+      </xm-cell-group>
+
+      <xm-cell-group title="单选" class="xm-radio-group">
+        <xm-cell-item>
+          <xm-radio-group slot="right" v-model="radio" color="#4cd864">
+            <xm-radio value="巴士"></xm-radio>
+            <xm-radio value="火车"></xm-radio>
+            <xm-radio value="飞机" disabled>飞机--disabled</xm-radio>
+            <xm-radio value="单车">单车</xm-radio>
+          </xm-radio-group>
+        </xm-cell-item>
+      </xm-cell-group>
+
+      <xm-cell-group>
         <div slot="bottom" style="overflow: hidden;word-break: break-all;text-align: left;padding-left: 10px;font-size: 14px;">
           <p>您输入：{{inputVal}}</p>
           <p>留言：{{textareaVal}}</p>
           <p>出行方式：{{selectVal}}</p>
           <p>是否保存：{{switchVal}}</p>
+          <p>单选选择：{{radio}}</p>
         </div>
       </xm-cell-group>
 
@@ -255,7 +270,8 @@ export default {
                     { name: '顺风车', text: '顺风车' },
                     { name: '出租车', text: '出租车' },
                     { name: '代驾', text: '代驾' }
-      ]
+      ],
+      radio: '飞机'
     }
   },
   methods: {
@@ -459,5 +475,7 @@ h2{
 .topic-loading-item .loading-item-three {
     margin-top: 10px;
 }
+
+
 </style>
 
