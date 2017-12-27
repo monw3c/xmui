@@ -95,9 +95,16 @@
           <xm-select slot="right" right :data="selectList"></xm-select>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
+      </xm-cell-group>
+
+      <xm-cell-group>
         <xm-cell-item>
-          <span slot="left">是否保存</span>
-          <xm-switch slot="right" value="switch" @input="switchAction"></xm-switch>
+          <span slot="left">不让他看我的朋友圈</span>
+          <xm-switch slot="right" :value="switch1" @input="switchAction"></xm-switch>
+        </xm-cell-item>
+        <xm-cell-item>
+          <span slot="left">不看他的朋友圈</span>
+          <xm-switch slot="right" :value="switch2" @input="switchAction"></xm-switch>
         </xm-cell-item>
       </xm-cell-group>
 
@@ -261,7 +268,8 @@ export default {
       stepList: ['发起工单', '主管审批', '经理审批', '总监核查', '结束'],
       step: 2,
       tag1: true,
-      switch: true,
+      switch1: true,
+      switch2: false,
       selectList: [
                     { name: '请选择出行方式', value: 0 },
                     { name: '巴士', value: 1 },
@@ -274,7 +282,7 @@ export default {
       inputVal: '',
       textareaVal: '',
       selectVal: '',
-      switchVal: 'true',
+      switchVal: true,
       gridRow: [
                     { icon: '请选择出行方式', text: '巴士' },
                     { name: '巴士', text: '巴士' },
