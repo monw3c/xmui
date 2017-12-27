@@ -30,6 +30,10 @@
     
     }
 
+    // & .xm__cell--item:not(textarea) {
+    //     @include tap-color($background-color-base, .95);
+    // }
+
     & .xm__cell--item {
         display: flex;
         position: relative;
@@ -62,7 +66,7 @@
         & .xm__cell--right {
             flex: 1;
             width: 100%;
-            min-height: 40px;
+            min-height: $line-height-computed*2;
             color: #525252;
             text-align: right;
             padding-right: 10px;

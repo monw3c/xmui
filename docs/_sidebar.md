@@ -9,6 +9,8 @@
  - [表单](/components/form.md)
  - [网格](/components/grid.md)
  - [图标](/components/icons.md)
+ - [轮播](/components/swiper.md)
+ - [时间选择器](/components/datetimepicker.md) 
 
 - 弹出层
  - [Modal](/components/modal.md)

@@ -62,7 +62,7 @@
         <xm-cell-item>
           <span slot="leftIcon" class="xm__icon--phone"></span>
           <xm-input slot="right" type="tel" v-model="value1" placeholder="请输入手机号"></xm-input>
-          <xm-button slot="right" type="warning" class="btn__block" style="padding: 6px;width: 120px;font-size: 12px;">获取验证码</xm-button>
+          <xm-button slot="right" type="error" class="btn__block" style="padding: 6px;width: 120px;font-size: 12px;">获取验证码</xm-button>
         </xm-cell-item>
         <xm-cell-item>
           <xm-input slot="right" :value="value1" placeholder="这里是readonly" readonly></xm-input>
@@ -112,13 +112,26 @@
         </xm-cell-item>
       </xm-cell-group>
 
+      <xm-cell-group title="复选" class="xm-checkbox-group">
+        <xm-cell-item>
+          <xm-checkbox-group slot="right" v-model="checkbox" color="#4cd864">
+            <xm-checkbox value="1">巴士</xm-checkbox>
+            <xm-checkbox value="2">火车</xm-checkbox>
+            <xm-checkbox value="3" disabled>飞机--disabled</xm-checkbox>
+            <xm-checkbox value="4">单车</xm-checkbox>
+          </xm-checkbox-group>
+        </xm-cell-item>
+      </xm-cell-group>
+
+
       <xm-cell-group>
         <div slot="bottom" style="overflow: hidden;word-break: break-all;text-align: left;padding-left: 10px;font-size: 14px;">
           <p>您输入：{{inputVal}}</p>
           <p>留言：{{textareaVal}}</p>
           <p>出行方式：{{selectVal}}</p>
           <p>是否保存：{{switchVal}}</p>
-          <p>单选选择：{{radio}}</p>
+          <p>单选：{{radio}}</p>
+          <p>复选：{{checkbox}}</p>
         </div>
       </xm-cell-group>
 
@@ -131,7 +144,7 @@
         <span slot="icon" class="xm__icon--phone"></span>
         <span slot="text">手机</span>
       </xm-grid>
-      <xm-grid>
+      <xm-grid @click="gridClick">
         <span slot="icon" class="xm__icon--lbsfill"></span>
         <span slot="text">位置</span>
       </xm-grid>
@@ -271,10 +284,14 @@ export default {
                     { name: '出租车', text: '出租车' },
                     { name: '代驾', text: '代驾' }
       ],
-      radio: '飞机'
+      radio: '巴士',
+      checkbox: ['1', '4']
     }
   },
   methods: {
+    gridClick () {
+      alert(1)
+    },
     switchAction (val) {
       this.switchVal = val
     },

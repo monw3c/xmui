@@ -158,6 +158,54 @@ checkbox的另一种表现，有```value```属性
 
 
 ## radio 
+###### 基础用法
+需配合 xm-radio-group 使用，通过```color```属性改变 √ 颜色，```disabled```禁止选中
+``` html
+<xm-radio-group v-model="radio" color="#4cd864">
+    <xm-radio value="巴士"></xm-radio>
+    <xm-radio value="火车"></xm-radio>
+    <xm-radio value="飞机" disabled>飞机--disabled</xm-radio>
+    <xm-radio value="单车">单车</xm-radio>
+</xm-radio-group>
+
+export default {
+  data () {
+    return {
+      radio: '巴士'
+    }
+  }
+}
+```
+
+###### 属性
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| color   | 设置颜色  | String  | — | —  |
+| disabled   | 禁止选中  | Boolean  | — | false  |
 
 
 ## checkbox
+###### 基础用法
+需配合 xm-checkbox-group 使用，通过```color```属性改变 √ 颜色，```disabled```禁止选中
+``` html
+<xm-checkbox-group v-model="checkbox" color="#4cd864">
+    <xm-checkbox value="1">巴士</xm-checkbox>
+    <xm-checkbox value="2">火车</xm-checkbox>
+    <xm-checkbox value="3" disabled>飞机--disabled</xm-checkbox>
+    <xm-checkbox value="4">单车</xm-checkbox>
+</xm-checkbox-group>
+
+export default {
+  data () {
+    return {
+      checkbox: ['1', '4']
+    }
+  }
+}
+```
+
+###### 属性
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| color   | 设置颜色  | String  | — | —  |
+| disabled   | 禁止选中  | Boolean  | — | false  |

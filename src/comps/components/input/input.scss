@@ -18,6 +18,7 @@
         @include size(100%,100%);
         border: none;
         font-size: inherit;
+        background: transparent;
         &::-webkit-search-cancel-button {
           -webkit-appearance: none;
         }

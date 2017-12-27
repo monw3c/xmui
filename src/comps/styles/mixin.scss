@@ -10,6 +10,7 @@
     height: $height;
 }
 
+// 遮罩层
 @mixin mask(){
     position: fixed;
     top: 0;
@@ -24,3 +25,12 @@
         display: none;
     }
 }
+
+// 按下去背景颜色
+@mixin tap-color($bgcolor, $opacity:.9) {
+    
+    &:active {
+      background-color: $bgcolor * $opacity;
+    }
+}
+  

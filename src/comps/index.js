@@ -13,6 +13,7 @@ import Switch from './components/switch/index'
 import Skeleton from './components/skeleton/index'
 
 import { Radio, RadioGroup } from './components/radio/index'
+import { Checkbox, CheckboxGroup } from './components/checkbox/index'
 import { Grid, Grids } from './components/grid/index'
 import { Modal, SpModal } from './components/modal/index'
 import { CellItem, CellGroup } from './components/cell/index'
@@ -37,6 +38,8 @@ const components = [
   Skeleton,
   Radio,
   RadioGroup,
+  Checkbox,
+  CheckboxGroup,
   Grid,
   Grids,
   CellItem,
