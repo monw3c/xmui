@@ -2,7 +2,7 @@
 
 # XMUI  
 
-[![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://travis-ci.org/XadillaX/x-m-ui.svg)](https://travis-ci.org/XadillaX/x-m-ui)  
+[![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://travis-ci.org/XadillaX/x-m-ui)  
 
 基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 移动 和 部分PC 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
 
