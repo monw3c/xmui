@@ -10,7 +10,9 @@ export default {
   props: {
     value: { // 把v-model绑定的值带进来放进子类绑定的checkedModels数组中
       type: Array,
-      default: []
+      default: function () {
+        return []
+      }
     },
     color: {
       type: String,
