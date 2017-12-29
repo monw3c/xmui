@@ -1,6 +1,5 @@
 import './styles/index.scss'
 
-import {Button, ButtonGroup} from './components/button/index'
 import Tag from './components/tag/index'
 import LoadMore from './components/loadMore/index'
 import Search from './components/search/index'
@@ -11,7 +10,10 @@ import Textarea from './components/textarea/index'
 import Select from './components/select/index'
 import Switch from './components/switch/index'
 import Skeleton from './components/skeleton/index'
+import Navbar from './components/navbar/index'
 
+import {Button, ButtonGroup} from './components/button/index'
+import { TabbarItem, Tabbar } from './components/tabbar/index'
 import { Radio, RadioGroup } from './components/radio/index'
 import { Checkbox, CheckboxGroup } from './components/checkbox/index'
 import { Grid, Grids } from './components/grid/index'
@@ -36,6 +38,9 @@ const components = [
   Select,
   Switch,
   Skeleton,
+  TabbarItem,
+  Tabbar,
+  Navbar,
   Radio,
   RadioGroup,
   Checkbox,

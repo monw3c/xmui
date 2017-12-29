@@ -4,7 +4,9 @@
       <!-- nav -->
     </div>
     <div id="demo-wrap">
-      <router-view></router-view>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
     </div>
     
   </div>

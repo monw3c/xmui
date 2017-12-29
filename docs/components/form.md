@@ -1,6 +1,6 @@
 # Form 表单
 ----
-##### 配合 xm-cell-item 和 xm-cell-group 使用
+##### 建议配合 xm-cell-group 和 xm-cell-item 一起使用
 
 ## input
 
@@ -50,33 +50,6 @@
 | blur     | 失焦方法   | Function  |    — | —   |
 | focus    | 聚焦方法   | Function  |    — | —   |
 | input    | 输入方法   | Function  |    — | —   |
-
-## cell
-
-###### 基础用法
-有```leftIcon```、```left```、```right```和```rightIcon```四个slot
-``` html
-# type='link'时，是<a>链接形式
-<xm-cell-group>
-    <xm-cell-item type='link' href="tel:400517517">
-        <span slot="leftIcon" class="xm__icon--contact"></span>
-        <span slot="left">联系方式</span>
-        <span slot="right">400517517</span>
-        <span slot="rightIcon" class="xm__icon--right"></span>
-    </xm-cell-item>
-
-    <xm-cell-item>
-        <span slot="left">我的消息</span>
-        <xm-tag slot="right" type="error" round style="margin-bottom:0;">8</xm-tag>
-        <span slot="rightIcon" class="xm__icon--right"></span>
-    </xm-cell-item>
-</xm-cell-group>
-```
-###### 属性
-| 参数      | 说明    | 类型      | 可选值       | 默认值   |
-|---------- |-------- |---------- |-------------  |-------- |
-| type     | 设置类型   | String  | link | —  |
-| href    | 设置href   | String  |  — | —   |
 
 
 ## textarea

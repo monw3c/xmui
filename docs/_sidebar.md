@@ -5,13 +5,19 @@
  - [按钮](/components/button.md)
  - [标签](/components/tag.md)
  - [加载更多](/components/loadmore.md)
- - [搜索框](/components/search.md)
+ - [搜索框](/components/search.md) 
+ - [单元格](/components/cell.md)
+ - [布局](/components/layout.md)
  - [表单](/components/form.md)
  - [网格](/components/grid.md)
  - [图标](/components/icons.md)
  - [轮播](/components/swiper.md)
  - [时间选择器](/components/datetimepicker.md) 
-
+ - [导航栏(顶部)](/components/navbar.md)
+ - [标签栏(底部)](/components/tabbar.md)
+ - [标签页](/components/tab.md)
+ 
+ 
 - 弹出层
  - [Modal](/components/modal.md)
  - [Toast](/components/toast.md)
@@ -20,8 +26,5 @@
 
 
 - 应用组件
- - [标签页](/components/tab.md)
  - [工单流程](/components/step.md)
- - [导航栏(顶部)](/components/navbar.md)
- - [标签栏(底部)](/components/tabbar.md)
  - [skeleton骨架](/components/skeleton.md)

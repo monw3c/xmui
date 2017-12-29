@@ -1,5 +1,5 @@
 <div align=center>![logo](imgs/logo.png)</div>   
-基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 PC 端和 移动 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
+基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 移动 和 部分PC 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
 
 ## 特性
 
@@ -29,7 +29,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/6/embedded/)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/8/embedded/)  
 
 
 ## 组件列表
@@ -37,8 +37,10 @@ Vue.use(xmui)
 - [x] 标签
 - [x] 加载更多
 - [x] 搜索框
+- [x] 单元格
 - [x] 表单
 - [x] 网格
+- [ ] 布局
 - [x] Modal
 - [x] Toast
 - [x] Loading
@@ -49,8 +51,8 @@ Vue.use(xmui)
 - [ ] ActionSheet
 - [ ] 时间选择器
 - [ ] 标签页
-- [ ] 导航栏(顶部)
-- [ ] 标签栏(底部)
+- [x] 导航栏(顶部)
+- [x] 标签栏(底部)
 
 ## 贡献
 

@@ -8,7 +8,7 @@
 export default {
   name: 'xm-checkbox-group',
   props: {
-    value: {
+    value: { // 把v-model绑定的值带进来放进子类绑定的checkedModels数组中
       type: Array,
       default: []
     },
@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-      currentValue: this.value
+
     }
   },
   watch: {
@@ -28,19 +28,17 @@ export default {
     }
   },
   methods: {
-    updateValue () {
+    updateValue () { // 更新数据
       const value = this.value
       this.childrens = this.$children.filter(item => item.$options.name === 'xm-checkbox')
       if (this.childrens) {
         this.childrens.forEach(child => {
-          child.checkedModels = value
+          child.checkedModels = value // 把值放进子类绑定的checkedModels数组中
         })
       }
     },
     change (val) {
-      this.currentValue = val
-      this.updateValue()
-      this.$emit('input', val)
+      this.$emit('input', val) // 单向流动，让值从父级传出去
     }
   },
   mounted () {

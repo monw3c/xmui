@@ -2,7 +2,7 @@
     <label class="xm__radio" :class="[{'disabled':disabled}]">
         <span class="xm__radio--text"><slot>{{value}}</slot></span>
         <input type="radio" @change="onChange" :disabled="disabled" :checked="checked"/>
-        <span class="xm__radio--icon xm__icon--radio" :style="[{color: $parent.color}]"></span>
+        <span class="xm__radio--icon xm__icon--radio" :style="[{'color': $parent.color}]"></span>
     </label>
 </template>
 

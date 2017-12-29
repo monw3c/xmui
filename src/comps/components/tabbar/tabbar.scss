@@ -1,0 +1,64 @@
+.xm__tabbar{
+    @include size(100%,50px);
+    display: flex;
+    background-color: $body-background;
+}
+
+
+
+.xm__tabbar--item {
+    flex: 1;
+    color: $text-color;
+    display: flex;
+    line-height: $line-height-base;
+    font-size: $font-size-small;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &.xm__tabbar--item-active {
+        color: $success-color;
+    }
+
+    &.router-link-active{
+        color: $success-color;
+    }
+
+    & .xm__tabbar--item-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 27px;
+
+        & img {
+            width: 18px;
+        
+        }
+
+        & .xm__icon {
+            display: block;
+            font-size: 18px;
+            padding: 0 2px;
+        }
+
+        & .xm__tabbar--item-badge {
+            display: inline-block;
+            padding: .15em .4em;
+            min-width: 8px;
+            @include border-radius(18px);
+            background-color: #F43530;
+            color: #fff;
+            line-height: 1.2;
+            text-align: center;
+            font-size: 12px;
+            vertical-align: middle;
+            position: absolute;
+            top: -2px;
+            right: -13px;
+        }
+                
+    }
+
+    
+}
+

@@ -119,7 +119,7 @@
         </xm-cell-item>
       </xm-cell-group>
 
-      <xm-cell-group title="复选" class="xm-checkbox-group">
+      <xm-cell-group title="复选" class="xm-checkbox-group" >
         <xm-cell-item>
           <xm-checkbox-group slot="right" v-model="checkbox" color="#4cd864">
             <xm-checkbox value="1">巴士</xm-checkbox>
@@ -136,7 +136,7 @@
           <p>您输入：{{inputVal}}</p>
           <p>留言：{{textareaVal}}</p>
           <p>出行方式：{{selectVal}}</p>
-          <p>是否保存：{{switchVal}}</p>
+          <p>朋友圈：{{switchVal}}</p>
           <p>单选：{{radio}}</p>
           <p>复选：{{checkbox}}</p>
         </div>
@@ -175,13 +175,31 @@
 
 
 
-    <h4>导航栏(顶部)</h4>
+    <h4>布局</h4>
 
+
+
+
+
+    <h4>导航栏(顶部)</h4>
+    <div class="navbar-wrap">
+      <xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @leftAction="clickLeft" @rightAction="clickRight"></xm-navbar>
+      <br>
+      <xm-navbar img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" left-icon="xm__icon--left" right-icon="xm__icon--edit"></xm-navbar>
+    </div>
 
 
 
     <h4>标签栏(底部)</h4>
-
+    <div class="tabbar-wrap">
+      <xm-tabbar>
+        <xm-tabbar-item icon="xm__icon--phone" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--lock" :href="hrefObj" bagde="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
+        <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--date" href="my">我的</xm-tabbar-item>
+      </xm-tabbar>
+    </div>
 
 
 
@@ -293,10 +311,20 @@ export default {
                     { name: '代驾', text: '代驾' }
       ],
       radio: '巴士',
-      checkbox: ['1', '4']
+      checkbox: ['1', '4'],
+      hrefObj: { path: '/mall', name: 'mall', params: { userId: 123 } }
     }
   },
   methods: {
+    clickLeft () {
+      alert('左边')
+    },
+    clickRight () {
+      alert('右边')
+    },
+    routerAction () {
+
+    },
     gridClick () {
       alert(1)
     },
@@ -473,6 +501,7 @@ h2{
   position: fixed;
   right: 5px;
   top: 5px;
+  z-index: 9999;
 }
 .right-top-loading.xm__loading--wrap{
   margin: 0;
@@ -500,7 +529,16 @@ h2{
 .topic-loading-item .loading-item-three {
     margin-top: 10px;
 }
+.xm__tabbar{
+  background: #fff;
+}
+.tabbar-wrap, .navbar-wrap{
+  background: #f5f5f5;
+  padding: 10px;
+}
 
-
+.xm__navbar--title img{
+  height: 30px;
+}
 </style>
 
