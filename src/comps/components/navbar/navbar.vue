@@ -1,6 +1,6 @@
 <template>
     <header class="xm__navbar" :style="{'background-color':bgcolor,'color':color}">
-      <div class="xm__navbar--left" @click="leftAction">
+      <div class="xm__navbar--left" @click="clickLeft">
         <i class="xm__navbar--icon" :class="leftIcon"></i>
         <span class="xm__navbar--text">{{leftText}}</span>
       </div>
@@ -10,7 +10,7 @@
       <div class="xm__navbar--title" v-if="imgSrc&&!title">
         <img :src="imgSrc">
       </div>
-      <div class="xm__navbar--right" @click="rightAction">
+      <div class="xm__navbar--right" @click="clickRight">
         <span class="xm__navbar--text">{{rightText}}</span>
         <i class="xm__navbar--icon" :class="rightIcon"></i>
       </div>
@@ -63,11 +63,11 @@ export default {
     }
   },
   methods: {
-    leftAction (event) {
-      this.$emit('leftAction', event)
+    clickLeft (event) {
+      this.$emit('left-action', event)
     },
-    rightAction (event) {
-      this.$emit('rightAction', event)
+    clickRight (event) {
+      this.$emit('right-action', event)
     }
   },
   computed: {

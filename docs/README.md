@@ -29,7 +29,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/8/embedded/)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/9/embedded/)  
 
 
 ## 组件列表

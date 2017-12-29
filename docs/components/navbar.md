@@ -3,7 +3,7 @@
 ### 基础用法
 使用```title```、```bgcolor```、```color```、```left-text```、```left-icon```、```right-text```、```right-icon```和```img-src```属性来定义 Navbar 的样式。
 ``` html
-<xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @leftAction="clickLeft" @rightAction="clickRight"></xm-navbar>
+<xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @left-action="clickLeft" @right-action="clickRight"></xm-navbar>
 
 #有title的时候设置img-src无效
 <xm-navbar img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" left-icon="xm__icon--left" right-icon="xm__icon--edit"></xm-navbar>
@@ -25,5 +25,5 @@
 ### API
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- | 
-| leftAction     | 左点击方法   | Function  |    — | —   |
-| rightAction     | 右点击方法   | Function  |    — | —   |
+| left-action     | 左点击方法   | Function  |    — | —   |
+| right-action     | 右点击方法   | Function  |    — | —   |

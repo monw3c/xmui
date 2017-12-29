@@ -183,7 +183,7 @@
 
     <h4>导航栏(顶部)</h4>
     <div class="navbar-wrap">
-      <xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @leftAction="clickLeft" @rightAction="clickRight"></xm-navbar>
+      <xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @left-action="clickLeft" @right-action="clickRight"></xm-navbar>
       <br>
       <xm-navbar img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" left-icon="xm__icon--left" right-icon="xm__icon--edit"></xm-navbar>
     </div>
