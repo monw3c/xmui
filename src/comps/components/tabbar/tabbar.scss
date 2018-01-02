@@ -43,10 +43,10 @@
 
         & .xm__tabbar--item-badge {
             display: inline-block;
-            padding: .15em .4em;
+            padding: 2px 5px;
             min-width: 8px;
             @include border-radius(18px);
-            background-color: #F43530;
+            background-color: $error-color;
             color: #fff;
             line-height: 1.2;
             text-align: center;
@@ -54,7 +54,7 @@
             vertical-align: middle;
             position: absolute;
             top: -2px;
-            right: -13px;
+            right: -15px;
         }
                 
     }

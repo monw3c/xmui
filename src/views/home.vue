@@ -194,10 +194,10 @@
     <div class="tabbar-wrap">
       <xm-tabbar>
         <xm-tabbar-item icon="xm__icon--phone" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
-        <xm-tabbar-item icon="xm__icon--lock" :href="hrefObj" bagde="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--lock" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
-        <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
-        <xm-tabbar-item icon="xm__icon--date" href="my">我的</xm-tabbar-item>
+        <xm-tabbar-item href="###"img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--date" href="my" badge="11">我的</xm-tabbar-item>
       </xm-tabbar>
     </div>
 
