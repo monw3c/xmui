@@ -67,15 +67,6 @@
         border: none;
     }
 
-    &:first-child{
-        border-right:none;
-        border-bottom-left-radius: 4px;
-    }
-
-    &:last-child{
-        border-bottom-right-radius: 4px;
-    }
-
     &::before{
         content: "";
         position: absolute;
@@ -89,6 +80,21 @@
         box-sizing: border-box;
         border: 1px solid $border-color-base;
     }
+
+    &:first-child{
+        border-right:none;
+        border-bottom-left-radius: 4px;
+        
+        &::before{
+            border: none;
+        }
+    }
+
+    &:last-child{
+        border-bottom-right-radius: 4px;
+    }
+
+    
 }
 
 .xm__dialog--ft .xm__btn--default{
