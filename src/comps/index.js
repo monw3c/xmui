@@ -11,6 +11,7 @@ import Select from './components/select/index'
 import Switch from './components/switch/index'
 import Skeleton from './components/skeleton/index'
 import Navbar from './components/navbar/index'
+import Actionsheet from './components/actionsheet/index'
 
 import {Button, ButtonGroup} from './components/button/index'
 import { TabbarItem, Tabbar } from './components/tabbar/index'
@@ -41,6 +42,7 @@ const components = [
   TabbarItem,
   Tabbar,
   Navbar,
+  Actionsheet,
   Radio,
   RadioGroup,
   Checkbox,

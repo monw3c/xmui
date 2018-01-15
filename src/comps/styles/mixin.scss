@@ -20,6 +20,8 @@
     background-color: rgba(55, 55, 55, 0.6);
     height: 100%;
     z-index: $zindex-modal-mask;
+    transition: opacity .2s ease-in;
+    pointer-events: auto; 
 
     &--hidden {
         display: none;

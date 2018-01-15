@@ -196,7 +196,7 @@
         <xm-tabbar-item icon="xm__icon--phone" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--lock" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
-        <xm-tabbar-item href="###"img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
+        <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--date" href="my" badge="11">我的</xm-tabbar-item>
       </xm-tabbar>
     </div>
@@ -218,7 +218,7 @@
 
     <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
     <xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
-    <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
+    <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="https://m.360buyimg.com/n12/s750x750_jfs/t13243/363/119511899/34477/f555b966/5a03ffafNd99ceef4.jpg"/></xm-sp-modal>
 
 
     <h4>Toast</h4>
@@ -237,8 +237,11 @@
     
 
     <h4>ActionSheet</h4>
-    
+    <xm-button type="success" @click="actionSheetVisible1=true">有取消</xm-button>
+    <xm-button type="primary" @click="actionSheetVisible2=true">无取消</xm-button>
 
+    <xm-actionsheet :item-list="itemList" cancel="取消" cancel-color="#19be6b" v-model="actionSheetVisible1" header="这里是个标题"></xm-actionsheet>
+    <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
 
 
     <h4>轮播</h4>
@@ -318,7 +321,23 @@ export default {
       ],
       radio: '巴士',
       checkbox: ['1', '4'],
-      hrefObj: { path: '/mall', name: 'mall', params: { userId: 123 } }
+      hrefObj: { path: '/mall', name: 'mall', params: { userId: 123 } },
+      itemList: [
+        { text: '顺风车',
+          callBack: () => {
+            this.$modal.alert({
+              title: '提示',
+              content: '我是actionsheet弹出来的',
+              color: '#19be6b'
+            })
+          }
+        },
+        { text: '巴士', callBack: () => {} },
+        { text: '快车', callBack: () => {} },
+        { text: '专车', callBack: () => {} }
+      ],
+      actionSheetVisible1: false,
+      actionSheetVisible2: false
     }
   },
   methods: {

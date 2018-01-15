@@ -36,7 +36,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/9/embedded/)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/12/embedded/)  
 
 ## 组件列表
 - [x] 按钮
@@ -54,7 +54,7 @@ Vue.use(xmui)
 - [x] skeleton骨架
 - [ ] 图标
 - [ ] 轮播
-- [ ] ActionSheet
+- [x] ActionSheet
 - [ ] 时间选择器
 - [ ] 标签页
 - [x] 导航栏(顶部)

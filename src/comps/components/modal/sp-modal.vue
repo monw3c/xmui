@@ -9,7 +9,7 @@
         </div>
         <div class="xm__dialog--ft">
           <div>
-            <xm-button @click="close"><i class="xm__icon--close"></i></xm-button>
+            <xm-button @click="close"><i class="xm__icon--close-outline"></i></xm-button>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.xm__dialog{
+.xm__dialog.xm__dialog--special{
   position: fixed;
   text-align: center;
   top: 50%;
@@ -90,35 +90,40 @@ export default {
   background-color: transparent;
   transform: translate3d(-50%, -50%, 0);
   z-index: 1000;
-}
 
-.xm__dialog--bd{
-  max-height: 320px;
-  overflow: hidden;
-}
-.xm__dialog--bd img{
-  width: 100%;
-  border-radius: 4px;
-}
-
-.xm__dialog--ft button{
-  background: transparent;
-  margin: 0 auto;
-
-  &::before{
-    border: none;
+  & .xm__dialog--bd{
+    max-height: 320px;
+    overflow: hidden;
+  
+    & .xm__dialog--bd img{
+      width: 100%;
+      border-radius: 4px;
+    }
   }
 
-  &:hover,
-  &:active {
-    background-color: transparent;
-    text-decoration: none;
-    border: none;
-  }
+  & .xm__dialog--ft {
+    margin-bottom: 0;
+    
+    & button {
+    background: transparent;
+    margin: 0 auto;
 
-  & .xm__icon--close{
-    font-size: 34px;
-    color: #fff;
+      &::before{
+        border: none;
+      }
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+      }
+
+      & .xm__icon--close-outline{
+        font-size: 34px;
+        color: #fff;
+      }
+    }
   }
 }
 </style>
