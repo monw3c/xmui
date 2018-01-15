@@ -945,17 +945,44 @@ a {
       position: relative;
       border-radius: 0;
       border: none; }
-      .xm__dialog .xm__dialog--ft .xm__btn--group button:hover, .xm__dialog .xm__dialog--ft .xm__btn--group button:active {
-        background-color: #fff;
-        text-decoration: none;
-        color: #495060;
-        border: none; }
+      .xm__dialog .xm__dialog--ft .xm__btn--group button::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0px 0px 0px;
+        pointer-events: none;
+        box-sizing: border-box;
+        border-top: 1px solid #dddee1; }
       .xm__dialog .xm__dialog--ft .xm__btn--group button:first-child {
         border-right: none;
         border-bottom-left-radius: 4px; }
       .xm__dialog .xm__dialog--ft .xm__btn--group button:last-child {
         border-bottom-right-radius: 4px; }
-      .xm__dialog .xm__dialog--ft .xm__btn--group button::before {
+    .xm__dialog .xm__dialog--ft .xm__btn--default, .xm__dialog .xm__dialog--ft .xm__btn--primary, .xm__dialog .xm__dialog--ft .xm__btn--success, .xm__dialog .xm__dialog--ft .xm__btn--warning, .xm__dialog .xm__dialog--ft .xm__btn--error, .xm__dialog .xm__dialog--ft .xm__btn--text {
+      display: block;
+      flex: 1;
+      color: #495060;
+      text-decoration: none;
+      position: relative;
+      border-radius: 0;
+      border: none;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
+      .xm__dialog .xm__dialog--ft .xm__btn--default:hover, .xm__dialog .xm__dialog--ft .xm__btn--primary:hover, .xm__dialog .xm__dialog--ft .xm__btn--success:hover, .xm__dialog .xm__dialog--ft .xm__btn--warning:hover, .xm__dialog .xm__dialog--ft .xm__btn--error:hover, .xm__dialog .xm__dialog--ft .xm__btn--text:hover, .xm__dialog .xm__dialog--ft .xm__btn--default:active, .xm__dialog .xm__dialog--ft .xm__btn--primary:active, .xm__dialog .xm__dialog--ft .xm__btn--success:active, .xm__dialog .xm__dialog--ft .xm__btn--warning:active, .xm__dialog .xm__dialog--ft .xm__btn--error:active, .xm__dialog .xm__dialog--ft .xm__btn--text:active {
+        background-color: #fff;
+        text-decoration: none;
+        color: #495060;
+        border: none; }
+      .xm__dialog .xm__dialog--ft .xm__btn--default:first-child, .xm__dialog .xm__dialog--ft .xm__btn--primary:first-child, .xm__dialog .xm__dialog--ft .xm__btn--success:first-child, .xm__dialog .xm__dialog--ft .xm__btn--warning:first-child, .xm__dialog .xm__dialog--ft .xm__btn--error:first-child, .xm__dialog .xm__dialog--ft .xm__btn--text:first-child {
+        border-right: none;
+        border-bottom-left-radius: 4px; }
+      .xm__dialog .xm__dialog--ft .xm__btn--default:last-child, .xm__dialog .xm__dialog--ft .xm__btn--primary:last-child, .xm__dialog .xm__dialog--ft .xm__btn--success:last-child, .xm__dialog .xm__dialog--ft .xm__btn--warning:last-child, .xm__dialog .xm__dialog--ft .xm__btn--error:last-child, .xm__dialog .xm__dialog--ft .xm__btn--text:last-child {
+        border-bottom-right-radius: 4px; }
+      .xm__dialog .xm__dialog--ft .xm__btn--default::before, .xm__dialog .xm__dialog--ft .xm__btn--primary::before, .xm__dialog .xm__dialog--ft .xm__btn--success::before, .xm__dialog .xm__dialog--ft .xm__btn--warning::before, .xm__dialog .xm__dialog--ft .xm__btn--error::before, .xm__dialog .xm__dialog--ft .xm__btn--text::before {
         content: "";
         position: absolute;
         top: 0px;
@@ -968,7 +995,7 @@ a {
         box-sizing: border-box;
         border: 1px solid #dddee1;
         border-bottom: none; }
-      .xm__dialog .xm__dialog--ft .xm__btn--group button:first-child::before {
+      .xm__dialog .xm__dialog--ft .xm__btn--default:first-child::before, .xm__dialog .xm__dialog--ft .xm__btn--primary:first-child::before, .xm__dialog .xm__dialog--ft .xm__btn--success:first-child::before, .xm__dialog .xm__dialog--ft .xm__btn--warning:first-child::before, .xm__dialog .xm__dialog--ft .xm__btn--error:first-child::before, .xm__dialog .xm__dialog--ft .xm__btn--text:first-child::before {
         border-right: none; }
     .xm__dialog .xm__dialog--ft .xm__btn--default, .xm__dialog .xm__dialog--ft .xm__btn--primary, .xm__dialog .xm__dialog--ft .xm__btn--success, .xm__dialog .xm__dialog--ft .xm__btn--warning, .xm__dialog .xm__dialog--ft .xm__btn--error, .xm__dialog .xm__dialog--ft .xm__btn--text {
       display: block;
