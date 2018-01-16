@@ -95,6 +95,10 @@
           <xm-select slot="right" right :data="selectList"></xm-select>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
+        <xm-flexbox>
+          <div style="width:30%"><xm-button block no-radius long type="default" style="margin-top:10px">取消</xm-button></div>
+          <xm-flexbox-item><xm-button block no-radius long type="success" style="margin-top:10px">提交</xm-button></xm-flexbox-item>
+        </xm-flexbox>
       </xm-cell-group>
 
       <xm-cell-group>
@@ -129,7 +133,8 @@
           </xm-checkbox-group>
         </xm-cell-item>
       </xm-cell-group>
-
+      
+      
 
       <xm-cell-group>
         <div slot="bottom" style="overflow: hidden;word-break: break-all;text-align: left;padding-left: 10px;font-size: 14px;">
@@ -175,8 +180,18 @@
 
 
 
-    <h4>布局</h4>
-
+    <h4>flex布局</h4>
+    <xm-flexbox class="flex">
+      <div>普通div</div>
+      <xm-flexbox-item>默认的水平flex div</xm-flexbox-item>
+      <div>普通div</div>
+    </xm-flexbox>
+    <br>
+    <xm-flexbox direction="vertical" class="flex">
+      <div>普通div</div>
+      <xm-flexbox-item>direction="vertical" 的垂直flex div</xm-flexbox-item>
+      <div>普通div</div>
+    </xm-flexbox>
 
 
 
@@ -211,13 +226,18 @@
     <h2>弹出层</h2>
     <h4>Modal</h4>
     <xm-button type="success" @click="modalClick1">alert</xm-button>
-    <xm-button type="primary" @click="modalClick2">confirm</xm-button>
+    <xm-button type="primary" @click="modalClick2">自定义内容confirm</xm-button>
     <xm-button type="error" @click="modalClick3">特殊应用层</xm-button>
+    <br>
     <xm-button type="success" @click="modalClick4">全局alert层</xm-button>
     <xm-button type="primary" @click="modalClick5">全局confirm层,带回调函数</xm-button>
+    <xm-button type="warning" @click="modalClick6">全局prompt层,带回调函数</xm-button>
 
     <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
-    <xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
+    <xm-modal type="confirm" dialog-title="填写资料" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">
+      <xm-input v-model="value2" name="name2" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
+      <xm-textarea placeholder="请输入留言，50字以内" :value="value3" @input="textareaAction3" max="50"></xm-textarea>
+    </xm-modal>
     <xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="https://m.360buyimg.com/n12/s750x750_jfs/t13243/363/119511899/34477/f555b966/5a03ffafNd99ceef4.jpg"/></xm-sp-modal>
 
 
@@ -244,14 +264,20 @@
     <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
 
 
+    <h4>Popup</h4>
+
+
+
+
+
+
     <h4>轮播</h4>
 
 
 
 
     <h4>时间选择器</h4>
-
-
+    
 
     
     <h2>应用组件</h2>
@@ -261,7 +287,7 @@
 
 
     <h4>Skeleton骨架</h4>
-    <xm-skeleton type="circle"></xm-skeleton>
+    <xm-skeleton type="circle" @click.native="modalClick1"></xm-skeleton>
     <xm-skeleton  animate="loading"></xm-skeleton>
 
     <div class="topic-loading-item">
@@ -287,6 +313,8 @@ export default {
       msg: `xmui - 基于vue2.x，可复用UI组件`,
       value: '',
       value1: '',
+      value2: '',
+      value3: '',
       inputValue: '',
       modalVisible1: false,
       modalVisible2: false,
@@ -368,6 +396,9 @@ export default {
     textareaAction (val) {
       this.textareaVal = val
     },
+    textareaAction3 (val) {
+      this.value3 = val
+    },
     toastClick1 () {
       this.$toast.text({content: '太长会换行呢，15个字以内最好', direction: 'bottom'})
     },
@@ -397,6 +428,21 @@ export default {
             color: '#19be6b',
             autoClose: true,
             maskClosable: false
+          })
+        }
+      })
+    },
+    modalClick6 () {
+      this.$modal.prompt({
+        title: '你想怎么样呢？',
+        placeholder: '填入您的支付宝密码',
+        color: '#ed3f14',
+        // readonly: true,
+        callBack (val) {
+          this.$modal.alert({
+            title: '我爱你',
+            content: `密码是${val}，我爱你真的，把帐号也发我一遍 `,
+            color: '#19be6b'
           })
         }
       })
@@ -450,9 +496,10 @@ export default {
       // alert(this.modalVisible)
     },
     modalOk2 (e) {
-      alert(`好的2`)
+      alert(`${this.value2} 和 ${this.value3}`)
       this.modalVisible2 = false
-      // alert(this.modalVisible)
+      this.value2 = ''
+      this.value3 = ''
     }
   },
   mounted: () => {
@@ -565,5 +612,32 @@ h2{
 .xm__navbar--title img{
   height: 30px;
 }
+
+.flex.xm__flexbox{
+  border:1px solid #eee;
+}
+.flex.xm__flexbox.xm__flex--vertical{
+  border:none;
+  height: 300px;
+}
+.flex.xm__flexbox div:nth-child(odd){
+  background: #ededed;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.flex.xm__flexbox.xm__flex--vertical div{
+  width: 100%;
+}
+.flex.xm__flexbox.xm__flex--vertical .xm__flex--item{
+  background: #ddd;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 </style>
 

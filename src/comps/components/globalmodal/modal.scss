@@ -35,6 +35,18 @@
         word-wrap: break-word;
         word-break: break-all;
         color: $text-color;
+
+        & .xm__dialog--bd-input{
+            height: 38px;
+            border: 1px solid $border-color-split;
+            padding: 0 2px;
+            @include border-radius;
+
+            &::-webkit-input-placeholder{
+                color: $input-placeholder-color;
+            }
+        }
+
     }
 
 

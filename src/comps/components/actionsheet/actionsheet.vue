@@ -9,7 +9,6 @@
         </ul>
         <a v-if="cancel" @click.stop="close" class="xm__actionsheet--action" :style="{'color':cancelColor}">{{cancel}}</a>
       </div>
-      
     </div>
   </transition>
 </template>

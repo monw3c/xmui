@@ -1,10 +1,10 @@
-// set boeder圆角
+// border圆角
 @mixin border-radius($radius:$border-radius-small){
     -webkit-border-radius: $radius;
     border-radius: $radius;
 }
 
-// set 宽高
+// 宽高
 @mixin size($width,$height){
     width: $width;
     height: $height;
@@ -34,5 +34,21 @@
     &:active {
       background-color: $bgcolor * $opacity;
     }
+}
+
+// flex布局
+@mixin flex(){
+    display: flex;
+    align-items: center;
+
+    & .xm__flex--item {
+        flex: 1;
+    }
+
+    &.xm__flex--vertical {
+        flex-direction: column;
+        height: 100%;
+    }
+
 }
   

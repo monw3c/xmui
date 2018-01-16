@@ -36,7 +36,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/12/embedded/)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/14/embedded/)  
 
 ## 组件列表
 - [x] 按钮
@@ -46,7 +46,7 @@ Vue.use(xmui)
 - [x] 单元格
 - [x] 表单
 - [x] 网格
-- [ ] 布局
+- [x] flexbox
 - [x] Modal
 - [x] Toast
 - [x] Loading

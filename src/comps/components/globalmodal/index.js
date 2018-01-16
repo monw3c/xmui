@@ -11,13 +11,19 @@ function open (propsData) {
 
 export default {
   confirm (opts) {
-    const defaultOpts = {content: '', type: 'confirm', maskClosable: true, callBack () { }}
+    const defaultOpts = {title: '', content: '', type: 'confirm', maskClosable: true, color: '', callBack () { }}
+    const propsOpts = Object.assign(defaultOpts, opts)
+    return open(propsOpts)
+  },
+
+  prompt (opts) {
+    const defaultOpts = {title: '', placeholder: '', type: 'prompt', maskClosable: true, color: '', readonly: false, callBack () { }}
     const propsOpts = Object.assign(defaultOpts, opts)
     return open(propsOpts)
   },
 
   alert (opts) {
-    const defaultOpts = {content: '', type: 'alert', maskClosable: true, autoClose: false, callBack () { }}
+    const defaultOpts = {title: '', content: '', type: 'alert', maskClosable: true, color: '', autoClose: false, callBack () { }}
     const propsOpts = Object.assign(defaultOpts, opts)
     return open(propsOpts)
   }

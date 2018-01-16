@@ -25,10 +25,8 @@
 
 	&:hover,
     &:active {
-        background-color: $btn-primary-bg;
         text-decoration: none;
-        color: $plain-color;
-        border-color: $btn-primary-bg;
+        
     }
 
     &[disabled] {

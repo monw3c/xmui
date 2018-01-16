@@ -4,12 +4,15 @@
  使用```type```、```:visible```、```@close```、```@confirm```、```dialog-title```、```color```、```:z-index```和```:mask-closable```属性来定义 Modal 的样式。
 ``` html
 <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
-<xm-modal type="confirm" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">我哦哦哦哦哦</xm-modal>
+<xm-modal type="confirm" dialog-title="填写资料" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">
+    <xm-input v-model="value2" name="name2" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
+    <xm-textarea placeholder="请输入留言，50字以内" :value="value3" @input="textareaAction3" max="50"></xm-textarea>
+</xm-modal>
 ```
 
 ### 特殊弹出层，是用在活动页面的弹出层，一般为图片展示用
 ``` html
-<xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="../assets/3333.png"/></xm-sp-modal>
+<xm-sp-modal :visible="modalVisible3" @close="modalClose3" :z-index="zIndex"><img src="https://m.360buyimg.com/n12/s750x750_jfs/t13243/363/119511899/34477/f555b966/5a03ffafNd99ceef4.jpg"/></xm-sp-modal>
 ```
 
 ### 属性
@@ -17,7 +20,7 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | type  | 类型   | string    |  alert，confirm  |     —    |
 | visible     | 显示钩子   | string  | 自定义 |  —   |
-| mask-closable     | 可否点击背景关闭   | Boolean    | - |   true    |
+| mask-closable     | 可否点击背景关闭   | Boolean    | true，false |   true    |
 | color     | 确定文字颜色   | string  | 自定义 |  —   |
 | z-index     | z-index   | string  | 自定义 |  —   |
 | dialog-title     | 是否有标题内容   | string  | 自定义 | 无标题  |
@@ -33,6 +36,7 @@
 ``` js
 this.$modal.confirm(title, content, color, maskClosable, callBack)
 this.$modal.alert(title, content, color, autoClose, maskClosable, callBack)
+this.$modal.prompt(title, placeholder, readonly, color, maskClosable, callBack)
 
 this.$modal.confirm({
         title: '提示',
@@ -48,6 +52,20 @@ this.$modal.confirm({
           })
         }
 })
+
+this.$modal.prompt({
+        title: '你想怎么样呢？',
+        placeholder: '填入您的支付宝密码',
+        color: '#ed3f14',
+        readonly: true,
+        callBack (val) {
+          this.$modal.alert({
+            title: '我爱你',
+            content: `密码是${val}，我爱你真的，把帐号也发我一遍 `,
+            color: '#19be6b'
+          })
+        }
+})
 ```
 
 ### 属性
@@ -55,8 +73,9 @@ this.$modal.confirm({
 |---------- |-------- |---------- |-------------  |-------- |
 | title  | 标题   | string    |  自定义  |   —    |
 | content     | 内容   | string  | 自定义 |  —   |
-| maskClosable   | 可否点击背景关闭   | Boolean    | - |   true    |
-| color     | 确定文字颜色   | string  | 自定义 |  -   |
-| autoClose    | 自动关闭   | Boolean  | - |  默认为3秒，alert有，confirm无   |
-| callBack     | 回调函数   | Function  | 自定义 | -  |
-
+| maskClosable   | 可否点击背景关闭   | Boolean    | true，false |   true    |
+| color     | 确定文字颜色   | string  | 自定义 |  —   |
+| autoClose    | 自动关闭   | Boolean  | true，false |  默认为3秒，alert有，confirm和prompt无   |
+| callBack     | 回调函数   | Function  | 自定义 | —  |
+| placeholder  | prompt的input属性placeholder   | string  | — |  —  |
+| readonly  | prompt的input属性readonly  | Boolean  | true，false |  false  |

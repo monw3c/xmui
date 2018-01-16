@@ -20,6 +20,7 @@ import { Checkbox, CheckboxGroup } from './components/checkbox/index'
 import { Grid, Grids } from './components/grid/index'
 import { Modal, SpModal } from './components/modal/index'
 import { CellItem, CellGroup } from './components/cell/index'
+import { FlexboxItem, Flexbox } from './components/flexbox/index'
 
 import GlobalModal from './components/globalmodal/index'
 import Toast from './components/toast/index'
@@ -50,7 +51,9 @@ const components = [
   Grid,
   Grids,
   CellItem,
-  CellGroup
+  CellGroup,
+  FlexboxItem,
+  Flexbox
 ]
 
 const install = function (Vue) {

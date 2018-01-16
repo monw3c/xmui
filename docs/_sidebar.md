@@ -7,7 +7,7 @@
  - [加载更多](/components/loadmore.md)
  - [搜索框](/components/search.md) 
  - [单元格](/components/cell.md)
- - [布局](/components/layout.md)
+ - [Flexbox](/components/flexbox.md)
  - [表单](/components/form.md)
  - [网格](/components/grid.md)
  - [图标](/components/icons.md)

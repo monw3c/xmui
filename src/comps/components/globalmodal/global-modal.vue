@@ -6,22 +6,29 @@
         <div class="xm__dialog--hd">
           <strong class="xm__dialog--title" v-if="title">{{title}}</strong>
         </div>
-        <div class="xm__dialog--bd">
+        <div class="xm__dialog--bd" v-if="type=='prompt'">
+          <xm-input v-model="promptValue" :placeholder="placeholder" :readonly="readonly" class="xm__dialog--bd-input"></xm-input>
+        </div>
+        <div class="xm__dialog--bd" v-else>
           {{content}}
         </div>
         <div class="xm__dialog--ft">
-          <div v-if="type&&type=='alert'">
+          <div v-if="!type||type=='alert'">
             <xm-button @click="confirm" :style="{'color':color}" long>确定</xm-button>
           </div>
-          <div v-else-if="type&&type=='confirm'">
+          <div v-else-if="type=='confirm'">
           <xm-button-group class="xm__btn--group" >
             <xm-button @click="close">取消</xm-button>
             <xm-button @click="confirm" :style="{'color':color}">确定</xm-button>
           </xm-button-group>
           </div>
-          <div v-else>
-            <xm-button @click="confirm" :style="{'color':color}" long>确定</xm-button>
+          <div v-else-if="type=='prompt'">
+          <xm-button-group class="xm__btn--group" >
+            <xm-button @click="close">取消</xm-button>
+            <xm-button @click="confirm" :style="{'color':color}">确定</xm-button>
+          </xm-button-group>
           </div>
+          
         </div>
       </div>
       
@@ -36,7 +43,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'default'
+      default: 'alert'
+    },
+    value: {
+      type: String,
+      default: ''
     },
     title: {
       type: String,
@@ -46,6 +57,11 @@ export default {
       type: String,
       default: ''
     },
+    placeholder: {
+      type: String,
+      default: ''
+    },
+    readonly: Boolean,
     maskClosable: {
       type: Boolean,
       default: true
@@ -60,6 +76,11 @@ export default {
       default () {}
     }
   },
+  data () {
+    return {
+      promptValue: this.value
+    }
+  },
   methods: {
     close () {
       this.$emit('close')
@@ -69,7 +90,13 @@ export default {
     confirm () {
       this.$emit('confirm')
       this.isVisible = false
-      this.callBack()
+      if (this.type === 'prompt') {
+        if (this.promptValue !== '') {
+          this.callBack(this.promptValue)
+        }
+      } else {
+        this.callBack()
+      }
       this.destroyed()
     },
     maskClose () {

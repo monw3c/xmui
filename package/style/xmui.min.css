@@ -588,10 +588,7 @@ a {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
   .xm__btn--default:hover, .xm__btn--primary:hover, .xm__btn--success:hover, .xm__btn--warning:hover, .xm__btn--error:hover, .xm__btn--text:hover, .xm__btn--default:active, .xm__btn--primary:active, .xm__btn--success:active, .xm__btn--warning:active, .xm__btn--error:active, .xm__btn--text:active {
-    background-color: #2d8cf0;
-    text-decoration: none;
-    color: #fff;
-    border-color: #2d8cf0; }
+    text-decoration: none; }
   .xm__btn--default[disabled], [disabled].xm__btn--primary, [disabled].xm__btn--success, [disabled].xm__btn--warning, [disabled].xm__btn--error, [disabled].xm__btn--text {
     cursor: not-allowed;
     opacity: 0.5;
@@ -928,6 +925,14 @@ a {
     word-wrap: break-word;
     word-break: break-all;
     color: #495060; }
+    .xm__dialog .xm__dialog--bd .xm__dialog--bd-input {
+      height: 38px;
+      border: 1px solid #e9eaec;
+      padding: 0 2px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+      .xm__dialog .xm__dialog--bd .xm__dialog--bd-input::-webkit-input-placeholder {
+        color: #333; }
   .xm__dialog .xm__dialog--ft {
     position: relative;
     line-height: 48px;
@@ -1691,3 +1696,12 @@ a {
     height: 50px;
     line-height: 50px;
     background-color: #fff; }
+
+.xm__flexbox {
+  display: flex;
+  align-items: center; }
+  .xm__flexbox .xm__flex--item {
+    flex: 1; }
+  .xm__flexbox.xm__flex--vertical {
+    flex-direction: column;
+    height: 100%; }
