@@ -20,4 +20,4 @@
 ### 属性
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| direction | 设置垂直布局 | String  |  — | horizontal   |
+| direction | 设置垂直布局 | String  |  horizontal，vertical | horizontal   |

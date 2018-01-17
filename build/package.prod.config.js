@@ -1,8 +1,10 @@
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var baseWebpackConfig = require('./package.config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var extractScss = new ExtractTextPlugin('/style/xmui.min.css')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const config = require('../config')
+const baseWebpackConfig = require('./package.config')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractScss = new ExtractTextPlugin('/style/xmui.min.css')
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
     output: {
@@ -37,6 +39,11 @@ module.exports = merge(baseWebpackConfig, {
                 }
             }
         }),
-        extractScss
+        extractScss,
+        new OptimizeCSSPlugin({
+            cssProcessorOptions: config.build.productionSourceMap
+            ? { safe: true, map: { inline: false } }
+            : { safe: true }
+        })
     ]
 })

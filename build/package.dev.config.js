@@ -1,8 +1,8 @@
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var baseWebpackConfig = require('./package.config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var extractScss = new ExtractTextPlugin('/style/xmui.min.css')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./package.config')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractScss = new ExtractTextPlugin('/style/xmui.min.css')
 
 module.exports = merge(baseWebpackConfig, {
     output: {

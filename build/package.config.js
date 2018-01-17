@@ -1,10 +1,10 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
         'xmui': './src/comps/index.js',
-        'style': './src/comps/index.js',
+        //'style': './src/comps/index.js',
     },
     output: {
         path: path.resolve(__dirname, '../package'),
