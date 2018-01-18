@@ -3,7 +3,9 @@
         <div class="xm__tabbar--item-icon">
           <i class="xm__icon" :class="icon" v-if="icon"></i>
           <img v-else-if="imgSrc&&!icon" :src="imgSrc">
+
           <div v-if="badge" class="xm__tabbar--item-badge">{{badge}}</div>
+          <div v-else-if="!badge&&dot" class="xm__tabbar--item-dot"></div>
         </div>
         <div class="xm__tabbar--item-text"><slot></slot></div>
     </div>
@@ -49,6 +51,10 @@ export default {
     badge: {
       type: String,
       default: ''
+    },
+    dot: {
+      type: Boolean,
+      default: false
     },
     active: {
       type: Boolean,

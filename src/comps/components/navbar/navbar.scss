@@ -1,10 +1,10 @@
 .xm__navbar{
-    @include size(100%,46px);
+    @include size(100%,4rem);
     background-color: $body-background;
     position: relative;
     user-select: none;
     text-align: center;
-    line-height: 46px;
+    line-height: 4rem;
     display: flex;
     
     &:after{
@@ -21,7 +21,7 @@
     & .xm__navbar--left,
     & .xm__navbar--right {
         font-size: $font-size-base;
-        min-width: 40px;
+        min-width: 3.5rem;
     }
 
     & .xm__navbar--left {
@@ -35,7 +35,7 @@
 
         & .xm__navbar--icon{
             margin-right: 5px;
-            font-size: 18px;
+            font-size: 1.8rem;
         }
     }
 
@@ -49,8 +49,8 @@
         margin: 0 20px;
 
         & img{
-            max-height: 40px;
-            height: 34px;
+            max-height: 3.5rem;
+            height: 3.5rem;
             vertical-align: middle;
         }
     }

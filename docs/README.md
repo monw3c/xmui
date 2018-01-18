@@ -29,7 +29,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/14/embedded/)  
+[在线示例](https://jsfiddle.net/kan831019/hh631dnc/16/embedded/)  
 
 
 ## 组件列表
@@ -39,14 +39,13 @@ Vue.use(xmui)
 - [x] 搜索框
 - [x] 单元格
 - [x] 表单
-- [x] 网格
+- [x] 网格和图标
 - [x] flexbox
 - [x] Modal
 - [x] Toast
 - [x] Loading
 - [x] 工单流程
 - [x] skeleton骨架
-- [ ] 图标
 - [ ] 轮播
 - [x] ActionSheet
 - [ ] 时间选择器

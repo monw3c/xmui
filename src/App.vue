@@ -30,4 +30,7 @@ export default {
 #aside{
   background: $body-background;
 }
+.xm__grids .xm__grid--icon {
+  height: 45px;
+}
 </style>

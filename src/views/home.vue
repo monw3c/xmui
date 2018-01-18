@@ -150,31 +150,204 @@
     </div>
 
 
-    <h4>网格</h4>
-    <xm-grids row="3">
+    <h4>网格和图标</h4>
+    <xm-grids row="6">
       <xm-grid href="https://github.com/monw3c/xmui">
         <span slot="icon" class="xm__icon--phone"></span>
-        <span slot="text">手机</span>
+        <span slot="text">xm__icon--phone</span>
       </xm-grid>
       <xm-grid @click="gridClick">
         <span slot="icon" class="xm__icon--lbs"></span>
-        <span slot="text">位置</span>
-      </xm-grid>
-      <xm-grid>
-        <span slot="icon" class="xm__icon--lock"></span>
-        <span slot="text">密码</span>
+        <span slot="text">xm__icon--lbs</span>
       </xm-grid>
       <xm-grid>
         <span slot="icon" class="xm__icon--qrcode"></span>
-        <span slot="text">扫码</span>
+        <span slot="text">xm__icon--qrcode</span>
       </xm-grid>
       <xm-grid>
         <span slot="icon" class="xm__icon--date"></span>
-        <span slot="text">时间</span>
+        <span slot="text">xm__icon--date</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--nochecked"></span>
+        <span slot="text">xm__icon--nochecked</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--checked"></span>
+        <span slot="text">xm__icon--checked</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--radio"></span>
+        <span slot="text">xm__icon--radio</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--search"></span>
+        <span slot="text">xm__icon--search</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--close-outline"></span>
+        <span slot="text">xm__icon--close-outline</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--close"></span>
+        <span slot="text">xm__icon--close</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--homefill"></span>
+        <span slot="text">xm__icon--homefill</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--home"></span>
+        <span slot="text">xm__icon--home</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--myfill"></span>
+        <span slot="text">xm__icon--myfill</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--my"></span>
+        <span slot="text">xm__icon--my</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--userfill"></span>
+        <span slot="text">xm__icon--userfill</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--user"></span>
+        <span slot="text">xm__icon--user</span>
       </xm-grid>
       <xm-grid>
         <span slot="icon" class="xm__icon--contact"></span>
-        <span slot="text">电话</span>
+        <span slot="text">xm__icon--contact</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--link"></span>
+        <span slot="text">xm__icon--link</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--unlock"></span>
+        <span slot="text">xm__icon--unlock</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--lock"></span>
+        <span slot="text">xm__icon--lock</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--likefill"></span>
+        <span slot="text">xm__icon--likefill</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--like"></span>
+        <span slot="text">xm__icon--like</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--reduce-outline"></span>
+        <span slot="text">xm__icon--reduce-outline</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--reduce"></span>
+        <span slot="text">xm__icon--reduce</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--add-outline"></span>
+        <span slot="text">xm__icon--add-outline</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--add"></span>
+        <span slot="text">xm__icon--add</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--edit"></span>
+        <span slot="text">xm__icon--edit</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--delete"></span>
+        <span slot="text">xm__icon--delete</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--photodel"></span>
+        <span slot="text">xm__icon--photodel</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--photo"></span>
+        <span slot="text">xm__icon--photo</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--msgfill"></span>
+        <span slot="text">xm__icon--msgfill</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--msg"></span>
+        <span slot="text">xm__icon--msg</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--menumore"></span>
+        <span slot="text">xm__icon--menumore</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--menu"></span>
+        <span slot="text">xm__icon--menu</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--tips"></span>
+        <span slot="text">xm__icon--tips</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--refresh"></span>
+        <span slot="text">xm__icon--refresh</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--share"></span>
+        <span slot="text">xm__icon--share</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--totop"></span>
+        <span slot="text">xm__icon--totop</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--attachment"></span>
+        <span slot="text">xm__icon--attachment</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--emoji"></span>
+        <span slot="text">xm__icon--emoji</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--scan"></span>
+        <span slot="text">xm__icon--scan</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--mall"></span>
+        <span slot="text">xm__icon--mall</span>
+      </xm-grid>
+
+      <xm-grid>
+        <span slot="icon" class="xm__icon--filter"></span>
+        <span slot="text">xm__icon--filter</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--sort"></span>
+        <span slot="text">xm__icon--sort</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--loading"></span>
+        <span slot="text">xm__icon--loading</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--left"></span>
+        <span slot="text">xm__icon--left</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--right"></span>
+        <span slot="text">xm__icon--right</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--up"></span>
+        <span slot="text">xm__icon--up</span>
+      </xm-grid>
+      <xm-grid>
+        <span slot="icon" class="xm__icon--down"></span>
+        <span slot="text">xm__icon--down</span>
       </xm-grid>
     </xm-grids>
 
@@ -208,11 +381,11 @@
     <h4>标签栏(底部)</h4>
     <div class="tabbar-wrap">
       <xm-tabbar>
-        <xm-tabbar-item icon="xm__icon--home" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--home" type="link" href="https://github.com/monw3c/xmui" active dot>首页</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--mall" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
         <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
-        <xm-tabbar-item icon="xm__icon--date" href="my" badge="11">我的</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--my" href="my" badge="11">我的</xm-tabbar-item>
       </xm-tabbar>
     </div>
 
@@ -639,6 +812,7 @@ h2{
   justify-content: center;
   display: flex;
 }
+
 
 </style>
 

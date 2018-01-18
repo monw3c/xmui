@@ -1,5 +1,5 @@
 .xm__tabbar{
-    @include size(100%,50px);
+    @include size(100%,5rem);
     display: flex;
     background-color: $body-background;
 }
@@ -28,16 +28,16 @@
         position: relative;
         display: flex;
         align-items: center;
-        height: 28px;
+        height: 3rem;
 
         & img {
-            width: 22px;
+            width: 2.2rem;
         
         }
 
         & .xm__icon {
             display: block;
-            font-size: 22px;
+            font-size: 2.2rem;
             padding: 0 2px;
         }
 
@@ -53,8 +53,18 @@
             font-size: .7em;
             vertical-align: middle;
             position: absolute;
-            top: 0;
-            right: -13px;
+            top: 2px;
+            right: -10px;
+        }
+
+        & .xm__tabbar--item-dot {
+            display: inline-block;
+            @include size(6px,6px);
+            @include border-radius(100px);
+            background-color: $error-color;
+            position: absolute;
+            top: 5px;
+            right: -5px;
         }
                 
     }
