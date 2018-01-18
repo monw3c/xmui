@@ -18,7 +18,7 @@
     }
 
     & header{
-        font-size: 1rem;
+        font-size: $font-size-small;
         color: $title-color;
         height: 40px;
         line-height: 40px;
@@ -33,7 +33,7 @@
     & .xm__actionsheet--item {
         display: block;
         position: relative;
-        font-size: 1rem;
+        font-size: $font-size-base;
         color: $text-color;
         height: 50px;
         line-height: 50px;
@@ -67,7 +67,7 @@
     & .xm__actionsheet--action {
         display: block;
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: $font-size-base;
         color: $text-color;
         height: 50px;
         line-height: 50px;

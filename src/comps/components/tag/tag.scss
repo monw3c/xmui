@@ -7,13 +7,13 @@
     box-sizing: border-box;
     text-align: center;
 	white-space: nowrap;
-    font-size: 12px;
+    font-size: $font-size-small;
     margin: 0px;
     @include border-radius;
     padding: 3px 8px;
 
     & .xm__tag--close{
-        font-size: 12px;
+        font-size: $font-size-small;
         vertical-align: middle;
     }
 

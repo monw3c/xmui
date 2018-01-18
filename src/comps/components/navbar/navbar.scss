@@ -1,10 +1,10 @@
 .xm__navbar{
-    @include size(100%,40px);
+    @include size(100%,46px);
     background-color: $body-background;
     position: relative;
     user-select: none;
     text-align: center;
-    line-height: 40px;
+    line-height: 46px;
     display: flex;
     
     &:after{
@@ -20,7 +20,7 @@
 
     & .xm__navbar--left,
     & .xm__navbar--right {
-        font-size: 14px;
+        font-size: $font-size-base;
         min-width: 40px;
     }
 
@@ -35,11 +35,12 @@
 
         & .xm__navbar--icon{
             margin-right: 5px;
+            font-size: 18px;
         }
     }
 
     & .xm__navbar--title {
-        font-size: 16px;
+        font-size: 1.8rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

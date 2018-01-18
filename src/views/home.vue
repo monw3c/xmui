@@ -5,23 +5,23 @@
 
     <h2>基础组件</h2>
     <h4>按钮</h4>
-    <xm-button>普通按钮</xm-button>
-    <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >primary按钮</xm-button>
+    <xm-button>普通</xm-button>
+    <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >主要</xm-button>
     <xm-button type="error" icon="xm__icon--checked" ></xm-button>
-    <xm-button type="warning" disabled>禁止按钮</xm-button>
-    <xm-button plain>简约按钮</xm-button>
-    <xm-button type="text" icon="xm__icon--checked">文字按钮</xm-button>
-    <xm-button loading type="success">loading状态按钮</xm-button>
+    <xm-button type="warning" disabled>禁止</xm-button>
+    <xm-button plain>简约</xm-button>
+    <xm-button type="text" icon="xm__icon--checked">文字</xm-button>
+    <xm-button loading type="success">loading状态</xm-button>
     <xm-button bg-color="#fc0" color="#e0439a" border-color="#fc0">自定义颜色</xm-button>
     <br/><br/>
-    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block no-radius class="btn__block">无圆角的块按钮</xm-button>
+    <xm-button bg-color="#fcb" color="#e0439a" border-color="#fcb" block no-radius class="btn__block">无圆角块状</xm-button>
     <br/>
-    <xm-button round long>圆角长按钮</xm-button>
+    <xm-button round long>100%宽圆角</xm-button>
     <br/><br/>
     <xm-button-group class="btn__group">
-      <xm-button type="warning">警告按钮</xm-button>
-      <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >primary按钮</xm-button>
-      <xm-button type="success" icon="xm__icon--loading">success按钮</xm-button>
+      <xm-button type="warning">警告</xm-button>
+      <xm-button type="primary" @click="btnClick" icon="xm__icon--checked" >主要</xm-button>
+      <xm-button type="success" icon="xm__icon--loading">成功</xm-button>
     </xm-button-group>
     
 
@@ -35,7 +35,7 @@
     <xm-tag type="success" v-if="tag1" closable @close="tag1=false">success</xm-tag>
 
     <h4>搜索框</h4>
-    <p style="text-align:left">input方法监听的值：{{inputValue}}</p>
+    <p style="text-align:left;font-size: 14px;">input方法监听的值：{{inputValue}}</p>
     <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"></xm-search></form>
     <xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
 
@@ -157,7 +157,7 @@
         <span slot="text">手机</span>
       </xm-grid>
       <xm-grid @click="gridClick">
-        <span slot="icon" class="xm__icon--lbsfill"></span>
+        <span slot="icon" class="xm__icon--lbs"></span>
         <span slot="text">位置</span>
       </xm-grid>
       <xm-grid>
@@ -208,8 +208,8 @@
     <h4>标签栏(底部)</h4>
     <div class="tabbar-wrap">
       <xm-tabbar>
-        <xm-tabbar-item icon="xm__icon--phone" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
-        <xm-tabbar-item icon="xm__icon--lock" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--home" type="link" href="https://github.com/monw3c/xmui" active>首页</xm-tabbar-item>
+        <xm-tabbar-item icon="xm__icon--mall" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
         <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--date" href="my" badge="11">我的</xm-tabbar-item>
@@ -615,6 +615,7 @@ h2{
 
 .flex.xm__flexbox{
   border:1px solid #eee;
+  font-size: 16px;
 }
 .flex.xm__flexbox.xm__flex--vertical{
   border:none;

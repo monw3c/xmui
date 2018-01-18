@@ -13,11 +13,14 @@
     &:checked {
         border-color: currentColor;
         background-color: currentColor;
+        
         &:before {
           transform: scale(0);
+          transition: transform .3s;
         }
         &:after {
           transform: translateX(24px);
+          transition: transform .3s;
         }
     }
     

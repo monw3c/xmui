@@ -28,33 +28,33 @@
         position: relative;
         display: flex;
         align-items: center;
-        height: 27px;
+        height: 28px;
 
         & img {
-            width: 18px;
+            width: 22px;
         
         }
 
         & .xm__icon {
             display: block;
-            font-size: 18px;
+            font-size: 22px;
             padding: 0 2px;
         }
 
         & .xm__tabbar--item-badge {
             display: inline-block;
-            padding: 2px 5px;
+            padding: 2px 4px;
             min-width: 8px;
             @include border-radius(18px);
             background-color: $error-color;
             color: #fff;
             line-height: 1.2;
             text-align: center;
-            font-size: 12px;
+            font-size: .7em;
             vertical-align: middle;
             position: absolute;
-            top: -2px;
-            right: -15px;
+            top: 0;
+            right: -13px;
         }
                 
     }

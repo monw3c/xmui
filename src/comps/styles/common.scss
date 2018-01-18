@@ -1,10 +1,14 @@
+
+html{
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: transparent;
+}
 input, button{
     outline: none;
 }
 
 a{
     text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .xm--overflow--hidden{

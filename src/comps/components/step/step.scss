@@ -50,6 +50,10 @@
                 color:$success-color;
             }
 
+            &.xm__step--process .xm__step--title {
+                margin-left: 6px;
+            }
+
             &:last-child .xm__step--circle-container {
                 left: auto;
                 right: -9px;
@@ -69,7 +73,7 @@
             }
  
             & .xm__step--title {
-                font-size: 12px;
+                font-size: $font-size-small;
                 transform: translate3d(-50%, 0, 0);
                 display: inline-block;
                 margin-left: 3px;

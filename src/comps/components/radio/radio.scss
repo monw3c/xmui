@@ -7,7 +7,7 @@
     & .xm__radio {
         width: 100%; 
         display: flex;
-        line-height: $line-height-computed*2;
+        line-height: $line-height-computed*2.4;
         position: relative;
 
         & .xm__radio--icon {
@@ -15,7 +15,7 @@
             width: 100%;
             color: #525252;
             text-align: right;
-            font-size: 14px;
+            font-size: $font-size-base;
             padding-right: 10px;
             justify-content: flex-end;
         }
@@ -31,7 +31,7 @@
 
             &:checked + .xm__radio--icon:before {
                 display: inline;
-                font-size: 28px;
+                font-size: $font-size-base*2;
                 position: absolute;
                 right: 0;
             }

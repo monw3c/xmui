@@ -10,7 +10,7 @@
         top: 50%;
         transform: translateY(-50%);
         left: 10px;
-        font-size: 16px;
+        font-size: $font-size-base;
     }
 }
 
@@ -41,7 +41,7 @@
     height: 16px;
     line-height: 16px;
     padding: 0;
-    font-size: 14px;
+    font-size: $font-size-base;
     color: #666;
     border: none;
 }

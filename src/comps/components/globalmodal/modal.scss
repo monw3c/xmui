@@ -9,7 +9,7 @@
     left: 50%;
     width: 85%;
     max-width: 300px;
-    font-size: 16px;
+    font-size: $font-size-base;
     overflow: hidden;
     transition: .2s;
     @include border-radius;
@@ -24,13 +24,13 @@
 
     & .xm__dialog--title {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 
     & .xm__dialog--bd {
         padding: 0.5em 1.6em 0.8em;
         min-height: 40px;
-        font-size: 16px;
+        font-size: $font-size-base;
         line-height: $line-height-base;
         word-wrap: break-word;
         word-break: break-all;
@@ -57,10 +57,10 @@
     
         & button{
             background-color: $body-background;
-            font-size: 16px; 
+            font-size: $font-size-base; 
 
             & span{
-                font-size: 16px; 
+                font-size: $font-size-base; 
             }
        
         }

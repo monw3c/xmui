@@ -8,7 +8,7 @@
     position: relative;
 
     & .xm__cell--title {
-        padding: 0 10px 2px;
+        padding: 0 10px 4px;
         font-size: $font-size-base;
         text-align: left;
         color: $text-color;
@@ -66,7 +66,7 @@
         & .xm__cell--right {
             flex: 1;
             width: 100%;
-            min-height: $line-height-computed*2;
+            min-height: $line-height-computed*2.4;
             color: #525252;
             text-align: right;
             padding-right: 10px;

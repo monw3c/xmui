@@ -13,6 +13,7 @@
         font-size: $font-size-base;
         background-color: $body-background;
         outline: none;
+        -webkit-appearance:none;
 
         &.is-right{
             direction: rtl;
