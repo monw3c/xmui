@@ -36,7 +36,7 @@ Vue.use(xmui)
 
 ## 查看示例  
 
-[在线示例](https://jsfiddle.net/kan831019/hh631dnc/16/embedded/)  
+[在线示例](https://monw3c.github.io/xmui/dist/)  
 
 ## 组件列表
 - [x] 按钮
