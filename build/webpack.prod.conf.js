@@ -74,7 +74,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
-      title: 'xmui - 基于vue2，为公司产品打(zao)造(lun)的(zi)可复用UI组件'
+      title: 'xmui - 基于vue2，可复用UI组件'
     }),
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
