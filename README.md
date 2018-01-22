@@ -18,20 +18,48 @@
 - 适用于 移动 和 部分PC 端(Chrome,safari,IE9+等)
 
 ## 开发  
+> 全局引入 -- 在 webpack 入口文件 main.js 中如下配置：
 
 ``` bash
 # 安装
 cnpm install x-m-ui --save  
 
 # 引入css
-import './package/style/xmui.min.css'  
+import './package/xmui.min.css'  
 
 # 引入xmui.min.js
 import xmui from './package/xmui.min.js'  
 
 # 注入到vue
 Vue.use(xmui)
-```  
+```
+
+> 按需引入 -- 在 入口文件 main.js 或 组件内 中如下配置：
+
+``` bash
+# 全局组件 main.js引入
+import Toast from '../package/comps/components/toast'
+Vue.prototype.$toast = Toast
+
+# 一般组件
+import xmButton from '../package/comps/components/button'
+import xmButtonGroup from '../package/comps/components/buttongroup'
+import xmTabbar from '../package/comps/components/tabbar'
+import xmTabbarItem from '../package/comps/components/tabbaritem'
+import xmModal from '../package/comps/components/modal'
+import xmSpModal from '../package/comps/components/spmodal'
+...
+
+components: {
+    xmButton,
+    xmButtonGroup,
+    xmTabbar,
+    xmTabbarItem,
+    xmModal,
+    xmSpModal
+    ...
+}
+``` 
 更多说明，请查看[在线文档](https://monw3c.github.io/xmui/)
 
 ## 查看示例  

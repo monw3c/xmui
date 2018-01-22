@@ -1,0 +1,20 @@
+.xm__skeleton--circle {
+    @include size(50px,50px);
+    @include border-radius(100px);
+    background: $skeleton-bg;
+    opacity: .5;
+}
+
+.xm__skeleton--bar {
+    opacity: .5;
+    @include size(100%,24px);
+    background: $skeleton-bg;
+}
+
+.xm__skeleton--opacity{
+    animation: opacity 1s ease-in-out infinite;
+}
+
+.xm__skeleton--loading{
+    animation: bar-loading 1s ease-in-out infinite;
+}

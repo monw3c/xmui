@@ -1,0 +1,51 @@
+.xm__loading--wrap{
+    
+}
+
+.xm__loading{
+    
+    & .xm__loading--loader {
+        animation: spin 1250ms linear infinite;
+        border: 2px solid $primary-color;
+        border-right-color: transparent;
+        @include border-radius(100px);
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-indent: -9999px;
+        @include size(32px,32px);
+
+        &.borderRightTransparent {
+            border-right-color: transparent!important;
+        }
+    }
+
+    //非行内的时候
+    &.xm__loading--fullScreen{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        transform: translate(-50%, -50%);
+        background: $body-background;
+        padding: 14px 10px 10px;
+        @include border-radius();
+        z-index: $zindex-loading;
+    }
+    // 垂直显示
+    & .xm__loading--vertical{
+        margin: 0 auto;
+        display: block;
+    }
+
+    & .xm__loading--text{
+        display: inline-block;
+        height: 34px;
+        line-height: 36px;
+        font-size: $font-size-base;
+        vertical-align: top;
+    }
+
+    
+}

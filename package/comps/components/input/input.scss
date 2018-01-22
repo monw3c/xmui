@@ -1,0 +1,39 @@
+.xm__input--wrap {
+    display: flex;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    line-height: normal;
+    flex: 1;
+}
+
+.xm__input {
+    display: flex;
+    @include size(100%,100%);
+    align-items: center;
+    position: relative;
+
+    > input {
+        display: block;
+        @include size(100%,100%);
+        border: none;
+        font-size: inherit;
+        background: transparent;
+        &::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+        }
+
+        &.is-right{
+            text-align: right;
+        }
+    }
+
+    &:before {
+        content: "*";
+        position: absolute;
+        left: -7px;
+        font-size: 14px;
+        color: rgb(255, 68, 68);
+        display: none;
+    }
+}

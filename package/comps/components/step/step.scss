@@ -1,0 +1,112 @@
+.xm__steps {
+    overflow: hidden;
+    background-color: $body-background;
+
+    &.xm__steps--horizontal {
+        padding: 0 10px;
+        
+        & .xm__steps--items {
+            display: flex;
+            margin: 0 0 10px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 22px;
+        }
+    }
+
+    & .xm__step {
+        flex: 1;
+        font-size: $font-size-base;
+        position: relative;
+        color: $text-color;
+
+        & .xm__step--circle {
+            display: block;
+            @include size(5px,5px);
+            background-color: #888;
+            @include border-radius(50%);
+        }
+
+        &.xm__step--horizontal {
+            text-align: left;
+
+            &:last-child {
+                position: absolute;
+                right: 10px;
+                width: auto;
+            }
+
+            & .xm__step--circle-container {
+                position: absolute;
+                top: 28px;
+                left: -8px;
+                padding: 0 8px;
+                background-color: $body-background;
+                z-index: 1;
+            }
+
+            &.xm__step--process .xm__step--circle-container {
+                top: 22px;
+                color:$success-color;
+            }
+
+            &.xm__step--process .xm__step--title {
+                margin-left: 6px;
+            }
+
+            &:last-child .xm__step--circle-container {
+                left: auto;
+                right: -9px;
+            }
+
+            & .xm__step--line {
+                position: absolute;
+                left: 0px;
+                top: 30px;
+                width: 100%;
+                height: 1px;
+                background-color: #e5e5e5;
+            }
+
+            &:last-child .xm__step--line {
+                width: 0;
+            }
+ 
+            & .xm__step--title {
+                font-size: $font-size-small;
+                transform: translate3d(-50%, 0, 0);
+                display: inline-block;
+                margin-left: 3px;
+                text-align: left;
+            }
+
+            &:first-child .xm__step--title {
+                transform: none;
+                margin-left: 0;
+            }
+
+            &:first-child .xm__step--title {
+                transform: none;
+                margin-left: 0;
+            }
+
+            &.xm__step--process .xm__step--title{
+                color:$success-color;
+            }
+
+            &:last-child .xm__step--title {
+                transform: none;
+                margin-left: 0;
+            }
+
+            &.xm__step--finish {
+                color: $title-color;
+
+                & .xm__step--circle, 
+                & .xm__step--line {
+                    background-color: $success-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.xm__tag {
+    display: inline-block;
+    line-height: 1.2;
+    cursor: pointer;
+    color: rgb(31, 45, 61);
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    text-align: center;
+	white-space: nowrap;
+    font-size: $font-size-small;
+    margin: 0px;
+    @include border-radius;
+    padding: 3px 8px;
+
+    & .xm__tag--close{
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
+
+    &.is-round{
+        @include border-radius(100px);
+    }
+
+    &.xm__tag--default {
+        color: $btn-default-color;
+        background: $btn-default-bg;
+        border: $border-width-default $border-style-default $border-color-base; 
+    }
+
+    &.xm__tag--success {
+        @extend .xm__tag--default;
+        color: $btn-success-color;
+        background: $btn-success-bg;
+        border: $border-width-default $border-style-default $btn-success-bg; 
+    }
+
+    &.xm__tag--primary {
+        @extend .xm__tag--default;
+        color: $btn-primary-color;
+        background: $btn-primary-bg;
+        border: $border-width-default $border-style-default $btn-primary-bg;
+    }
+
+    &.xm__tag--warning {
+        @extend .xm__tag--default;
+        color: $btn-warning-color;
+        background: $btn-warning-bg;
+        border: $border-width-default $border-style-default $btn-warning-bg;
+    }
+
+    &.xm__tag--warning {
+        @extend .xm__tag--default;
+        color: $btn-warning-color;
+        background: $btn-warning-bg;
+        border: $border-width-default $border-style-default $btn-warning-bg;
+    }
+
+    &.xm__tag--error {
+        @extend .xm__tag--default;
+        color: $btn-error-color;
+        background: $btn-error-bg;
+        border: $border-width-default $border-style-default $btn-error-bg;
+    }
+
+}

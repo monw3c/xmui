@@ -1,0 +1,59 @@
+.xm__mask {
+    @include mask
+} 
+
+.xm__dialog--special{
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  max-width: 300px;
+  font-size: 16px;
+  overflow: hidden;
+  transition: .2s;
+  border-radius: 4px;
+  background-color: transparent;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1000;
+
+  & .xm__dialog--bd{
+    max-height: 320px;
+    overflow: hidden;
+  
+    & img{
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  & .xm__dialog--ft {
+    margin-bottom: 0;
+    
+    & button.xm__btn--default{
+    background: transparent;
+    margin: 0 auto;
+
+      &::before{
+        border: none;
+      }
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+      }
+
+      & .xm__icon--close-outline{
+        font-size: 34px;
+        color: #fff;
+      }
+
+      &::before{
+        border: none;
+      }
+
+    }
+  }
+}

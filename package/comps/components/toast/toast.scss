@@ -1,0 +1,41 @@
+.xm__toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    color: #fff;
+    z-index: 3001;
+    font-size: $font-size-small;
+    line-height: 1.2;
+    @include border-radius;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: rgba(39, 39, 39, .7);
+
+
+    &.xm__toast--text {
+        padding: 12px;
+        min-width: 220px;
+    }
+
+    &.xm__toast--loading {
+        width: 120px;
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    & .xm__loading {
+        font-size: 0;
+        line-height: 0;
+        z-index: 0;
+        position: relative;
+    }
+
+    & .xm__toast--loading .xm__loading {
+        margin: 10px 0 5px;
+    }
+
+}

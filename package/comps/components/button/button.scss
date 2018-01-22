@@ -1,0 +1,274 @@
+.xm__btn {
+    display: inline-block;
+    line-height: 1;
+    cursor: pointer;
+    color: rgb(31, 45, 61);
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-size: $font-size-base;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(191, 203, 217);
+    border-image: initial;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 12px 20px;
+    position: relative;
+} 
+
+.xm__btn--default{
+    color: $btn-default-color;
+    background: $btn-default-bg;
+    border: $border-width-default $border-style-default $border-color-base;
+	@include border-radius;
+
+	&:hover,
+    &:active {
+        text-decoration: none;
+        
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--primary{
+	@extend .xm__btn--default;
+	color: $btn-primary-color;
+	background: $btn-primary-bg;
+    border: $border-width-default $border-style-default $btn-primary-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-primary-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-primary-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--success{
+	@extend .xm__btn--default;
+	color: $btn-success-color;
+	background: $btn-success-bg;
+    border: $border-width-default $border-style-default $btn-success-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-success-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-success-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--warning{
+	@extend .xm__btn--default;
+	color: $btn-warning-color;
+	background: $btn-warning-bg;
+    border: $border-width-default $border-style-default $btn-warning-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-warning-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-warning-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--error{
+	@extend .xm__btn--default;
+	color: $btn-error-color;
+	background: $btn-error-bg;
+    border: $border-width-default $border-style-default $btn-error-bg;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-error-bg;
+        text-decoration: none;
+        color: $plain-color;
+        border-color: $btn-error-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-round {
+        @include border-radius(20px);
+    }
+
+    &.is-plain {
+        color: $btn-plain-color;
+        background: $btn-plain-bg;
+        border: $border-width-default $border-style-default $border-color-base;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--text{
+	@extend .xm__btn--default;
+	color: $btn-text-color;
+	background: $btn-text-bg;
+    border: none;
+    
+    &:hover,
+    &:active {
+        background-color: $btn-text-bg;
+        text-decoration: none;
+        color: $text-color;
+        border-color: $btn-text-bg;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.is-long {
+        @include size(100%,auto)
+    }
+
+    &.no-radius {
+        @include border-radius(0);
+    }
+}
+
+.xm__btn--block {
+	display: block;
+}
+
+.xm__btn--group {
+	position: relative;
+    vertical-align: middle;
+    display: flex;   
+    
+    & button{
+        flex: 1;
+        border-radius: 0;
+
+        &.no-radius {
+            @include border-radius(0);
+        }
+    }
+    & button:first-child{
+        @include border-radius();
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+    & button:last-child{
+        @include border-radius;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.xm__hasIconBtn{
+    padding: 11px 20px;
+}

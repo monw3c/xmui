@@ -3,8 +3,9 @@ const merge = require('webpack-merge')
 const config = require('../config')
 const baseWebpackConfig = require('./package.config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractScss = new ExtractTextPlugin('/style/xmui.min.css')
+const extractScss = new ExtractTextPlugin('/xmui.min.css')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
     output: {
@@ -44,6 +45,10 @@ module.exports = merge(baseWebpackConfig, {
             cssProcessorOptions: config.build.productionSourceMap
             ? { safe: true, map: { inline: false } }
             : { safe: true }
-        })
+        }),
+        new CopyWebpackPlugin([
+            // {output}/file.txt
+            { from: `./src/comps`,to:`./comps`}
+        ]),
     ]
 })

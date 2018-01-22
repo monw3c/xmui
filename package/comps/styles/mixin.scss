@@ -1,0 +1,54 @@
+// border圆角
+@mixin border-radius($radius:$border-radius-small){
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// 宽高
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+
+// 遮罩层
+@mixin mask(){
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(55, 55, 55, 0.6);
+    height: 100%;
+    z-index: $zindex-modal-mask;
+    transition: opacity .2s ease-in;
+    pointer-events: auto; 
+
+    &--hidden {
+        display: none;
+    }
+}
+
+// 按下去背景颜色
+@mixin tap-color($bgcolor, $opacity:.9) {
+    
+    &:active {
+      background-color: $bgcolor * $opacity;
+    }
+}
+
+// flex布局
+@mixin flex(){
+    display: flex;
+    align-items: center;
+
+    & .xm__flex--item {
+        flex: 1;
+    }
+
+    &.xm__flex--vertical {
+        flex-direction: column;
+        height: 100%;
+    }
+
+}
+  
