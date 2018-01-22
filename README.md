@@ -38,25 +38,19 @@ Vue.use(xmui)
 
 ``` bash
 # 全局组件 main.js引入
-import Toast from '../package/comps/components/toast'
+import Toast from 'x-m-ui/package/comps/components/toast'
 Vue.prototype.$toast = Toast
 
 # 一般组件
-import xmButton from '../package/comps/components/button'
-import xmButtonGroup from '../package/comps/components/buttongroup'
-import xmTabbar from '../package/comps/components/tabbar'
-import xmTabbarItem from '../package/comps/components/tabbaritem'
-import xmModal from '../package/comps/components/modal'
-import xmSpModal from '../package/comps/components/spmodal'
+import xmButton from 'x-m-ui/package/comps/components/button'
+import xmButtonGroup from 'x-m-ui/package/comps/components/buttongroup'
+import xmModal from 'x-m-ui/package/comps/components/modal'
 ...
 
 components: {
     xmButton,
     xmButtonGroup,
-    xmTabbar,
-    xmTabbarItem,
-    xmModal,
-    xmSpModal
+    xmModal
     ...
 }
 ``` 
