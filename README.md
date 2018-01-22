@@ -25,10 +25,10 @@
 cnpm install x-m-ui --save  
 
 # 引入css
-import './package/xmui.min.css'  
+import 'x-m-ui/package/xmui.min.css'  
 
 # 引入xmui.min.js
-import xmui from './package/xmui.min.js'  
+import xmui from 'x-m-ui'  
 
 # 注入到vue
 Vue.use(xmui)
