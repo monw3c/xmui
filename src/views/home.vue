@@ -542,7 +542,7 @@ export default {
   },
   methods: {
     clickLeft () {
-      alert('左边')
+      alert('左边!')
     },
     clickRight () {
       alert('右边')
