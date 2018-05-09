@@ -1,6 +1,6 @@
 {
   "name": "x-m-ui",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "description": "UI components base on Vue 2.x",
   "author": "mon <505038730@qq.com>",
   "main": "package/xmui.min.js",
@@ -98,6 +98,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/monw3c/xmui/issues"
+    "url": "https://github.com/monw3c/xmui/issues",
+    "email" : "505038730@qq.com"
   }
 }

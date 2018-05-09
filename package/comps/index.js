@@ -1,7 +1,7 @@
 import './styles/index.scss'
 
 import Tag from './components/tag/index'
-import LoadMore from './components/loadMore/index'
+import LoadMore from './components/loadmore/index'
 import Search from './components/search/index'
 import Loading from './components/loading/index'
 import Step from './components/step/index'
