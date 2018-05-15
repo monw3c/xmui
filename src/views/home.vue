@@ -436,6 +436,24 @@
     <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
 
 
+
+
+    <h4>无缝滚动</h4>
+    <div class="seamlessscroll">
+      <xm-seamlessscroll autoplay="2000">
+        <xm-seamlessscroll-item>只有一条的时候不滚动，默认向上滚动</xm-seamlessscroll-item>
+      </xm-seamlessscroll>
+    </div>
+    <div class="seamlessscroll">
+      <xm-seamlessscroll autoplay="3000" direction="down">
+        <xm-seamlessscroll-item>邵逸夫奖名单公布</xm-seamlessscroll-item>
+        <xm-seamlessscroll-item>女星玛戈基德去世</xm-seamlessscroll-item>
+        <xm-seamlessscroll-item>多国谴责美搬使馆</xm-seamlessscroll-item>
+      </xm-seamlessscroll>
+    </div>
+
+
+
     <h4>Popup</h4>
 
 
@@ -474,7 +492,9 @@
         <xm-skeleton width="60%"></xm-skeleton>
       </div>
     </div>
+    
 
+    
   </div>
 </template>
 

@@ -22,6 +22,7 @@ import Modal from './components/modal/index'
 import SpModal from './components/spmodal/index'
 import CellGroup from './components/cell/index'
 import Flexbox from './components/flexbox/index'
+import SeamlessScroll from './components/seamlessscroll/index'
 
 import GlobalModal from './components/globalmodal/index'
 import Toast from './components/toast/index'
@@ -54,7 +55,9 @@ const components = {
   CellItem: CellGroup.item,
   CellGroup,
   FlexboxItem: Flexbox.item,
-  Flexbox
+  Flexbox,
+  SeamlessScrollItem: SeamlessScroll.item,
+  SeamlessScroll
 }
 
 const install = function (Vue) {
