@@ -355,7 +355,7 @@
     <h4>flex布局</h4>
     <xm-flexbox class="flex">
       <div>普通div</div>
-      <xm-flexbox-item>默认的水平flex div</xm-flexbox-item>
+      <xm-flexbox-item @click='modalClick1'>默认的水平flex div</xm-flexbox-item>
       <div>普通div</div>
     </xm-flexbox>
     <br>

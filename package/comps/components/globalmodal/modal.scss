@@ -35,6 +35,9 @@
         word-wrap: break-word;
         word-break: break-all;
         color: $text-color;
+        max-height: 300px;
+        overflow: auto;
+        -webkit-overflow-scrolling:touch;
 
         & .xm__dialog--bd-input{
             height: 38px;
