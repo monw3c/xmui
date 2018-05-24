@@ -70,6 +70,7 @@ components: {
 - [x] skeleton骨架
 - [ ] 轮播
 - [x] ActionSheet
+- [x] 无缝滚动
 - [ ] 左右滑菜单
 - [ ] 时间选择器
 - [ ] 标签页

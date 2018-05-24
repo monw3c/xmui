@@ -37,7 +37,7 @@
     <h4>搜索框</h4>
     <p style="text-align:left;font-size: 14px;">input方法监听的值：{{inputValue}}</p>
     <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"></xm-search></form>
-    <xm-search placeholder="自定义placeholder" v-model="value" show-action @action="searchAction" @input="inputAction" action-text-color="#2d8cf0">search</xm-search>
+    <xm-search placeholder="自定义placeholder" v-model="value"  @action="searchAction" @input="inputAction" action-text-color="#777" @cancel="searchCancel"><span slot="search">搜索</span><span slot="cancel">取消</span></xm-search>
 
 
     <h4>加载更多</h4>
@@ -355,7 +355,7 @@
     <h4>flex布局</h4>
     <xm-flexbox class="flex">
       <div>普通div</div>
-      <xm-flexbox-item>默认的水平flex div</xm-flexbox-item>
+      <xm-flexbox-item @click='modalClick1'>默认的水平flex div</xm-flexbox-item>
       <div>普通div</div>
     </xm-flexbox>
     <br>
@@ -436,6 +436,24 @@
     <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
 
 
+
+
+    <h4>无缝滚动</h4>
+    <div class="seamlessscroll">
+      <xm-seamlessscroll autoplay="2000">
+        <xm-seamlessscroll-item>只有一条的时候不滚动，默认向上滚动</xm-seamlessscroll-item>
+      </xm-seamlessscroll>
+    </div>
+    <div class="seamlessscroll">
+      <xm-seamlessscroll autoplay="3000" direction="down">
+        <xm-seamlessscroll-item>邵逸夫奖名单公布</xm-seamlessscroll-item>
+        <xm-seamlessscroll-item>女星玛戈基德去世</xm-seamlessscroll-item>
+        <xm-seamlessscroll-item>多国谴责美搬使馆</xm-seamlessscroll-item>
+      </xm-seamlessscroll>
+    </div>
+
+
+
     <h4>Popup</h4>
 
 
@@ -474,7 +492,9 @@
         <xm-skeleton width="60%"></xm-skeleton>
       </div>
     </div>
+    
 
+    
   </div>
 </template>
 
@@ -630,6 +650,10 @@ export default {
     },
     searchAction (e) {
       this.value = e
+      alert(this.value)
+    },
+    searchCancel (e) {
+      this.value = ''
       alert(this.value)
     },
     inputAction (e) {

@@ -16,7 +16,7 @@
  - [导航栏(顶部)](/components/navbar.md)
  - [标签栏(底部)](/components/tabbar.md)
  - [标签页](/components/tab.md)
- 
+ - [无缝滚动](/components/seamlessscroll.md) 
  
 - 弹出层
  - [Modal](/components/modal.md)

@@ -14,13 +14,13 @@
     }
 }
 
-.xm__search--action {
+.xm__search--action,.xm__search--cancel {
     line-height: $line-height-computed;
-    font-size: $font-size-base;
+    font-size: $font-size-small;
     letter-spacing: 1px;
 }
 
-.xm__search--action div {
+.xm__search--action div,.xm__search--cancel div {
     padding: 0 10px;
 }
 
@@ -29,7 +29,7 @@
     flex: 1;
     height: 34px;
     box-sizing: border-box;
-    padding: 8px 24px 8px 35px;
+    padding: 4px 24px 4px 35px;
     border: 1px solid #e5e5e5;
     @include border-radius;
     background-color: #fff;
@@ -38,8 +38,8 @@
 .xm__search--input {
     display: block;
     width: 100%;
-    height: 16px;
-    line-height: 16px;
+    height: 24px;
+    line-height: 24px;
     padding: 0;
     font-size: $font-size-base;
     color: #666;

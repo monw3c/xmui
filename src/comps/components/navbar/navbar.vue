@@ -4,7 +4,7 @@
         <i class="xm__navbar--icon" :class="leftIcon"></i>
         <span class="xm__navbar--text">{{leftText}}</span>
       </div>
-      <div class="xm__navbar--title" v-if="title">
+      <div class="xm__navbar--title">
         {{title}}
       </div>
       <div class="xm__navbar--title" v-if="imgSrc&&!title">

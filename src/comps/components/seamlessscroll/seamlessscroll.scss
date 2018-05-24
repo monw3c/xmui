@@ -1,0 +1,30 @@
+.xm__seamlessscroll {
+      overflow: hidden;
+      width: 100%;
+      background-color: #fff;
+  
+      &--box {
+        height: inherit;
+      }
+  
+      &--align {
+        &-left {
+          justify-content: flex-start;
+        }
+  
+        &-right {
+          justify-content: flex-end;
+        }
+  
+        &-center {
+          justify-content: center;
+        }
+      }
+  
+      &--item {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: inherit;
+      }
+}
