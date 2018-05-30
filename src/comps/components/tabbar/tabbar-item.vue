@@ -1,9 +1,8 @@
 <template>
-    <div @click="itemAciton" class="xm__tabbar--item" :class="{'xm__tabbar--item-active':active}">
+    <div @click="itemAciton" class="xm__tabbar--item" :class="{'xm__tabbar--item-active':isActive}">
         <div class="xm__tabbar--item-icon">
           <i class="xm__icon" :class="icon" v-if="icon"></i>
           <img v-else-if="imgSrc&&!icon" :src="imgSrc">
-
           <div v-if="badge" class="xm__tabbar--item-badge">{{badge}}</div>
           <div v-else-if="!badge&&dot" class="xm__tabbar--item-dot"></div>
         </div>
@@ -55,15 +54,12 @@ export default {
     dot: {
       type: Boolean,
       default: false
-    },
-    active: {
-      type: Boolean,
-      default: false
     }
   },
   methods: {
     itemAciton (event) {
       this.$emit('click', event)
+      this.$parent.$emit('input', this.href.path)
       this.routerLink()
     },
     routerLink () { // 思路来自vant https://github.com/youzan/vant/blob/dev/packages/mixins/router-link.js
@@ -76,12 +72,11 @@ export default {
     }
   },
   computed: {
-    // computeHref () {
-    //   return this.href && this.href !== '' ? this.href : 'javascript:;'
-    // },
-    // computeActive () {
-
-    // }
+    isActive () {
+      if (this.$parent.value === this.href.path) {
+        return true
+      }
+    }
   }
 }
 </script>

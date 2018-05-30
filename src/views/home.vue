@@ -380,11 +380,11 @@
 
     <h4>标签栏(底部)</h4>
     <div class="tabbar-wrap">
-      <xm-tabbar>
-        <xm-tabbar-item icon="xm__icon--home" type="link" href="https://github.com/monw3c/xmui" active dot>首页</xm-tabbar-item>
+      <xm-tabbar v-model="active">
+        <xm-tabbar-item icon="xm__icon--home" type="link" href="https://github.com/monw3c/xmui" dot>首页</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--mall" :href="hrefObj" badge="8" @click="routerAction"><span slot="badge">8</span>商城</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--add" href="add" class="add"></xm-tabbar-item>
-        <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图标</xm-tabbar-item>
+        <xm-tabbar-item href="###" img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true">自定义图</xm-tabbar-item>
         <xm-tabbar-item icon="xm__icon--my" href="my" badge="11">我的</xm-tabbar-item>
       </xm-tabbar>
     </div>
@@ -542,7 +542,7 @@ export default {
       ],
       radio: '巴士',
       checkbox: ['1', '4'],
-      hrefObj: { path: '/mall', name: 'mall', params: { userId: 123 } },
+      hrefObj: { path: '/mall', params: { userId: 123 } },
       itemList: [
         { text: '顺风车',
           callBack: () => {
@@ -558,7 +558,8 @@ export default {
         { text: '专车', callBack: () => {} }
       ],
       actionSheetVisible1: false,
-      actionSheetVisible2: false
+      actionSheetVisible2: false,
+      active: '/mall'
     }
   },
   methods: {
@@ -836,7 +837,9 @@ h2{
   justify-content: center;
   display: flex;
 }
-
+.xm__seamlessscroll--item{
+  font-size: 1.5rem;
+}
 
 </style>
 

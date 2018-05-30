@@ -8,24 +8,14 @@
 export default {
   name: 'xm-tabbar',
   props: {
-    // active: {
-    //   type: String,
-    //   default: ''
-    // },
+    value: {
+      type: String,
+      default: ''
+    },
     color: {
       type: String,
       default: ''
     }
-  },
-  methods: {
-    actived () {
-      // console.log(this.$children.length)
-    }
-  },
-  watch: {
-    // active (val) {
-
-    // }
   }
 }
 </script>
