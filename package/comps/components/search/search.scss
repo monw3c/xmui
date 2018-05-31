@@ -18,13 +18,10 @@
     line-height: $line-height-computed;
     font-size: $font-size-small;
     letter-spacing: 1px;
-}
 
-.xm__search--action div,.xm__search--cancel div {
-    padding: 0 10px;
-}
-.xm__search--cancel div {
-    padding: 0 0 0 10px;
+    & div{
+        padding: 0 0 0 10px;
+    }
 }
 
 .xm__search--input--wrap{
