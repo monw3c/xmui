@@ -3,8 +3,8 @@
     <div class="xm__dialog--wrap" v-if="isVisible" ref="modal" >
       <div class="xm__mask" @click="maskClose"></div>
       <div class="xm__dialog" :style="{'z-index':zIndex}">
-        <div class="xm__dialog--hd">
-          <strong class="xm__dialog--title" v-if="dialogTitle">{{dialogTitle}}</strong>
+        <div class="xm__dialog--hd" v-if="dialogTitle">
+          <strong class="xm__dialog--title" >{{dialogTitle}}</strong>
         </div>
         <div class="xm__dialog--bd">
           <slot></slot>
