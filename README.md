@@ -77,6 +77,7 @@ components: {
 - [x] skeleton骨架
 - [ ] 轮播
 - [x] ActionSheet
+- [x] Popup
 - [x] 无缝滚动
 - [ ] 左右滑菜单
 - [ ] 时间选择器
