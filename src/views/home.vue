@@ -456,6 +456,26 @@
 
 
     <h4>Popup</h4>
+    <xm-button type="success" @click="popupVisible1=true">弹出popup</xm-button>
+
+    <xm-popup v-model="popupVisible1" header="这里是个标题" cancel="取消" cancel-color="#19be6b">
+      <xm-cell-group class="selectSign">
+        <xm-cell-item>
+          <img src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" slot="left" class="img">
+          <div class="" slot="right"  @click="openModalBox">
+            <p>电子提案 <xm-tag bg-color="#fff" color="#ed3f14" border-color="#ed3f14" round>荐</xm-tag></p>
+            <p>通过在网上进行电子提案</p>
+          </div>
+        </xm-cell-item>
+        <xm-cell-item>
+          <img src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" slot="left" class="img">
+          <div class="" slot="right">
+            <p>原始提案</p>
+            <p>采用原始方式进行提案，平台只进行记录</p>
+          </div>
+        </xm-cell-item>
+      </xm-cell-group>
+    </xm-popup>
 
 
 
@@ -559,6 +579,8 @@ export default {
       ],
       actionSheetVisible1: false,
       actionSheetVisible2: false,
+      popupVisible1: false,
+      popupVisible2: false,
       active: '/mall'
     }
   },
@@ -698,6 +720,16 @@ export default {
       this.modalVisible2 = false
       this.value2 = ''
       this.value3 = ''
+    },
+    openModalBox (e) {
+      this.popupVisible1 = false
+      this.$modal.alert({
+        title: '这里可以自定义',
+        content: '开启3秒关闭，取消背景层关闭',
+        color: '#19be6b',
+        autoClose: true,
+        maskClosable: false
+      })
     }
   },
   mounted: () => {
@@ -707,7 +739,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 #demo-wrap{
   margin: 10px auto;
 }
@@ -840,6 +872,37 @@ h2{
 .xm__seamlessscroll--item{
   font-size: 1.5rem;
 }
-
+.selectSign{
+  margin-bottom: 0;
+}
+.selectSign .xm__cell--item{
+  padding: 5px 0 5px 10px;
+}
+.selectSign .xm__cell--left{
+    flex: 1!important;
+    justify-content: center!important;
+}
+.selectSign .xm__cell--left .img{
+    width: 50px;
+}
+.selectSign .xm__cell--right{
+    flex: 4!important;
+    justify-content: flex-start!important;
+    text-align: left!important;
+}
+.selectSign .xm__cell--right p{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.selectSign .xm__cell--right p:last-child{
+    color: #999;
+    font-size: 1.4rem;
+}
+.selectSign .xm__cell--right p .xm__tag{
+    padding:3px 4px;
+    font-size: 1.1rem!important;
+    margin-left: .5rem;
+}
 </style>
 

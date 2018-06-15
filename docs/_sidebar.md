@@ -23,7 +23,7 @@
  - [Toast](/components/toast.md)
  - [Loading](/components/loading.md)
  - [ActionSheet](/components/actionsheet.md)
-
+ - [Popup](/components/popup.md)
 
 - 应用组件
  - [工单流程](/components/step.md)

@@ -12,6 +12,7 @@ import Switch from './components/switch/index'
 import Skeleton from './components/skeleton/index'
 import Navbar from './components/navbar/index'
 import Actionsheet from './components/actionsheet/index'
+import Popup from './components/popup/index'
 
 import Button from './components/button/index'
 import Tabbar from './components/tabbar/index'
@@ -46,6 +47,7 @@ const components = {
   Tabbar,
   Navbar,
   Actionsheet,
+  Popup,
   Radio,
   RadioGroup: Radio.group,
   Checkbox,
