@@ -1,5 +1,5 @@
 <template>
-    <div class="xm__cell--item">
+    <div class="xm__cell--item" @click="handleClick">
         <div class="xm__cell--left">
               <slot name="leftIcon"></slot>
               <slot name="left"></slot>
@@ -50,6 +50,11 @@ export default {
   computed: {
     iconClass () {
       if (this.icon !== '') return this.icon
+    }
+  },
+  methods: {
+    handleClick (event) {
+      this.$emit('click', event)
     }
   }
 }

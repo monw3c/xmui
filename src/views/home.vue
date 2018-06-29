@@ -78,7 +78,7 @@
           <span slot="right">400517517</span>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
-        <xm-cell-item>
+        <xm-cell-item @click="cellClick">
           <span slot="left">我的消息</span>
           <xm-tag slot="right" type="error" round style="margin-bottom:0;">8</xm-tag>
           <span slot="rightIcon" class="xm__icon--right"></span>
@@ -593,6 +593,9 @@ export default {
     },
     routerAction () {
 
+    },
+    cellClick () {
+      this.$toast.text({content: '您有8条消息，注意查收', direction: 'top'})
     },
     gridClick () {
       alert(1)
