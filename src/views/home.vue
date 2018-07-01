@@ -53,11 +53,11 @@
         <!-- <div slot="top">头部的</div> -->
         <xm-cell-item>
           <span slot="left">用户名：</span>
-          <xm-input slot="right" v-model="value1" name="name1" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
+          <xm-input slot="right" v-model="value1" name="name1" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2" has-close></xm-input>
         </xm-cell-item>
         <xm-cell-item>
           <span slot="left">密  码：</span>
-          <xm-input slot="right" type="password" v-model="value1" placeholder="请输入密码"></xm-input>
+          <xm-input slot="right" type="password" v-model="value1" placeholder="请输入密码" has-close></xm-input>
         </xm-cell-item>
         <xm-cell-item>
           <span slot="leftIcon" class="xm__icon--phone"></span>
@@ -65,7 +65,7 @@
           <xm-button slot="right" type="error" class="btn__block" style="padding: 6px;width: 120px;font-size: 12px;">获取验证码</xm-button>
         </xm-cell-item>
         <xm-cell-item>
-          <xm-input slot="right" :value="value1" placeholder="这里是readonly" readonly></xm-input>
+          <xm-input slot="right" :value="value1" placeholder="这里是readonly" readonly has-close></xm-input>
           <span slot="rightIcon" class="xm__icon--delete"></span>
         </xm-cell-item>
         <xm-cell-item>

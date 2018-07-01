@@ -36,4 +36,19 @@
         color: rgb(255, 68, 68);
         display: none;
     }
+
+    & .xm__input--close{
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+
+        & span{
+            margin-left: 0;
+            font-size: 2rem;
+        }
+    }
 }

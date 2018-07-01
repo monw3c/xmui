@@ -27,6 +27,7 @@
         <input ref="input" v-if="type == 'time'" type="time"
                    v-model="currentValue" :name="name" @focus="onFocus" @blur="onBlur" :maxlength="max" :placeholder="placeholder" :autocomplete="autocomplete" :readonly="readonly" :disabled="disabled" :class="[{'is-right': right}]"
         >
+        <div class="xm__input--close" v-if="hasClose&&(type == 'text'||type == 'search'||type == 'password'||type == 'email'||type == 'tel')&&!disabled&&!readonly" v-show="currentValue!=''" @click="emptyVal"><span class="xm__icon--close"></span></div>
     </div>
 </template>
 
@@ -56,6 +57,10 @@ export default {
     right: {
       type: Boolean,
       default: false
+    },
+    hasClose: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -77,6 +82,9 @@ export default {
     },
     onFocus () {
       this.$emit('focus')
+    },
+    emptyVal () {
+      this.currentValue = ''
     }
   }
 }
