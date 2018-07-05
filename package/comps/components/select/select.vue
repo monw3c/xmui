@@ -11,22 +11,35 @@
 export default {
   name: 'xm-select',
   props: {
-    data: [Array],
+    data: {
+      type: Array,
+      required: true
+    },
     right: {
       type: Boolean,
       default: false
-    }
+    },
+    value: [String, Number, Object, Boolean],
   },
   data () {
     return {
-      selectVal: 0
+      selectVal: ''
     }
   },
   watch: {
+    value (val) {
+      this.selectVal = val
+    },
     selectVal (val) {
       this.$emit('change', val)
+      this.$emit('input', val)
     }
-  }
+  },
+  created () {
+    if (typeof this.value !== 'undefined') {
+      this.selectVal = this.value
+    }
+  },
 }
 </script>
 

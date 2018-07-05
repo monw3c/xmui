@@ -87,12 +87,12 @@
           <xm-textarea slot="right" placeholder="请输入留言，50字以内" :value="value" @input="textareaAction" max="50"></xm-textarea>
         </xm-cell-item>
         <xm-cell-item>
-          <xm-select slot="right" :data="selectList" @change="selectAction"></xm-select>
+          <xm-select slot="right" :data="selectList" @change="selectAction" v-model="curSelected"></xm-select>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
         <xm-cell-item>
           <span slot="left">出行方式</span>
-          <xm-select slot="right" right :data="selectList"></xm-select>
+          <xm-select slot="right" right :data="selectList" v-model="curSelected"></xm-select>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
         <xm-flexbox>
@@ -547,6 +547,7 @@ export default {
                     { name: '出租车', value: 5 },
                     { name: '代驾', value: 6 }
       ],
+      curSelected: '3',
       inputVal: '',
       textareaVal: '',
       selectVal: '',
@@ -667,7 +668,7 @@ export default {
       })
     },
     btnClick () {
-
+      alert('按钮点击')
     },
     closeTag () {
       this.tag1 = false
