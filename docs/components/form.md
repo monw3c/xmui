@@ -85,7 +85,7 @@
 ``` html
 <xm-cell-group>
     <xm-cell-item>
-        <xm-select slot="right" :data="selectList" @change="selectAction"></xm-select>
+        <xm-select slot="right" :data="selectList" @change="selectAction" v-model="curSelected"></xm-select>
         <span slot="rightIcon" class="xm__icon--right"></span>
     </xm-cell-item>
     <xm-cell-item>
@@ -101,6 +101,7 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | data   | 传入的option数组  | Array  | — | —  |
 | right    | 设置居右显示   | Boolean  |  — | false   |
+| disabled  | 设置不可选   | Boolean  |  — | false   |
 
 ###### API
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |

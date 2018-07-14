@@ -417,7 +417,7 @@
     <h4>Toast</h4>
     <xm-button type="success" @click="toastClick1">文字</xm-button>
     <xm-button type="primary" @click="toastClick2">loading</xm-button>
-  
+    <xm-button type="error" @click="toastClick3">无遮罩</xm-button>
 
     <h4>Loading</h4>
     <xm-loading></xm-loading>
@@ -627,6 +627,11 @@ export default {
         // mask: false
       })
     },
+    toastClick3 () {
+      this.$toast.loading({
+        mask: false
+      })
+    },
     modalClick4 () {
       this.$modal.alert({
         title: '这里可以自定义',
@@ -793,7 +798,7 @@ h2{
 .btn__block{
   margin: 0 auto!important;
 }
-.xm__btn,.xm__tag{
+.wrap > .xm__btn,.xm__tag{
   margin-bottom: 10px;
 }
 .xm__dialog--special .xm__dialog--bd img{

@@ -1,6 +1,6 @@
 <template>
     <div class="xm__select">
-        <select :class="[{'is-right': right}]" v-model="selectVal">
+        <select :class="[{'is-right': right}]" v-model="selectVal" :disabled="disabled">
           <option v-for="item in data" :value="item.value">{{item.name}}</option>
         </select>
     </div>
@@ -19,7 +19,11 @@ export default {
       type: Boolean,
       default: false
     },
-    value: [String, Number, Object, Boolean],
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    value: [String, Number, Object, Boolean]
   },
   data () {
     return {
@@ -39,7 +43,7 @@ export default {
     if (typeof this.value !== 'undefined') {
       this.selectVal = this.value
     }
-  },
+  }
 }
 </script>
 
