@@ -16,7 +16,7 @@
           <div v-else-if="type&&type=='confirm'">
           <xm-button-group class="xm__btn--group" >
             <xm-button @click="close">取消</xm-button>
-            <xm-button @click="confirm" :style="{'color':color}">确定</xm-button>
+            <xm-button v-if="confirmBtn" @click="confirm" :style="{'color':color}">确定</xm-button>
           </xm-button-group>
           </div>
           <div v-else>
@@ -60,6 +60,10 @@ export default {
       default: ''
     },
     maskClosable: {
+      type: Boolean,
+      default: true
+    },
+    confirmBtn: {
       type: Boolean,
       default: true
     }

@@ -24,12 +24,13 @@
 | color     | 确定文字颜色   | string  | 自定义 |  —   |
 | z-index     | z-index   | string  | 自定义 |  —   |
 | dialog-title     | 是否有标题内容   | string  | 自定义 | 无标题  |
+| confirm-btn     | 是否禁止confirm按钮   | Boolean  | true，false | true  |
 
 ### 方法
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | close     | 取消操作   | Function    |  自定义  |     —    |
-| confirm     | 确定操作   | Function  |  自定义  |  —   |
+| confirm     | 确定操作(:confirm-btn="false"不出现)   | Function  |  自定义  |  —   |
 
 ##  
 ## 全局弹出层
