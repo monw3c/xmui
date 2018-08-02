@@ -15,6 +15,10 @@ export default {
     color: {
       type: String,
       default: '#4CD864'
+    },
+    hor: {
+      type: Boolean,
+      default: false
     }
   },
   data () {

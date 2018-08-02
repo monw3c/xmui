@@ -133,8 +133,8 @@ checkbox的另一种表现，有```value```属性
 
 ## radio 
 ###### 基础用法
-需配合 xm-radio-group 使用，通过```color```属性改变 √ 颜色，```disabled```禁止选中
-``` html
+需配合 xm-radio-group 使用，通过```color```属性改变 √ 颜色，```disabled```禁止选中,```hor```为水平单选框，默认不填为垂直
+```html
 <xm-radio-group v-model="radio" color="#4cd864">
     <xm-radio value="巴士"></xm-radio>
     <xm-radio value="火车"></xm-radio>
@@ -156,7 +156,7 @@ export default {
 |---------- |-------- |---------- |-------------  |-------- |
 | color   | 设置颜色  | String  | — | —  |
 | disabled   | 禁止选中  | Boolean  | — | false  |
-
+| hor   | 水平显示  | Boolean  | — | false  |
 
 ## checkbox
 ###### 基础用法

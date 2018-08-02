@@ -123,6 +123,18 @@
         </xm-cell-item>
       </xm-cell-group>
 
+      <xm-cell-group title="单选" class="xm-radio-group" style="background: #fff;margin-bottom: 20px;text-align: center;">
+        <xm-cell-item>
+          <xm-radio-group slot="right" v-model="radio" color="#ed3f14" hor>
+            <xm-radio value="巴士"></xm-radio>
+            <xm-radio value="火车"></xm-radio>
+            <xm-radio value="飞机" disabled>飞机--disabled</xm-radio>
+            <xm-radio value="单车">单车</xm-radio>
+          </xm-radio-group>
+        </xm-cell-item>
+      </xm-cell-group>
+  
+
       <xm-cell-group title="复选" class="xm-checkbox-group" >
         <xm-cell-item>
           <xm-checkbox-group slot="right" v-model="checkbox" color="#4cd864">
