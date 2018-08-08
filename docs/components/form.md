@@ -55,7 +55,7 @@
 ## textarea
 
 ###### 基础用法
-有```placeholder```、```value```和```max```属性
+有```placeholder```、```value```、```readonly```、```disabled```和```max```属性
 ``` html
 <xm-cell-group>
     <xm-cell-item>
@@ -70,6 +70,8 @@
 | placeholder   | 设置placeholder  | String  | — | —  |
 | value    | 绑定值   | String  |  — | —   |
 | max    | 设置maxlength   | String  |  — | —   |
+| readonly     | 是否readonly   | Boolean  |    — | false   |
+| disabled     | 是否disabled   | Boolean  |    — | false   |
 
 ###### API
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |

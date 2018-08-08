@@ -1,6 +1,6 @@
 <template>
     <div class="xm__textarea">
-        <textarea :placeholder="placeholder" v-model="strVal" :maxlength="max"></textarea>
+        <textarea :placeholder="placeholder" v-model="strVal" :maxlength="max" :readonly="readonly" :disabled="disabled"></textarea>
     </div>
 </template>
 
@@ -10,6 +10,8 @@ export default {
   name: 'xm-textarea',
   props: {
     placeholder: String,
+    readonly: Boolean,
+    disabled: Boolean,
     value: {
       type: String
     },
