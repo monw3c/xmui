@@ -1,4 +1,4 @@
-<div align=center><a href="https://github.com/monw3c/xmui" target="blank"><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png"/></a></div>  
+<div align=center><a href="https://github.com/monw3c/xmui" target="blank"><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png?raw=true"/></a></div>  
 
 # XMUI  
 
