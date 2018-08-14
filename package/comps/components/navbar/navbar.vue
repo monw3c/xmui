@@ -4,11 +4,11 @@
         <i class="xm__navbar--icon" :class="leftIcon"></i>
         <span class="xm__navbar--text">{{leftText}}</span>
       </div>
-      <div class="xm__navbar--title" v-if="!imgSrc">
+      <div class="xm__navbar--title" v-if="title">
         {{title}}
       </div>
-      <div class="xm__navbar--title" v-if="imgSrc&&!title">
-        <img :src="imgSrc">
+      <div class="xm__navbar--title" v-else>
+        <slot></slot>
       </div>
       <div class="xm__navbar--right" @click="clickRight">
         <span class="xm__navbar--text">{{rightText}}</span>
@@ -21,10 +21,6 @@
 export default {
   name: 'xm-navbar',
   props: {
-    imgSrc: {
-      type: String,
-      default: ''
-    },
     leftText: {
       type: String,
       default: ''

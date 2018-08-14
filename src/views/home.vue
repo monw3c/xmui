@@ -384,8 +384,8 @@
     <div class="navbar-wrap">
       <xm-navbar title="首页文字很长很长很长啊啊啊啊啊" bgcolor='#fff' color="#333" left-text="返回" left-icon="xm__icon--left" right-text="设置" @left-action="clickLeft" @right-action="clickRight"></xm-navbar>
       <br>
-      <xm-navbar img-src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true" left-icon="xm__icon--left" right-icon="xm__icon--edit"></xm-navbar>
-      <xm-navbar bgcolor='#fff' color="#333" left-text="" left-icon="xm__icon--left" right-icon="xm__icon--edit" @left-action="clickLeft" @right-action="clickRight"></xm-navbar>
+      <xm-navbar bgcolor='#fff' color="#333" left-text="" left-icon="xm__icon--left" right-icon="xm__icon--edit" @left-action="clickLeft" @right-action="clickRight"><img src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true"></xm-navbar>
+      <xm-navbar bgcolor='#fff' color="#333" left-text="" left-icon="xm__icon--left" right-icon="xm__icon--edit" @left-action="clickLeft" @right-action="clickRight" ><div><span slot="icon" class="xm__icon--loading"></span>这里是HTML</div></xm-navbar>
     </div>
 
 
