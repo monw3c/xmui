@@ -86,8 +86,8 @@
                 & + .xm__icon--radio-horizontal:before {
                     color: #ccc;
                     display: inline;
-                    content: "\E668";
-                    font-size: $font-size-base*1.5;
+                    content: "\E680";
+                    font-size: $font-size-base*1.1;
                     right: 0;
                     // top: -18px;
                     position: absolute;
@@ -95,7 +95,7 @@
     
                 &:checked + .xm__icon--radio-horizontal:before {
                     color: currentColor;
-                    content: "\E730";
+                    content: "\E62B";
                 }
     
             }

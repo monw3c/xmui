@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'iconfont';  /* project id 510640 */
-    src: url('//at.alicdn.com/t/font_510640_53hxz2fcbo5bqpvi.eot');
-    src: url('//at.alicdn.com/t/font_510640_53hxz2fcbo5bqpvi.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_510640_53hxz2fcbo5bqpvi.woff') format('woff'),
-    url('//at.alicdn.com/t/font_510640_53hxz2fcbo5bqpvi.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_510640_53hxz2fcbo5bqpvi.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_510640_hqsz5p7eecp.eot');
+    src: url('//at.alicdn.com/t/font_510640_hqsz5p7eecp.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_510640_hqsz5p7eecp.woff') format('woff'),
+    url('//at.alicdn.com/t/font_510640_hqsz5p7eecp.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_510640_hqsz5p7eecp.svg#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -23,6 +23,8 @@
 .xm__icon--checked:before { content: "\e730"; }
 
 .xm__icon--radio:before { content: "\e6da"; }
+.xm__icon--hor-radio:before { content: "\e680"; }
+.xm__icon--hor-radio-check:before { content: "\e62b"; }
 
 .xm__icon--phone:before { content: "\e61e"; }
 
