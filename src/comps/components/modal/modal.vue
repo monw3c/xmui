@@ -11,16 +11,16 @@
         </div>
         <div class="xm__dialog--ft">
           <div v-if="type&&type=='alert'">
-            <xm-button @click="confirm" :style="{'color':color}"  long>确定</xm-button>
+            <xm-button @click="confirm" :style="{'color':color}"  long>{{confirmText}}</xm-button>
           </div>
           <div v-else-if="type&&type=='confirm'">
           <xm-button-group class="xm__btn--group" >
-            <xm-button @click="close">取消</xm-button>
-            <xm-button v-if="confirmBtn" @click="confirm" :style="{'color':color}">确定</xm-button>
+            <xm-button @click="close">{{cancelText}}</xm-button>
+            <xm-button v-if="confirmBtn" @click="confirm" :style="{'color':color}">{{confirmText}}</xm-button>
           </xm-button-group>
           </div>
           <div v-else>
-            <xm-button @click="confirm" :style="{'color':color}"  long>确定</xm-button>
+            <xm-button @click="confirm" :style="{'color':color}"  long>{{confirmText}}</xm-button>
           </div>
         </div>
       </div>
@@ -54,6 +54,14 @@ export default {
     zIndex: {
       type: Number,
       default: ''
+    },
+    confirmText: {
+      type: String,
+      default: '确定'
+    },
+    cancelText: {
+      type: String,
+      default: '取消'
     },
     color: {
       type: String,

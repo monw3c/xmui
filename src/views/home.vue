@@ -418,8 +418,9 @@
     <xm-button type="primary" @click="modalClick5">全局confirm层,带回调函数</xm-button>
     <xm-button type="warning" @click="modalClick6">全局prompt层,带回调函数</xm-button>
 
-    <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" color="#19be6b" :z-index="zIndex" :mask-closable="false">点击背景功能关闭</xm-modal>
-    <xm-modal type="confirm" dialog-title="填写资料" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" color="#19be6b" :z-index="zIndex">
+    <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" confirm-text='自定义文字' color="#19be6b" :z-index="zIndex" :mask-closable="false" >点击背景功能关闭</xm-modal>
+    <xm-modal type="confirm" dialog-title="填写资料" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" confirm-text='ok啦' 
+        cancel-text='窝的confirm-btn禁止了' color="#19be6b" :z-index="zIndex" :confirm-btn="false">
       <xm-input v-model="value2" name="name2" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
       <xm-textarea placeholder="请输入留言，50字以内" :value="value3" @input="textareaAction3" max="50"></xm-textarea>
     </xm-modal>
@@ -648,6 +649,7 @@ export default {
       this.$modal.alert({
         title: '这里可以自定义',
         content: '开启3秒关闭，取消背景层关闭',
+        confirmText: '窝要关了',
         color: '#19be6b',
         autoClose: true,
         maskClosable: false
@@ -657,11 +659,14 @@ export default {
       this.$modal.confirm({
         title: '提示',
         content: '你想怎么样呢？',
+        confirmText: 'ok啦',
+        cancelText: '窝要关了',
         color: '#19be6b',
         callBack () {
           this.$modal.alert({
             title: '这里可以自定义',
             content: '开启3秒关闭，取消背景层关闭',
+            confirmText: '知道了',
             color: '#19be6b',
             autoClose: true,
             maskClosable: false
@@ -673,12 +678,15 @@ export default {
       this.$modal.prompt({
         title: '你想怎么样呢？',
         placeholder: '填入您的支付宝密码',
+        confirmText: 'ok啦',
+        cancelText: '窝要关了',
         color: '#ed3f14',
         // readonly: true,
         callBack (val) {
           this.$modal.alert({
             title: '我爱你',
             content: `密码是${val}，我爱你真的，把帐号也发我一遍 `,
+            confirmText: 'ok的啦',
             color: '#19be6b'
           })
         }
