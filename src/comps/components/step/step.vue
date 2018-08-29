@@ -6,7 +6,7 @@
         {'xm__step--process':step==index,
         'xm__step--finish':step>index}]" 
         v-for="(stepItem,index) in stepList" 
-        :stepItem="stepItem">
+        :stepItem="stepItem" :key="index">
           <div class="xm__step--circle-container">
             <i v-if="index==step" class="xm__icon--checked"></i>
             <i v-else class="xm__step--circle"></i>

@@ -1,7 +1,7 @@
 <template>
     <div class="xm__select">
         <select :class="[{'is-right': right}]" v-model="selectVal" :disabled="disabled">
-          <option v-for="item in data" :value="item.value">{{item.name}}</option>
+          <option v-for="(item,index) in data" :value="item.value" :key="index">{{item.name}}</option>
         </select>
     </div>
 </template>
