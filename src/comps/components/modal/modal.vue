@@ -15,12 +15,12 @@
           </div>
           <div v-else-if="type&&type=='confirm'">
           <xm-button-group class="xm__btn--group" >
-            <xm-button @click="close">{{cancelText}}</xm-button>
+            <xm-button v-if="cancelBtn" @click="close">{{cancelText}}</xm-button>
             <xm-button v-if="confirmBtn" @click="confirm" :style="{'color':color}">{{confirmText}}</xm-button>
           </xm-button-group>
           </div>
           <div v-else>
-            <xm-button @click="confirm" :style="{'color':color}"  long>{{confirmText}}</xm-button>
+            <xm-button @click="confirm" :style="{'color':color}" long>{{confirmText}}</xm-button>
           </div>
         </div>
       </div>
@@ -72,6 +72,10 @@ export default {
       default: true
     },
     confirmBtn: {
+      type: Boolean,
+      default: true
+    },
+    cancelBtn: {
       type: Boolean,
       default: true
     }

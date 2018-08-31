@@ -25,6 +25,7 @@
 | z-index     | z-index   | string  | 自定义 |  —   |
 | dialog-title  | 是否有标题内容   | string  | 自定义 | 无标题  |
 | confirm-btn   | 是否禁止confirm按钮   | Boolean  | true，false | true  |
+| cancel-btn   | 是否禁止cancel按钮   | Boolean  | true，false | true  |
 | confirm-text  | 自定义confirm文字  | 自定义  | — |  确定  |
 | cancel-text   | 自定义cancel文字  | 自定义  | — |  取消  |
 
@@ -33,6 +34,7 @@
 |---------- |-------- |---------- |-------------  |-------- |
 | close     | 取消操作   | Function    |  自定义  |     —    |
 | confirm     | 确定操作(:confirm-btn="false"不出现)   | Function  |  自定义  |  —   |
+| cancel     | 确定操作(:cancel-btn="false"不出现)   | Function  |  自定义  |  —   |
 
 ##  
 ## 全局弹出层
