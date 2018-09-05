@@ -75,6 +75,7 @@ components: {
 - [x] Loading
 - [x] 工单流程
 - [x] skeleton骨架
+- [x] Lazy延迟加载
 - [ ] 轮播
 - [x] ActionSheet
 - [x] Popup

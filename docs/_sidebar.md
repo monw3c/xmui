@@ -28,3 +28,4 @@
 - 应用组件
  - [工单流程](/components/step.md)
  - [skeleton骨架](/components/skeleton.md)
+ - [Lazy延迟加载](/components/lazy.md)
