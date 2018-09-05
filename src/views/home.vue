@@ -36,8 +36,8 @@
 
     <h4>搜索框</h4>
     <p style="text-align:left;font-size: 14px;">input方法监听的值：{{inputValue}}</p>
-    <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"></xm-search></form>
-    <xm-search placeholder="自定义placeholder" v-model="value"  @action="searchAction" @input="inputAction" action-text-color="#777" @cancel="searchCancel"><span slot="search">搜索</span><span slot="cancel">取消</span></xm-search>
+    <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"><span slot="search">确定</span></xm-search></form>
+    <xm-search placeholder="自定义placeholder" v-model="value"  @action="searchAction" @input="inputAction" action-text-color="#777" cancel-text-color="#777"  @cancel="searchCancel"><span slot="search">搜索</span><span slot="cancel">取消</span></xm-search>
 
 
     <h4>加载更多</h4>

@@ -9,15 +9,16 @@
         @keypress.enter.prevent="onSearch" 
         @focus="onFocus"
         @blur="onBlur"
+        ref="input"
         >
-        <i class="xm__icon xm__icon--clear" style="display: none;"></i>
+        <i v-if="hasClear" v-show="val" class="xm__icon xm__icon--clear xm__icon--close-outline" @click="onClear"></i>
       </div>
-      <div class="xm__search--action" v-if="this.$slots.search && this.$slots.search.length>0">
+      <div class="xm__search--action" v-show="val" v-if="this.$slots.search && this.$slots.search.length>0">
         <div class="xm__search--action--text" :style="{'color':actionTextColor}" @click="onSearch">
           <slot name="search"></slot>
         </div>
       </div>
-      <div class="xm__search--cancel" v-if="onCancel">
+      <div class="xm__search--cancel" v-if="this.$slots.cancel && this.$slots.cancel.length>0" v-show="val">
         <div class="xm__search--cancel--text" :style="{'color':cancelTextColor}" @click="onCancel">
           <slot name="cancel"></slot>
         </div>
@@ -61,6 +62,10 @@ export default {
     showCancel: {
       type: Boolean,
       default: true
+    },
+    hasClear: {
+      type: Boolean,
+      default: true
     }
   },
   data () {
@@ -93,6 +98,12 @@ export default {
     },
     onCancel () {
       this.$emit('cancel', this.val)
+    },
+    onClear () {
+      // this.$refs.input.value = ''
+      this.val = ''
+      this.isFocus = false
+      this.$emit('clear', this.val)
     }
   }
 
