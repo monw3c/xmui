@@ -1,65 +1,86 @@
-  .fade-enter-active {
-    animation-name: fade-in;
-    animation-duration: .5s;
-  }
-  .fade-leave-active {
-    animation-name: fade-out;
-    animation-duration: .5s;
+.fade-enter-active {
+  animation-name: fade-in;
+  animation-duration: .5s;
+}
+.fade-leave-active {
+  animation-name: fade-out;
+  animation-duration: .5s;
+}
+
+.lazy-enter {
+  opacity: 0;
+}
+.lazy-enter-to {
+    opacity: 1;
+}
+.lazy-enter-active {
+  transition: opacity 0.3s 0.2s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.lazy-leave {
+  opacity: 1;
+}
+.lazy-leave-to {
+  opacity: 0;
+}
+.lazy-leave-active {
+  transition: opacity 0.5s;
+}
+
+@keyframes fade-in  {
+  from {
+    opacity: 0;
   }
 
-  @keyframes fade-in  {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
+}
 
-  // loading样式
-  @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+@keyframes fade-out {
+  from {
+    opacity: 1;
   }
+  to {
+    opacity: 0;
+  }
+}
 
-  // opacity样式
-  @keyframes opacity {
-    0%   {opacity: 1;}
-    10%  {opacity: 0.9;}
-    20%  {opacity: 0.8;}
-    30%  {opacity: 0.7;}
-    40%  {opacity: 0.6;}
-    50%  {opacity: 0.5;}
-    60%  {opacity: 0.6;}
-    70%  {opacity: 0.7;}
-    80%  {opacity: 0.8;}
-    90%  {opacity: 0.9;}
-    100% {opacity: 0.95;}
+// loading样式
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
   }
-  
-  @keyframes bar-loading {
-    0% {
-      width:60%
-    }
-    50% {
-      width:100%
-    }
-    100% {
-      width:60%
-    }
+  100% {
+      transform: rotate(360deg);
   }
-  
+}
+
+// opacity样式
+@keyframes opacity {
+  0%   {opacity: 1;}
+  10%  {opacity: 0.9;}
+  20%  {opacity: 0.8;}
+  30%  {opacity: 0.7;}
+  40%  {opacity: 0.6;}
+  50%  {opacity: 0.5;}
+  60%  {opacity: 0.6;}
+  70%  {opacity: 0.7;}
+  80%  {opacity: 0.8;}
+  90%  {opacity: 0.9;}
+  100% {opacity: 0.95;}
+}
+
+@keyframes bar-loading {
+  0% {
+    width:60%
+  }
+  50% {
+    width:100%
+  }
+  100% {
+    width:60%
+  }
+}

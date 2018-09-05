@@ -13,6 +13,7 @@ import Skeleton from './components/skeleton/index'
 import Navbar from './components/navbar/index'
 import Actionsheet from './components/actionsheet/index'
 import Popup from './components/popup/index'
+import Lazy from './components/lazy/index'
 
 import Button from './components/button/index'
 import Tabbar from './components/tabbar/index'
@@ -48,6 +49,7 @@ const components = {
   Navbar,
   Actionsheet,
   Popup,
+  Lazy,
   Radio,
   RadioGroup: Radio.group,
   Checkbox,

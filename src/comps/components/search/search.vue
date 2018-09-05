@@ -100,9 +100,9 @@ export default {
       this.$emit('cancel', this.val)
     },
     onClear () {
-      // this.$refs.input.value = ''
       this.val = ''
       this.isFocus = false
+      this.$emit('input', this.val)
       this.$emit('clear', this.val)
     }
   }

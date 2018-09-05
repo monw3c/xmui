@@ -1,7 +1,7 @@
 # Search 搜索框
 ----
 ### 基础用法
- 使用```action-text-color```、```bg-color```和```placeholder```属性来定义 Search 的样式。
+ 使用```action-text-color```、```cancel-text-color```、```bg-color```、```has-clear```和```placeholder```属性来定义 Search 的样式。
 ``` html
 <form action="/"><xm-search bg-color="#09c" @action="searchAction" v-model="value" action-text-color="#fff"><span slot="search">确定</span></xm-search></form>
 

@@ -528,6 +528,21 @@
     </div>
     
 
+
+    <h4>Lazy延迟加载</h4>
+    <xm-lazy :time="4000" @loaded="loadedAction">
+      <img style="width:50%" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536144560096&di=b0223a42d7bbee356fa7f166267e72c4&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F342ac65c10385343bc17bc0d9e13b07ecb8088c5.jpg"/>
+      <div class="topic-loading-item" slot="skeleton">
+        <div class="loading-item-two">
+          <xm-skeleton width="100%" animate="loading"/>
+        </div>
+        <div class="loading-item-three">
+          <xm-skeleton width="100%" animate="loading"/>
+        </div>
+      </div>
+      <!-- <xm-loading width="20" height="20" color="#ed3f14" slot="loading"></xm-loading> -->
+    </xm-lazy>
+
     
   </div>
 </template>
@@ -707,42 +722,33 @@ export default {
     },
     searchCancel (e) {
       this.value = ''
-      alert(this.value)
     },
     inputAction (e) {
       this.inputValue = e
     },
     modalClick1 (e) {
-      // alert(this.modalVisible)
       this.modalVisible1 = true
       this.zIndex++
     },
     modalClick2 (e) {
-      // alert(this.modalVisible)
       this.modalVisible2 = true
       this.zIndex++
     },
     modalClick3 (e) {
-      // alert(this.modalVisible)
       this.modalVisible3 = true
       this.zIndex++
     },
     modalClose1 (e) {
       this.modalVisible1 = false
-      // alert(this.modalVisible)
     },
     modalClose2 (e) {
       this.modalVisible2 = false
-      // alert(this.modalVisible)
     },
     modalClose3 (e) {
       this.modalVisible3 = false
-      // alert(this.modalVisible)
     },
     modalOk1 (e) {
-      // alert(`好的1`)
       this.modalVisible1 = false
-      // alert(this.modalVisible)
     },
     modalOk2 (e) {
       alert(`${this.value2} 和 ${this.value3}`)
@@ -759,10 +765,12 @@ export default {
         autoClose: true,
         maskClosable: false
       })
+    },
+    loadedAction () {
+      this.$toast.text({content: '延迟加载完成！', direction: 'bottom'})
     }
   },
   mounted: () => {
-    // alert(this.modalVisible)
 
   }
 }
