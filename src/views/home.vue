@@ -446,7 +446,7 @@
     <xm-button type="success" @click="actionSheetVisible1=true">有取消</xm-button>
     <xm-button type="primary" @click="actionSheetVisible2=true">无取消</xm-button>
 
-    <xm-actionsheet :item-list="itemList" cancel="取消" cancel-color="#19be6b" v-model="actionSheetVisible1" header="这里是个标题"></xm-actionsheet>
+    <xm-actionsheet :item-list="itemList" cancel="取消" cancel-color="#19be6b" v-model="actionSheetVisible1" header="这里是个标题" has-icon></xm-actionsheet>
     <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
 
 
@@ -594,6 +594,7 @@ export default {
       hrefObj: { path: '/mall', params: { userId: 123 } },
       itemList: [
         { text: '顺风车',
+          icon: '<span class="xm__icon--loading"></span>',
           callBack: () => {
             this.$modal.alert({
               title: '提示',
@@ -602,8 +603,20 @@ export default {
             })
           }
         },
-        { text: '巴士', callBack: () => {} },
-        { text: '快车', callBack: () => {} },
+        { text: '巴士', icon: '<img src="https://github.com/monw3c/xmui/blob/master/static/logo.jpg?raw=true"/>', callBack: () => {} },
+        { text: '快车',
+          icon: '<p>“别打算XSS攻击”</p>',
+          callBack: () => {
+            this.$modal.alert({
+              title: '提示',
+              content: '想了解vue XSS攻击点确定',
+              color: '#19be6b',
+              callBack: () => {
+                location.href = 'https://segmentfault.com/q/1010000009844447'
+              }
+            })
+          }
+        },
         { text: '专车', callBack: () => {} }
       ],
       actionSheetVisible1: false,

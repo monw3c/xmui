@@ -5,7 +5,7 @@
       <div class="xm__actionsheet" :class="isShow?'xm__actionsheet--active':''">
         <header class="xm__actionsheet--header" v-if="header">{{header}}</header>
         <ul>
-        <li v-for="(item,index) in itemList" :key="index" @click.stop="itemClick(item)" class="xm__actionsheet--item">{{item.text}}</li>
+        <li v-for="(item,index) in itemList" :key="index" @click.stop="itemClick(item)" class="xm__actionsheet--item"><span class="xm__actionsheet--icon" v-if="hasIcon&&item.icon!=''" v-html="item.icon"></span>{{item.text}}</li>
         </ul>
         <a v-if="cancel" @click.stop="close" class="xm__actionsheet--action" :style="{'color':cancelColor}">{{cancel}}</a>
       </div>
@@ -38,12 +38,19 @@ export default {
     cancelColor: {
       type: String,
       default: ''
+    },
+    hasIcon: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
     return {
       isShow: this.value
     }
+  },
+  computed: {
+
   },
   methods: {
     active () {

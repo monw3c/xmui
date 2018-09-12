@@ -31,37 +31,53 @@
     }
 
     & .xm__actionsheet--item {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         font-size: $font-size-big;
         color: $text-color;
         height: 50px;
-        line-height: 50px;
+        // line-height: 50px;
         background-color: $body-background;
-    }
 
-    & .xm__actionsheet--item:after {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-bottom: $border-width-default  $border-style-default  $border-color-base;
-        transform: scaleY(.5);
-        transform-origin: 0 0;
-    }
+        & .xm__actionsheet--icon{
+            max-height: 40px;
+            margin-right: 5px;
 
-    & .xm__actionsheet--item:first-child:before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-bottom: $border-width-default  $border-style-default  $border-color-base;
-        transform: scaleY(.5);
-        transform-origin: 0 0;
+            & img{
+                max-height: 40px;
+            }
+
+            & p{
+                margin: 0;
+            }
+        }
+    
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: $border-width-default  $border-style-default  $border-color-base;
+            transform: scaleY(.5);
+            transform-origin: 0 0;
+        }
+
+        &:first-child:before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: $border-width-default  $border-style-default  $border-color-base;
+            transform: scaleY(.5);
+            transform-origin: 0 0;
+        }
+
     }
 
     & .xm__actionsheet--action {
