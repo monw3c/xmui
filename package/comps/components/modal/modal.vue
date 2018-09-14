@@ -4,14 +4,14 @@
       <div class="xm__mask" @click="maskClose"></div>
       <div class="xm__dialog" :style="{'z-index':zIndex}">
         <div class="xm__dialog--hd" v-if="dialogTitle">
-          <strong class="xm__dialog--title" >{{dialogTitle}}</strong>
+          <strong class="xm__dialog--title">{{dialogTitle}}</strong>
         </div>
         <div class="xm__dialog--bd">
           <slot></slot>
         </div>
         <div class="xm__dialog--ft">
           <div v-if="type&&type=='alert'">
-            <xm-button @click="confirm" :style="{'color':color}"  long>{{confirmText}}</xm-button>
+            <xm-button @click="confirm" :style="{'color':color}" long>{{confirmText}}</xm-button>
           </div>
           <div v-else-if="type&&type=='confirm'">
           <xm-button-group class="xm__btn--group" >
@@ -91,13 +91,16 @@ export default {
     },
     close () {
       this.$emit('close')
+      this.isVisible = false
     },
     confirm () {
       this.$emit('confirm')
     },
     maskClose () {
-      if (this.maskClosable) {
+      if (this.maskClosable && this.cancelBtn) {
         this.close()
+      } else {
+        this.isVisible = false
       }
     }
   },

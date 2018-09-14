@@ -15,8 +15,6 @@
 }
 .lazy-enter-active {
   transition: opacity 0.3s 0.2s;
-  position: absolute;
-  top: 0;
   width: 100%;
 }
 .lazy-leave {
