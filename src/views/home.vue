@@ -432,15 +432,19 @@
     <xm-button type="primary" @click="toastClick2">loading</xm-button>
     <xm-button type="error" @click="toastClick3">无遮罩</xm-button>
 
+
+
     <h4>Loading</h4>
     <xm-loading></xm-loading>
     <!-- 自定义定位右上角 -->
     <xm-loading class="right-top-loading" width="20" height="20" color="#ed3f14"></xm-loading>
     <xm-loading has-text>自定义文字</xm-loading>
     <!-- 测试开启 -->
-    <!-- <xm-loading has-text fullScreen>全屏的loading</xm-loading> -->
+    <!-- <xm-loading has-text fullScreen closable @close="loadingStatus=false" v-show="loadingStatus">全屏可关闭的loading</xm-loading> -->
     <xm-loading has-text vertical border-width="8">垂直的loading</xm-loading>
-    
+    <xm-loading ><div slot="cus"><img style="width:40px" src="https://raw.githubusercontent.com/monw3c/xmui/master/static/logo.jpg"><p style="color:#19be6b;margin:0;">自定义效果</p></div></xm-loading>
+
+
 
     <h4>ActionSheet</h4>
     <xm-button type="success" @click="actionSheetVisible1=true">有取消</xm-button>
@@ -623,7 +627,8 @@ export default {
       actionSheetVisible2: false,
       popupVisible1: false,
       popupVisible2: false,
-      active: '/mall'
+      active: '/mall',
+      loadingStatus: true
     }
   },
   methods: {

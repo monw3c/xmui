@@ -32,6 +32,7 @@
         padding: 14px 10px 10px;
         @include border-radius();
         z-index: $zindex-loading;
+        
     }
     // 垂直显示
     & .xm__loading--vertical{
@@ -47,5 +48,22 @@
         vertical-align: top;
     }
 
-    
+    &.customize{
+        padding: 10px;
+    }
+
+    & .xm__loading--close{
+        font-size: $font-size-small*0.9;
+        vertical-align: middle;
+        position: absolute;
+        right: -0.5rem;
+        top: -0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        background: $body-background;
+        @include border-radius(30px);
+        color: $close-color; 
+    }
 }
