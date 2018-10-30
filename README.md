@@ -11,12 +11,12 @@
 
 - 基于 [Vue](http://vuejs.org/)`>=v2.1.4` 开发的可复用 UI 组件，并且可随产品需要扩展
 - 使用Vue官方的工作流，支持 ES6
-- 一系列线上产品都在使用中
+- 一系列产品线都在使用中
 - 关于SEO问题推荐使用插件 [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
 
 ## 浏览器支持
 
-- 适用于 移动 和 部分PC 端(Chrome,safari,IE9+等)
+- 适用于 移动 和 部分PC 端
 
 ## 开发  
 > 全局引入 -- 在 webpack 入口文件 main.js 中如下配置：
