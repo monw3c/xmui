@@ -17,7 +17,8 @@
  - [标签栏(底部)](/components/tabbar.md)
  - [标签页](/components/tab.md)
  - [无缝滚动](/components/seamlessscroll.md) 
- 
+ - [数字键盘](/components/keyboard.md) 
+
 - 弹出层
  - [Modal](/components/modal.md)
  - [Toast](/components/toast.md)
