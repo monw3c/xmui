@@ -93,7 +93,7 @@ components: {
 
 
 ## 欢迎加入星球一起探讨 
-<div align=center><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/xq.jpeg?raw=true" style="width:30%" /></div>  
+<div align=center><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/xq.jpeg?raw=true" width="240"/></div>  
 
 ## 贡献
 
