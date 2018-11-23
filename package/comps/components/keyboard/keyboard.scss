@@ -1,0 +1,236 @@
+.xm__mask {
+    @include mask
+}
+
+.xm__keyboard {
+    
+	& .xm__keyboard--dialog {
+		width: 100%;
+		transition: all .3s;
+		position: fixed;
+		transform: translateX(-50%);
+		left: 50%;
+		bottom: 0;
+		z-index: 999;
+		background: $body-background;
+		height: calc(4.28em + 56px);
+
+		& .number-input-area{
+			display: flex;
+			position: relative;
+			height:56px;
+			line-height:56px;
+			font-size: $font-size-base;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding:0 10px;
+			color: #666;
+			& span{
+				flex:1;
+			}
+			& .number-input{
+				flex:2;	
+				& input{
+					width:100%;
+					margin:0;
+					padding:0;
+					border:none;
+					line-height: 56px;
+					text-align: right;
+					font-size: 2rem;
+					color: #333;
+					&:disabled{
+						color: #333;
+						opacity: 1;
+    					-webkit-text-fill-color: #333;
+					}
+					&::-webkit-input-placeholder { 
+						color: #999;
+						font-size: $font-size-base;
+					}
+				}
+			}
+			& .number-unit{
+				padding:0 0 0 5px;
+			}
+		}
+
+		& .xm__keyboard--content {
+			display: flex;
+			width: 100%;
+			height: 4.28em;
+			position: relative;
+			// box-shadow: 0px -2px 3px #E2E2E2;
+
+			& .xm__keyboard--body, & .xm__keyboard--operate  {
+				display: flex;
+
+				&:after {
+					content: " ";
+					display: table;
+					clear: both;
+					width: 0px;
+				}
+
+				& .list-wrap {
+					width: 100%;
+					float: left;
+
+					& .list-item {
+						float: left;
+						text-align: center;
+						transition: background .3s;
+						background: $body-background;
+						position: relative;
+						list-style: none;
+
+						&:active {
+							background-color: #f0f0f0;
+						}
+
+						&:before {
+							content: "";
+							position: absolute;
+							z-index: 2;
+							background-color: #ddd;
+							-webkit-transform-origin: 100% 50%;
+							transform-origin: 100% 50%;
+							transform: scaleX(.5) translateX(100%);
+							top: 0;
+							right: 0;
+							width: 1px;
+							height: 100%;
+						}
+
+						&:after {
+							content: " ";
+							position: absolute;
+							z-index: 2;
+							background-color: #ddd;
+							-webkit-transform-origin: 50% 100%;
+							transform-origin: 50% 100%;
+							-webkit-transform: scaleY(.5) translateY(-100%);
+							transform: scaleY(.5) translateY(-100%);
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 1px;
+						}
+					}
+				}
+			}
+
+			& .xm__keyboard--body {
+				flex: 3;
+				background: #ddd;
+
+				& .list-wrap {
+                    margin: 0;
+                    padding: 0;
+
+					& .list-item {
+						width: 33.3%;
+						height: 2.14em;
+						line-height: 2.14em;
+						font-size: .5em;
+						color: #333;
+
+						&:before {
+							width: .04em;
+						}
+
+						&:after {
+							display: none;
+						}
+
+						&:nth-of-type(n+4):after {
+							display: inline;
+							height: .04em;
+						}
+
+						&:nth-of-type(3n):before {
+							display: none;
+						}
+
+						&.delete {
+							align-items: center;
+                            display: flex;
+                            justify-content: center;
+
+                            & i {
+                                font-size: .9em;
+                            }
+						}
+
+						&.slidedown {
+							align-items: center;
+                            display: flex;
+                            justify-content: center;
+
+                            & i {
+                                font-size: .9em;
+                                // color: $text-color;
+                            }
+						}
+					}
+				}
+			}
+
+			& .xm__keyboard--operate {
+				flex: 1;
+
+				& .list-wrap {
+					display: flex;
+					flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+
+					& .list-item {
+						position: relative;
+						width: 100%;
+
+						&:after {
+							display: none;
+						}
+
+						&.delete {
+							align-items: center;
+                            display: flex;
+                            justify-content: center;
+                            flex: 1;
+
+                            & i {
+                                font-size: .5em;
+                            }
+
+							&:before {
+								display: -1px;
+							}
+						}
+
+						&.confirm {
+							overflow: hidden;
+							color: $body-background;
+							background: $base-color;
+							display: flex;
+							flex: 3;
+							align-items: center;
+							justify-content: center;
+							font-size: .32em;
+							font-weight: 500;
+
+							&:active {
+								background-color: $base-color;
+							}
+
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

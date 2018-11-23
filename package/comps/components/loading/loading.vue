@@ -9,6 +9,8 @@
           ]"
       >   
           <template v-if="!$slots.cus">
+            <!-- ripple效果 -->
+            <!-- <div class="ripple"><div></div><div></div></div> -->
             <span class="xm__loading--loader" 
             :class="[
             {'xm__loading--vertical':vertical,'borderRightTransparent':color}

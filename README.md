@@ -79,6 +79,7 @@ components: {
 - [ ] 轮播
 - [x] ActionSheet
 - [x] Popup
+- [x] 数字键盘
 - [x] 无缝滚动
 - [ ] 左右滑菜单
 - [ ] 时间选择器
@@ -89,6 +90,10 @@ components: {
 ## 关于如何构建 Vue 组件库的文章，有兴趣的朋友可了解一起探讨 
 
 [如何基于 Vue 2 写一套 UI 库](http://gitbook.cn/gitchat/activity/5a5df169462f9b46f3418520)
+
+
+## 欢迎加入星球一起探讨 
+<div align=center><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/xq.jpeg?raw=true"/></div>  
 
 ## 贡献
 

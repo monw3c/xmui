@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'iconfont';  
-    src: url('//at.alicdn.com/t/font_510640_k81zbee215q.eot');
-    src: url('//at.alicdn.com/t/font_510640_k81zbee215q.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_510640_k81zbee215q.woff') format('woff'),
-    url('//at.alicdn.com/t/font_510640_k81zbee215q.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_510640_k81zbee215q.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_510640_ae3sn9b3kl.eot');
+    src: url('//at.alicdn.com/t/font_510640_ae3sn9b3kl.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_510640_ae3sn9b3kl.woff') format('woff'),
+    url('//at.alicdn.com/t/font_510640_ae3sn9b3kl.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_510640_ae3sn9b3kl.svg#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
   }
@@ -99,3 +99,6 @@
 .xm__icon--right:before { content: "\e687"; }
 .xm__icon--up:before { content: "\e67f"; }
 .xm__icon--down:before { content: "\e601"; }
+
+.xm__icon--kb-del:before { content: "\e629"; }
+.xm__icon--kb-hide:before { content: "\e644"; }

@@ -45,15 +45,18 @@
         border: none;
       }
 
-      & .xm__icon--close-outline{
+      & .xm__icon--close-outline {
         font-size: 34px;
         color: #fff;
       }
 
-      &::before{
+      &::before {
         border: none;
       }
 
+      &:first-child {
+        background-color: transparent;
+      }
     }
   }
 }

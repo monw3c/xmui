@@ -72,6 +72,7 @@ components: {
 - [ ] 轮播
 - [x] ActionSheet
 - [x] Popup
+- [x] 数字键盘
 - [x] 无缝滚动
 - [ ] 左右滑菜单
 - [ ] 时间选择器

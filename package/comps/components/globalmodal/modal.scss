@@ -28,7 +28,7 @@
     }
 
     & .xm__dialog--bd {
-        padding: 0.5em 1.6em 0.8em;
+        padding: .5em .8em .8em;
         min-height: 40px;
         font-size: $font-size-base;
         line-height: $line-height-base;
@@ -44,11 +44,13 @@
             border: 1px solid $border-color-split;
             padding: 0 2px;
             @include border-radius;
+            width: auto;
 
             &::-webkit-input-placeholder{
                 color: $input-placeholder-color;
             }
         }
+
 
     }
 
@@ -60,7 +62,7 @@
         & button{
             background-color: $body-background;
             font-size: $font-size-base;
-            padding: 15px;
+            padding: 1.5rem 2rem;
 
             & span{
                 font-size: $font-size-base; 
@@ -71,11 +73,12 @@
         & .xm__btn--group button{
             display: block;
             flex: 1;
-            color: $btn-default-color;
+            // color: $btn-default-color;
             text-decoration: none;
             position: relative;
             border-radius: 0;
             border: none;
+            color: #fff;
 
             &::before{
                 content: "";
@@ -91,17 +94,19 @@
                 border-top: 1px solid $border-color-base;
             }
 
-            &:first-child{
+            & .xm__btn--default{
                 border-right:none;
                 border-bottom-left-radius: 4px;
-                
+                background-color: #ccc;
+
                 &::before{
                     
                 }
             }
 
-            &:last-child{
+            & .xm__btn--primary{
                 border-bottom-right-radius: 4px;
+                background-color: $base-color;
             }
 
             
@@ -110,30 +115,33 @@
         & .xm__btn--default{
             display: block;
             flex: 1;
-            color: $btn-default-color;
+            color: #fff;
             text-decoration: none;
             position: relative;
             border-radius: 0;
             border: none;
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
-
+            background-color: #ccc;
+            
             &:hover,
             &:active {
-                background-color: $plain-color;
+                // background-color: $plain-color;
                 text-decoration: none;
-                color: $text-color;
+                // color: $text-color;
                 border: none;
             }
 
-            &:first-child{
-                border-right:none;
-                border-bottom-left-radius: 4px;
-            }
+            // &:first-child{
+            //     border-right:none;
+            //     border-bottom-left-radius: 4px;
+            //     background-color: #ccc;
+            // }
 
-            &:last-child{
-                border-bottom-right-radius: 4px;
-            }
+            // &:last-child{
+            //     border-bottom-right-radius: 4px;
+            //     background-color: $base-color;
+            // }
 
             &::before{
                 content: "";
@@ -150,33 +158,45 @@
                 border-bottom: none;
             }
 
-            &:first-child::before{
-                border-right: none;
+            // &:first-child::before{
+            //     border-right: none;
+            // }
+
+            &.is-long{
+                height: auto;
             }
         }
 
-        & .xm__btn--default{
+        & .xm__btn--primary{
             display: block;
             flex: 1;
-            color: $btn-default-color;
+            color: #fff;
             text-decoration: none;
             position: relative;
             border-radius: 0;
             border: none;
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
+            background-color: $base-color;
 
             &:hover,
             &:active {
-                background-color: $plain-color;
+                // background-color: $plain-color;
                 text-decoration: none;
-                color: $text-color;
+                // color: $text-color;
                 border: none;
             }
 
-            &.is-long{
-                height: auto;
-            }
+            // &:first-child{
+            //     border-right:none;
+            //     border-bottom-left-radius: 4px;
+            //     background-color: #ccc;
+            // }
+
+            // &:last-child{
+            //     border-bottom-right-radius: 4px;
+            //     background-color: $base-color;
+            // }
 
             &::before{
                 content: "";
@@ -189,8 +209,53 @@
                 transform-origin: 0px 0px 0px;
                 pointer-events: none;
                 box-sizing: border-box;
-                border-top: 1px solid $border-color-base;
+                border: 1px solid $border-color-base;
+                border-bottom: none;
+            }
+
+            // &:first-child::before{
+            //     border-right: none;
+            // }
+
+            &.is-long{
+                height: auto;
             }
         }
+
+        // & .xm__btn--default{
+        //     display: block;
+        //     flex: 1;
+        //     color: $btn-default-color;
+        //     text-decoration: none;
+        //     position: relative;
+        //     border-radius: 0;
+        //     border: none;
+        //     border-bottom-left-radius: 4px;
+        //     border-bottom-right-radius: 4px;
+
+        //     &:hover,
+        //     &:active {
+        //         background-color: $plain-color;
+        //         text-decoration: none;
+        //         color: $text-color;
+        //         border: none;
+        //     }
+
+            
+
+        //     &::before{
+        //         content: "";
+        //         position: absolute;
+        //         top: 0px;
+        //         left: 0px;
+        //         width: 200%;
+        //         height: 200%;
+        //         transform: scale(0.5);
+        //         transform-origin: 0px 0px 0px;
+        //         pointer-events: none;
+        //         box-sizing: border-box;
+        //         border-top: 1px solid $border-color-base;
+        //     }
+        // }
     }
 }

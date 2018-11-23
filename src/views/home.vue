@@ -418,7 +418,7 @@
     <xm-button type="primary" @click="modalClick5">全局confirm层,带回调函数</xm-button>
     <xm-button type="warning" @click="modalClick6">全局prompt层,带回调函数</xm-button>
 
-    <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" confirm-text='自定义文字' color="#19be6b" :z-index="zIndex" :mask-closable="false" >点击背景功能关闭</xm-modal>
+    <xm-modal type="alert" :visible="modalVisible1" @close="modalClose1" @confirm="modalOk1" dialog-title="提示" confirm-text='自定义文字' color="#fff" :z-index="zIndex" :mask-closable="false" >点击背景功能关闭</xm-modal>
     <xm-modal type="confirm" dialog-title="填写资料" :visible="modalVisible2" @close="modalClose2" @confirm="modalOk2" confirm-text='ok啦' 
         cancel-text='窝的confirm-btn禁止了' color="#19be6b" :z-index="zIndex" :confirm-btn="false">
       <xm-input v-model="value2" name="name2" max="10" placeholder="请输入用户名" @blur="inputAction1" @focus="inputAction2"></xm-input>
@@ -496,6 +496,29 @@
 
 
 
+    <h4>数字键盘</h4>
+    <xm-cell-group>
+      <xm-cell-item>
+        <span slot="left">房间面积</span>
+        <div slot="right" class="xm__cell-right" @click="openCurKeyboard" data-tips='{"title":"房间面积", "placeholder":"请输入房间面积", "name":"roomAreaVal", "unit":"㎡", "isCard":false}' :data-val="roomAreaVal">
+          <xm-input v-model="roomAreaVal" placeholder="㎡" disabled="disabled" ></xm-input>
+        </div>
+      </xm-cell-item>
+      <xm-cell-item>
+        <span slot="left">房间租金</span>
+        <div slot="right" class="xm__cell-right" @click="openCurKeyboard" data-tips='{"title":"房间租金", "placeholder":"请输入房间租金", "name":"roomRentVal", "unit":"元/月", "isCard":false}' :data-val="roomRentVal">
+          <xm-input v-model="roomRentVal" placeholder="元/月" disabled="disabled" ></xm-input>
+        </div>
+      </xm-cell-item>
+      <xm-cell-item>
+        <span slot="left">身份证号码</span>
+        <div slot="right" class="xm__cell-right" @click="openCurKeyboard" data-tips='{"title":"身份证号码", "placeholder":"请输入身份证号码", "name":"idCardVal", "unit":"这里无效", "isCard":true}' :data-val="idCardVal">
+          <xm-input v-model="idCardVal" placeholder="请输入身份证号码" disabled="disabled" ></xm-input>
+        </div>
+      </xm-cell-item>
+    </xm-cell-group>
+    <xm-keyboard :visible="keyBoardVisible" v-model="curVal" :tips="tips" :len="vLen" @confirm="save" @close="keyBoardClose"></xm-keyboard>
+
 
 
 
@@ -507,7 +530,8 @@
     <h4>时间选择器</h4>
     
 
-    
+
+
     <h2>应用组件</h2>
 
     <h4>工单流程</h4>
@@ -535,7 +559,7 @@
 
     <h4>Lazy延迟加载</h4>
     <xm-lazy :time="4000" @loaded="loadedAction">
-      <img style="width:50%" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536144560096&di=b0223a42d7bbee356fa7f166267e72c4&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F342ac65c10385343bc17bc0d9e13b07ecb8088c5.jpg"/>
+      <img style="width:50%" src="//github.com/monw3c/xmui/blob/master/docs/imgs/xq.jpeg?raw=true"/>
       <div class="topic-loading-item" slot="skeleton">
         <div class="loading-item-two">
           <xm-skeleton width="100%" animate="loading"/>
@@ -628,7 +652,15 @@ export default {
       popupVisible1: false,
       popupVisible2: false,
       active: '/mall',
-      loadingStatus: true
+      loadingStatus: true,
+
+      keyBoardVisible: false, // 是否显示数字键盘
+      tips: {}, // 键盘输入框配置项
+      curVal: '', // 键盘传入值
+      vLen: 8,
+      roomAreaVal: '', // 房间面积
+      roomRentVal: '', // 房间租金
+      idCardVal: ''
     }
   },
   methods: {
@@ -683,7 +715,7 @@ export default {
         title: '这里可以自定义',
         content: '开启3秒关闭，取消背景层关闭',
         confirmText: '窝要关了',
-        color: '#19be6b',
+        color: '#f9f9f9',
         autoClose: true,
         maskClosable: false
       })
@@ -694,13 +726,11 @@ export default {
         content: '你想怎么样呢？',
         confirmText: 'ok啦',
         cancelText: '窝要关了',
-        color: '#19be6b',
         callBack () {
           this.$modal.alert({
             title: '这里可以自定义',
             content: '开启3秒关闭，取消背景层关闭',
             confirmText: '知道了',
-            color: '#19be6b',
             autoClose: true,
             maskClosable: false
           })
@@ -713,14 +743,12 @@ export default {
         placeholder: '填入您的支付宝密码',
         confirmText: 'ok啦',
         cancelText: '窝要关了',
-        color: '#ed3f14',
         // readonly: true,
         callBack (val) {
           this.$modal.alert({
             title: '我爱你',
             content: `密码是${val}，我爱你真的，把帐号也发我一遍 `,
-            confirmText: 'ok的啦',
-            color: '#19be6b'
+            confirmText: 'ok的啦'
           })
         }
       })
@@ -779,13 +807,31 @@ export default {
       this.$modal.alert({
         title: '这里可以自定义',
         content: '开启3秒关闭，取消背景层关闭',
-        color: '#19be6b',
         autoClose: true,
         maskClosable: false
       })
     },
     loadedAction () {
       this.$toast.text({content: '延迟加载完成！', direction: 'bottom'})
+    },
+    // 显示数字键盘
+    openCurKeyboard (e) {
+      const obj = JSON.parse(e.currentTarget.dataset.tips)
+      this.curVal = e.currentTarget.dataset.val
+      this.keyBoardVisible = true
+      this.tips = {title: obj.title, placeholder: obj.placeholder, name: obj.name, unit: obj.unit, isCard: obj.isCard}
+    },
+    // 确定
+    save (data) {
+      this.keyBoardVisible = false
+      if (data.val && data.val !== '') {
+        this[[data.name]] = data.val + data.unit
+      } else {
+        this[[data.name]] = ''
+      }
+    },
+    keyBoardClose () {
+      this.keyBoardVisible = false
     }
   },
   mounted: () => {
