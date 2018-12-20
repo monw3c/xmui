@@ -451,7 +451,7 @@
     <xm-button type="primary" @click="actionSheetVisible2=true">无取消</xm-button>
 
     <xm-actionsheet :item-list="itemList" cancel="取消" cancel-color="#19be6b" v-model="actionSheetVisible1" header="这里是个标题" has-icon></xm-actionsheet>
-    <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2"></xm-actionsheet>
+    <xm-actionsheet :item-list="itemList" v-model="actionSheetVisible2" has-icon></xm-actionsheet>
 
 
 
@@ -645,7 +645,11 @@ export default {
             })
           }
         },
-        { text: '专车', callBack: () => {} }
+        { text: '专车', callBack: () => {} },
+        { text: '',
+          icon: '<p style="color:red"><span class="xm__icon--emoji"></span>单车</p>',
+          callBack: () => {}
+        }
       ],
       actionSheetVisible1: false,
       actionSheetVisible2: false,
@@ -834,7 +838,7 @@ export default {
       this.keyBoardVisible = false
     }
   },
-  mounted: () => {
+  mounted () {
 
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "x-m-ui",
-  "version": "1.1.12",
+  "version": "1.1.14",
   "description": "UI components base on Vue 2.x",
   "author": "mon <505038730@qq.com>",
   "main": "package/xmui.min.js",
@@ -14,7 +14,7 @@
     "package": "npm run package:prod && npm run build && npm publish"
   },
   "dependencies": {
-    "vue": "^2.5.2",
+    "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -81,7 +81,7 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",

@@ -23,6 +23,11 @@ const ModalMixin = {
   watch: {
     isVisible (val) {
       this.isActive = val
+      if (val) {
+        document.body.classList.add('xm--overflow--hidden')
+      } else {
+        document.body.classList.remove('xm--overflow--hidden')
+      }
     }
   },
 

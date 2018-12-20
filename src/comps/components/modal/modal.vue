@@ -97,19 +97,22 @@ export default {
       this.$emit('confirm')
     },
     maskClose () {
-      if (this.maskClosable && this.cancelBtn) {
+      if (this.maskClosable) {
         this.close()
-      } else {
-        this.isVisible = false
+      // } else {
+      //   this.isVisible = false
       }
     }
   },
   watch: {
     visible (val) {
+      console.log(val)
       this.isVisible = val
-      // if (!val && this.isLoading) {
-      //   this.isLoading = false
-      // }
+      if (val) {
+        document.body.classList.add('xm--overflow--hidden')
+      } else {
+        document.body.classList.remove('xm--overflow--hidden')
+      }
     }
   },
   mounted () {
