@@ -39,9 +39,9 @@
 ##  
 ## 全局弹出层
 ``` js
-this.$modal.confirm(title, content, confirmText, cancelText, color, maskClosable, callBack)
+this.$modal.confirm(title, content, confirmText, cancelText, color, maskClosable, callBack, closeAction)
 this.$modal.alert(title, content, confirmText, color, autoClose, maskClosable, callBack)
-this.$modal.prompt(title, placeholder, readonly, confirmText, cancelText, color, maskClosable, callBack)
+this.$modal.prompt(title, placeholder, readonly, confirmText, cancelText, color, maskClosable, callBack, closeAction)
 
 this.$modal.confirm({
         title: '提示',
@@ -58,6 +58,9 @@ this.$modal.confirm({
             autoClose: true,
             maskClosable: false
           })
+        },
+        closeAction () {
+          this.$toast.text({content: '触发关闭回调函数', direction: 'bottom'})
         }
 })
 
@@ -87,6 +90,7 @@ this.$modal.prompt({
 | color     | 确定文字颜色   | string  | 自定义 |  —   |
 | autoClose    | 自动关闭   | Boolean  | true，false |  默认为3秒，alert有，confirm和prompt无   |
 | callBack     | 回调函数   | Function  | 自定义 | —  |
+| closeAction  | 关闭回调函数   | Function  | 自定义 | —  |
 | placeholder  | prompt的input属性placeholder   | string  | — |  —  |
 | confirmText  | 自定义confirm文字  | 自定义  | — |  确定  |
 | cancelText  | 自定义cancel文字  | 自定义  | — |  取消  |

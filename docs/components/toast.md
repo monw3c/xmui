@@ -8,7 +8,15 @@ this.$toast.loading(mask, autoClose, callBack)
 
 methods: {
     toastClick1 () {
-      this.$toast.text({content: '太长会换行呢，15个字以内最好', direction: 'bottom', mask: true})
+      this.$toast.text({
+        content: '太长会换行呢，15个字以内最好',
+        direction: 'bottom',
+        callBack () {
+          setTimeout(() => {
+            this.$toast.text({content: '关闭后回调操作', direction: 'bottom'})
+          }, 2000)
+        }
+      })
     },
     toastClick2 () {
       this.$toast.loading({

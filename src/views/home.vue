@@ -79,8 +79,13 @@
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
         <xm-cell-item @click="cellClick">
-          <span slot="left">我的消息</span>
+          <span slot="left">我的任务</span>
           <xm-tag slot="right" type="error" round style="margin-bottom:0;">8</xm-tag>
+          <span slot="rightIcon" class="xm__icon--right"></span>
+        </xm-cell-item>
+        <xm-cell-item @click="cellClick">
+          <span slot="left">我的消息</span>
+          <span slot="right" class="dot"></span>
           <span slot="rightIcon" class="xm__icon--right"></span>
         </xm-cell-item>
         <xm-cell-item>
@@ -702,7 +707,15 @@ export default {
       this.value3 = val
     },
     toastClick1 () {
-      this.$toast.text({content: '太长会换行呢，15个字以内最好', direction: 'bottom'})
+      this.$toast.text({
+        content: '太长会换行呢，15个字以内最好',
+        direction: 'bottom',
+        callBack () {
+          setTimeout(() => {
+            this.$toast.text({content: '关闭后回调操作', direction: 'bottom'})
+          }, 2000)
+        }
+      })
     },
     toastClick2 () {
       this.$toast.loading({
@@ -738,6 +751,9 @@ export default {
             autoClose: true,
             maskClosable: false
           })
+        },
+        closeAction () {
+          this.$toast.text({content: '触发关闭回调函数', direction: 'bottom'})
         }
       })
     },

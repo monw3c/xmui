@@ -45,6 +45,7 @@ export default {
     close () {
       this.$emit('close')
       this.isVisible = false
+      this.callBack()
     }
   },
   mounted () {

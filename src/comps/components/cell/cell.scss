@@ -67,7 +67,7 @@
             flex: 1;
             width: 100%;
             min-height: $line-height-computed*2.4;
-            color: #525252;
+            color: $text-color;
             text-align: right;
             padding-right: 10px;
             justify-content: flex-end;
@@ -76,6 +76,14 @@
             & [class*=" xm__icon--"] {
                 display: block;
                 margin-left: 2px;
+            }
+
+            & .dot {
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                @include border-radius(100px);
+                background-color: $error-color;
             }
 
         }

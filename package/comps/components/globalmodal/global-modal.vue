@@ -88,6 +88,10 @@ export default {
     callBack: {
       type: Function,
       default () {}
+    },
+    closeAction: {
+      type: Function,
+      default () {}
     }
   },
   data () {
@@ -99,6 +103,7 @@ export default {
     close () {
       this.$emit('close')
       this.isVisible = false
+      this.closeAction()
       this.destroyed()
     },
     confirm () {

@@ -11,13 +11,13 @@ function open (propsData) {
 
 export default {
   text (opts) {
-    const defaultOpts = {content: '', mask: false, direction: '', callBack () { }}
+    const defaultOpts = {content: '', mask: false, direction: '', callBack () {}}
     const propsOpts = Object.assign(defaultOpts, opts)
     return open(propsOpts)
   },
 
   loading (opts) {
-    const defaultOpts = {content: '', type: 'default', mask: true, callBack () { }}
+    const defaultOpts = {content: '', type: 'default', mask: true, callBack () {}}
     const propsOpts = Object.assign(defaultOpts, opts)
     return open(propsOpts)
   }
