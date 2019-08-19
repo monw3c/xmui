@@ -13,6 +13,10 @@
 
 - 适用于 移动 和 部分PC 端
 
+## 通用项目工程  
+
+- 基于官方扩展的项目工程，集成了Axios，Dayjs和可选的XMUI，Vuex https://github.com/monw3c/vue-wp-cli  
+
 ## 开发  
 > 全局引入 -- 在 webpack 入口文件 main.js 中如下配置：
 
