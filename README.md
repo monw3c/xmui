@@ -1,8 +1,8 @@
-<div align=center><a href="https://github.com/monw3c/xmui" target="blank"><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png?raw=true"/></a></div>  
+<div align=center><a href="https://github.com/monw3c/xmui" target="blank"><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/logo.png?raw=true"/></a></div>
 
-# XMUI  
+# XMUI
 
-[![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://travis-ci.org/XadillaX/x-m-ui)  
+[![Version](https://img.shields.io/npm/v/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![Downloads](http://img.shields.io/npm/dm/x-m-ui.svg)](https://www.npmjs.com/package/x-m-ui) [![License](https://img.shields.io/npm/l/x-m-ui.svg?style=flat)](https://opensource.org/licenses/MIT) [![TravisCI](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://travis-ci.org/XadillaX/x-m-ui)
 
 基于vue 2+ ，为公司产品打(zao)造(lun)的(zi)可复用UI组件，适用于 移动 和 部分PC 端，其中包括 基础组件 和 应用组件，目前 组件 和 文档 在不断完善中。
 
@@ -18,22 +18,22 @@
 
 - 适用于 移动 和 部分PC 端
 
-## 通用项目工程  
+## 通用项目工程
 
-- 基于官方扩展的项目工程，集成了Axios，Dayjs和可选的XMUI，Vuex https://github.com/monw3c/vue-wp-cli  
+- 基于官方扩展的项目工程，集成了Axios，Dayjs和可选的XMUI，Vuex https://github.com/monw3c/vue-wp-cli
 
-## 开发  
+## 开发
 > 全局引入 -- 在 webpack 入口文件 main.js 中如下配置：
 
 ``` bash
 # 安装
-cnpm install x-m-ui --save  
+cnpm install x-m-ui --save
 
 # 引入css
-import 'x-m-ui/package/xmui.min.css'  
+import 'x-m-ui/package/xmui.min.css'
 
 # 引入xmui.min.js
-import xmui from 'x-m-ui'  
+import xmui from 'x-m-ui'
 
 # 注入到vue
 Vue.use(xmui)
@@ -58,12 +58,12 @@ components: {
     xmModal
     ...
 }
-``` 
+```
 更多说明，请查看[在线文档](https://monw3c.github.io/xmui/)
 
-## 查看示例  
+## 查看示例
 
-[在线示例](https://monw3c.github.io/xmui/dist/)  
+[在线示例](https://monw3c.github.io/xmui/dist/)
 
 ## 组件列表
 - [x] 按钮
@@ -91,15 +91,11 @@ components: {
 - [x] 导航栏(顶部)
 - [x] 标签栏(底部)
 
-## 关于如何构建 Vue 组件库的文章，有兴趣的朋友可了解一起探讨 
+## 关于如何构建 Vue 组件库的文章，有兴趣的朋友可了解一起探讨
 
 [如何基于 Vue 2 写一套 UI 库](http://gitbook.cn/gitchat/activity/5a5df169462f9b46f3418520)
 
-
-## 欢迎加入星球一起探讨 
-<div><img src="https://github.com/monw3c/xmui/blob/master/docs/imgs/xq.jpeg?raw=true" width="240"/></div>  
-
 ## 贡献
 
-在此不一一感谢所有付出脑力体力的同仁，如有疑问，请与我们联系   
+在此不一一感谢所有付出脑力体力的同仁，如有疑问，请与我们联系
 如果你在使用时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/monw3c/xmui/issues) 或 [Pull Request](https://github.com/monw3c/xmui/pulls)
