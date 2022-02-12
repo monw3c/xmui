@@ -7,7 +7,7 @@
  WORKDIR /src
  
  # 安装项目依赖包
- RUN npm config set registry https://registry.npm.taobao.org
+ RUN npm config set registry https://registry.npmmirror.com
  RUN npm install
  #RUN npm rebuild node-sass --force
  
